@@ -1,4 +1,4 @@
-# COP4331 | **Savester**
+# COP4331 - **Savester** Group Project
 
 
 
