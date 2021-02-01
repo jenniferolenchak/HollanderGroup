@@ -10,6 +10,6 @@ Savester is a web application for anyone with consistent income looking to bette
 
 * Jennifer Olenchak
 * Robin Perlman------Perl-R
-* Amen Naeem
+* Amen Naeem------PURPLEHOTWHEEL47
 * Allen Pereira------allenPereira123
 * Charles McCampbell-Hill
