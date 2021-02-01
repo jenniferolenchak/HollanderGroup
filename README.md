@@ -11,5 +11,5 @@ Savester is a web application for anyone with consistent income looking to bette
 * Jennifer Olenchak
 * Robin Perlman
 * Amen Naeem
-* Allen Pereira            username : allenPereira123
+* Allen Pereira------allenPereira123
 * Charles McCampbell-Hill
