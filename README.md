@@ -18,3 +18,11 @@ Savester is a web application for anyone with consistent income looking to bette
 
 
 ### Team Allocation
+
+In this section, each group member needs to provide a brief description of what they worked on during the sprint. Keep this short and to the point. Your trello board and commit history will provide the details
+
+* Jennifer Olenchak - 
+* Robin Perlman
+* Amen Naeem
+* Allen Pereira
+* Charles McCampbell-Hill
