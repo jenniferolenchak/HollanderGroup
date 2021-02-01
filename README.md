@@ -12,4 +12,4 @@ Savester is a web application for anyone with consistent income looking to bette
 * Robin Perlman------Perl-R
 * Amen Naeem------PURPLEHOTWHEEL47
 * Allen Pereira------allenPereira123
-* Charles McCampbell-Hill
+* Charles McCampbell-Hill------burke-hill
