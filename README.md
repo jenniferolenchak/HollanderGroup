@@ -9,7 +9,7 @@ Savester is a web application for anyone with consistent income looking to bette
 # Team Members
 
 * Jennifer Olenchak
-* Robin Perlman
+* Robin Perlman------Perl-R
 * Amen Naeem
 * Allen Pereira------allenPereira123
 * Charles McCampbell-Hill
