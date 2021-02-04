@@ -16,13 +16,14 @@ Savester is a web application for anyone with consistent income looking to bette
 
 ## Sprint 1
 
+[Trello Board](https://trello.com/b/7S4cq1oE/official-savester-board)
 
 ### Team Allocation
 
 In this section, each group member needs to provide a brief description of what they worked on during the sprint. Keep this short and to the point. Your trello board and commit history will provide the details
 
 * Jennifer Olenchak - 
-* Robin Perlman
+* Robin Perlman - Updated Requirements and Product Backlog. Also created Django project for website.
 * Amen Naeem
 * Allen Pereira
 * Charles McCampbell-Hill
