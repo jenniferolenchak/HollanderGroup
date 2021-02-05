@@ -25,5 +25,5 @@ In this section, each group member needs to provide a brief description of what 
 * Jennifer Olenchak - 
 * Robin Perlman - Updated Requirements and Product Backlog. Also created Django project for website.
 * Amen Naeem - Burndown chart , info on domain and web hosting, and requirement updates
-* Allen Pereira - requirements, connect database
-* Charles McCampbell-Hill
+* Allen Pereira 
+* Charles McCampbell-Hill - Updated requirements and product backlog. Found bootstrap theme for webpage.
