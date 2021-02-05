@@ -25,7 +25,7 @@ SECRET_KEY = 'r0opvw%-pbq@6hx2i!70j_fu5k(^sfiwn6(v^9&$0a5hc_amp-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['savesterapp.herokuapp.com']
 
 
 # Application definition
