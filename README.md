@@ -18,8 +18,10 @@ Savester is a web application for anyone with consistent income looking to bette
 ## Sprint 1
 
 [Trello Board](https://trello.com/b/wx8NhUQK/official-savester-team-board)
-
+[Sprint Backlog](https://trello.com/b/wx8NhUQK/official-savester-team-board)
+[Requirements[(https://trello.com/b/wx8NhUQK/official-savester-team-board)
 [Burndown Chart](http://prntscr.com/yk4fjy)
+[Velocity Chart](https://trello.com/b/wx8NhUQK/official-savester-team-board)
 
 ### Team Allocation
 
