@@ -25,5 +25,5 @@ In this section, each group member needs to provide a brief description of what 
 * Jennifer Olenchak - Created the velocity chart, created & Formatted the Trello board, and primarily populated the product backlog. Also helped Robin with Django.
 * Robin Perlman - Updated Requirements and Product Backlog. Also created Django project for website.
 * Amen Naeem - Burndown chart , info on domain and web hosting, and requirement updates
-* Allen Pereira 
+* Allen Pereira - set up database, updated requirements
 * Charles McCampbell-Hill - Updated requirements and product backlog. Found bootstrap theme for webpage.
