@@ -31,7 +31,7 @@ Savester is a web application for anyone with consistent income looking to bette
 
 In this section, each group member needs to provide a brief description of what they worked on during the sprint. Keep this short and to the point. Your trello board and commit history will provide the details
 
-* Jennifer Olenchak - Created the velocity chart, created & Formatted the Trello board, and primarily populated the product backlog. Also helped Robin with Django.
+* Jennifer Olenchak - Created the velocity chart, created & Formatted the Trello board, created the GitHub, and primarily populated the product backlog. Also helped Robin with Django.
 * Robin Perlman - Updated Requirements and Product Backlog. Also created Django project for website.
 * Amen Naeem - Burndown chart , info on domain and web hosting, and requirement updates
 * Allen Pereira - set up database, updated requirements
