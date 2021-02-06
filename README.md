@@ -25,7 +25,7 @@ Savester is a web application for anyone with consistent income looking to bette
 
 [Burndown Chart](http://prntscr.com/yk4fjy)
 
-[Velocity Chart](https://trello.com/b/wx8NhUQK/official-savester-team-board)
+[Velocity Chart](https://i.postimg.cc/qByMTk12/velocity-chart-1.jpg)
 
 ### Team Allocation
 
