@@ -19,7 +19,7 @@ Savester is a web application for anyone with consistent income looking to bette
 
 [Trello Board](https://trello.com/b/wx8NhUQK/official-savester-team-board)
 
-[Burndown Chart](http://prntscr.com/yjyz3a)
+[Burndown Chart](http://prntscr.com/yk4fjy)
 
 ### Team Allocation
 
