@@ -19,6 +19,8 @@ Savester is a web application for anyone with consistent income looking to bette
 
 [Trello Board](https://trello.com/b/wx8NhUQK/official-savester-team-board)
 
+[Product Backlog](https://trello.com/b/wx8NhUQK/official-savester-team-board)
+
 [Sprint Backlog](https://trello.com/b/wx8NhUQK/official-savester-team-board)
 
 [Requirements](https://trello.com/b/wx8NhUQK/official-savester-team-board)
