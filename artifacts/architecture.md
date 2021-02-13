@@ -11,7 +11,7 @@ See Code Complete, Chapter 3 and https://c4model.com/
 [Class UML](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/classUML.png)  
 Indicated in the Class diagram is each user story that relates to a given class. The custom and admin classes are in the diagram to show that there will be two main users. The customer class has access to the createIncome and createBudget which both have respective classes.  
 [Activity UML](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/activityUML.png)  
-The Activity diagram shows the process of a customer requesting a password reset.
+The Activity diagram shows the process of a customer requesting a password reset.  
 [Sequence UML](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/sequenceUML.png)  
 The Sequence diagram shows how each class interacts with the other. 
 
