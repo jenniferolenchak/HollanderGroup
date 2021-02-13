@@ -64,5 +64,5 @@ In this section, each group member needs to provide a brief description of what 
 * Jennifer Olenchak - 
 * Robin Perlman - Created database ER diagram, Worked on demonstration video, Created sample splash screen.
 * Amen Naeem - Context Diagram, Container Diagram, Component Diagram, Logo.
-* Allen Pereira - 
+* Allen Pereira - system design document, set up heroku
 * Charles McCampbell-Hill -
