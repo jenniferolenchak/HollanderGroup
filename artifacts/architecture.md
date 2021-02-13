@@ -17,9 +17,9 @@ The Sequence diagram shows how each class interacts with the other.
 
 # Data Design
 
-If you are using a database, you should have a basic Entity Relationship Diagram (ERD) in this section. This diagram should describe the tables in your database and their relationship to one another (especially primary/foreign keys), including the columns within each table. 
+[Database ER Diagram](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/ERdatabase.png)
 
-See Code Complete, Chapter 3
+The database contains four entities: Users, Settings, BudgetLists, and CashFlows. The user stores hold attributes for Username and Password alongside relationships with Settings and BudgetLists. The settings contain key information about the user alongside their preferences. The BudgetList contains attributes for savings goals and balance alongside a relationship with the Cashflows. Cashflows are either payments or expenses that are store to track the user income and spending habits. 
 
 # Business Rules
 
