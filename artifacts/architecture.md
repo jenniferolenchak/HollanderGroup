@@ -9,6 +9,7 @@ See Code Complete, Chapter 3 and https://c4model.com/
 # Code Design
 
 [Class UML](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/classUML.png)
+[Activity UML](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/activityUML.png)
 
 # Data Design
 
