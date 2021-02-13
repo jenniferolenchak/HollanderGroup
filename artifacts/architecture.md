@@ -8,7 +8,7 @@ See Code Complete, Chapter 3 and https://c4model.com/
 
 # Code Design
 
-![alt text](artifacts/documents/3f2ca384120eddb143c31866b5d1c902.png)
+![Alt text](artifacts/documents/3f2ca384120eddb143c31866b5d1c902.png?raw=true "Optional Title")
 
 # Data Design
 
