@@ -9,8 +9,11 @@ See Code Complete, Chapter 3 and https://c4model.com/
 # Code Design
 
 [Class UML](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/classUML.png)  
+Indicated in the Class diagram is each user story that relates to a given class. The custom and admin classes are in the diagram to show that there will be two main users. The customer class has access to the createIncome and createBudget which both have respective classes.  
 [Activity UML](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/activityUML.png)  
-[Sequence UML](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/sequenceUML.png)
+The Activity diagram shows the process of a customer requesting a password reset.
+[Sequence UML](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/sequenceUML.png)  
+The Sequence diagram shows how each class interacts with the other. 
 
 # Data Design
 
@@ -39,15 +42,12 @@ See Code Complete, Chapter 3
 See Code Complete, Chapter 3
 
 # Performance
-Web page contents will be preloaded to reduce loading times. Additionally, website contents will be loaded
-in an order where the user can immediately start interacting with the page. While the website is loaded, a spinner will be displayed to maintain engagement
-with the user. 
 
+See Code Complete, Chapter 3
 
 # Scalability
-If an increase in users is experienced from different parts of the world, a CDN will be implemented to help decrease load times. If CPU and memory issues
-are encountered, database will be moved to a seperate server to scale application and database seperately. If our single application server can no longer handle the
-the current load, more application servers will be added aswell as a load balancer to distribute traffic within servers equally.
+
+See Code Complete, Chapter 3
 
 # Interoperability
 
