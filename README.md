@@ -38,3 +38,27 @@ In this section, each group member needs to provide a brief description of what 
 * Amen Naeem - Burndown chart , info on domain and web hosting, and requirement updates
 * Allen Pereira - set up database, updated requirements
 * Charles McCampbell-Hill - Updated requirements and product backlog. Found bootstrap theme for webpage.
+
+## Sprint 2
+
+[Trello Board](https://trello.com/b/wx8NhUQK/official-savester-team-board)
+
+[Product Backlog](https://trello.com/b/wx8NhUQK/official-savester-team-board)
+
+[Sprint Backlog](https://trello.com/b/wx8NhUQK/official-savester-team-board)
+
+[Requirements](https://trello.com/b/wx8NhUQK/official-savester-team-board)
+
+[Burndown Chart](http://prntscr.com/ykded9)
+
+[Velocity Chart](https://i.postimg.cc/N0NN4KfM/velocity-chart-1.jpg)
+
+### Team Allocation
+
+In this section, each group member needs to provide a brief description of what they worked on during the sprint. Keep this short and to the point. Your trello board and commit history will provide the details
+
+* Jennifer Olenchak - 
+* Robin Perlman - Created database ER diagram, Worked on demonstration video, Created sample splash screen.
+* Amen Naeem - 
+* Allen Pereira - 
+* Charles McCampbell-Hill -
