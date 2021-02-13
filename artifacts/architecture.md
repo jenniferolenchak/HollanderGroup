@@ -39,12 +39,15 @@ See Code Complete, Chapter 3
 See Code Complete, Chapter 3
 
 # Performance
+Web page contents will be preloaded to reduce loading times. Additionally, website contents will be loaded
+in an order where the user can immediately start interacting with the page. While the website is loaded, a spinner will be displayed to maintain engagement
+with the user. 
 
-See Code Complete, Chapter 3
 
 # Scalability
-
-See Code Complete, Chapter 3
+If an increase in users is experienced from different parts of the world, a CDN will be implemented to help decrease load times. If CPU and memory issues
+are encountered, database will be moved to a seperate server to scale application and database seperately. If our single application server can no longer handle the
+the current load, more application servers will be added aswell as a load balancer to distribute traffic within servers equally.
 
 # Interoperability
 
