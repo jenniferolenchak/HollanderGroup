@@ -53,6 +53,10 @@ In this section, each group member needs to provide a brief description of what 
 
 [Velocity Chart](https://i.postimg.cc/N0NN4KfM/velocity-chart-1.jpg)
 
+Design Document
+
+Demonstration
+
 ### Team Allocation
 
 In this section, each group member needs to provide a brief description of what they worked on during the sprint. Keep this short and to the point. Your trello board and commit history will provide the details
