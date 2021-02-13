@@ -9,7 +9,7 @@ See Code Complete, Chapter 3 and https://c4model.com/
 # Code Design
 
 You should have your UML Class diagram and any other useful UML diagrams in this section. Each diagram should be accompanied by a brief description explaining what the elements are and why they are in the diagram. For your class diagram, you must also include a table that relates each class to one or more user stories. 
-
+artifacts/documents/3f2ca384120eddb143c31866b5d1c902.png
 See Code Complete, Chapter 3 and https://c4model.com/
 
 # Data Design
