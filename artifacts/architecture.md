@@ -35,7 +35,7 @@ See Code Complete, Chapter 3
 
 # Resource Management
 
-See Code Complete, Chapter 3
+Connection to the database will be opened when a database querry is made. The connection will be reused are remained open until error or max age is encountered.
 
 # Security
 
