@@ -8,7 +8,7 @@ See Code Complete, Chapter 3 and https://c4model.com/
 
 # Code Design
 
-[a link](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/3f2ca384120eddb143c31866b5d1c902.png)
+[Class UML](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/3f2ca384120eddb143c31866b5d1c902.png)
 
 # Data Design
 
