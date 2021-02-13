@@ -39,23 +39,28 @@ Connection to the database will be opened when a database querry is made. The co
 
 # Security
 
-See Code Complete, Chapter 3
+User passwords will be hashed using the PBKDF2 hashing algorithm
 
 # Performance
 
-See Code Complete, Chapter 3
+Web page contents will be preloaded to reduce loading times. Additionally, website contents will be loaded
+in an order where the user can immediately start interacting with the page. While the website is loaded, a spinner will be displayed to maintain engagement
+with the user. 
 
 # Scalability
 
-See Code Complete, Chapter 3
+If an increase in users is experienced from different parts of the world, a CDN will be implemented to help decrease load times. If CPU and memory issues
+are encountered, database will be moved to a seperate server to scale application and database seperately. If our single application server can no longer handle the
+the current load, more application servers will be added aswell as a load balancer to distribute traffic within servers equally.
 
 # Interoperability
 
-See Code Complete, Chapter 3
+Web app operates independently and does not communicate with any other software.
 
 # Internationalization/Localization
 
-See Code Complete, Chapter 3
+Information of language is provided by the browser header. A resource file will be used that contains all available translations for a language. A resource
+file is used because it is easier to automate.
 
 # Input/Output
 
@@ -85,7 +90,7 @@ See Code Complete, Chapter 3
 
 # Reuse
 
-See Code Complete, Chapter 3
+This app will not reuse an pre existing software, test cases or data formats
 
 # Change Strategy
 
