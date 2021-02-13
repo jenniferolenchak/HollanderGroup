@@ -8,17 +8,20 @@ See Code Complete, Chapter 3 and https://c4model.com/
 
 # Code Design
 
-[Class UML](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/classUML.png)  
+![Class UML](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/classUML.png)  
+**Class UML**  
 Indicated in the Class diagram is each user story that relates to a given class. The custom and admin classes are in the diagram to show that there will be two main users. The customer class has access to the createIncome and createBudget which both have respective classes.  
-[Activity UML](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/activityUML.png)  
+![Activity UML](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/activityUML.png)  
+**Activity UML**  
 The Activity diagram shows the process of a customer requesting a password reset.  
-[Sequence UML](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/sequenceUML.png)  
+![Sequence UML](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/sequenceUML.png)   
+**Sequence UML**  
 The Sequence diagram shows how each class interacts with the other. 
 
 # Data Design
 
-[Database ER Diagram](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/ERdatabase.png)
-
+![Database ER Diagram](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/ERdatabase.png)  
+**Database ER Diagram**  
 The database contains four entities: Users, Settings, BudgetLists, and CashFlows. The user stores hold attributes for Username and Password alongside relationships with Settings and BudgetLists. The settings contain key information about the user alongside their preferences. The BudgetList contains attributes for savings goals and balance alongside a relationship with the Cashflows. Cashflows are either payments or expenses that are store to track the user income and spending habits. 
 
 # Business Rules
