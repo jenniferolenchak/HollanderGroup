@@ -2,7 +2,7 @@ Populate each section with information as it applies to your project. If a secti
 
 # Program Organization
 
-[Context Diagram](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/Component%20Diagram.png}
+[Context Diagram](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/Component%20Diagram.png)
 
 See Code Complete, Chapter 3 and https://c4model.com/
 
