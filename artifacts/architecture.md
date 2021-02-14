@@ -71,23 +71,23 @@ See Code Complete, Chapter 3
 
 # Error Processing
 
-See Code Complete, Chapter 3
+To ensure what information being entered by the user meets requirements and follows a proper format, IO errors will be detected at the field level. 
 
 # Fault Tolerance
 
-See Code Complete, Chapter 3
+If a user enters invalid information into a field, the data will be disregarded an error message will be displayed containing the proper specifications of the field.
 
 # Architectural Feasibility
 
-See Code Complete, Chapter 3
+
 
 # Overengineering
 
-See Code Complete, Chapter 3
+
 
 # Build-vs-Buy Decisions
 
-This section should list the third party libraries your system is using and describe what those libraries are being used for.
+Django is being used for data formating, display, and it's ORM feature to easily manipulate data.
 
 See Code Complete, Chapter 3
 
@@ -97,4 +97,4 @@ This app will not reuse an pre existing software, test cases or data formats
 
 # Change Strategy
 
-See Code Complete, Chapter 3
+Once a user sign in, Savester will notify the use when  a recurring payment is approaching. If time permits, a text api will be implemented which allows users to get this notfication without signing into the app. 
