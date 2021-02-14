@@ -2,7 +2,7 @@ Populate each section with information as it applies to your project. If a secti
 
 # Program Organization
 
-You should have your context, container, and component (c4model.com) diagrams in this section, along with a description and explanation of each diagram and a table that relates each block to one or more user stories. 
+![Context Diagram](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/Component%20Diagram.png}
 
 See Code Complete, Chapter 3 and https://c4model.com/
 
