@@ -97,4 +97,4 @@ This app will not reuse an pre existing software, test cases or data formats
 
 # Change Strategy
 
-Once a user sign in, Savester will notify the use when  a recurring payment is approaching. If time permits, a text api will be implemented which allows users to get this notfication without signing into the app. 
+Once a user signs in, Savester will notify the user when  a recurring payment is approaching. If time permits, a text api will be implemented which allows users to get this notfication without signing into the app. This feature will be implemented seperately and should not interfere with other processes.
