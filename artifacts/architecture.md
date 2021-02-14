@@ -67,18 +67,17 @@ file is used because it is easier to automate.
 
 # Input/Output
 
-See Code Complete, Chapter 3
+To ensure what information being entered by the user meets requirements and follows a proper format, IO errors will be detected at the field level
 
 # Error Processing
 
-To ensure what information being entered by the user meets requirements and follows a proper format, IO errors will be detected at the field level. 
+The system will take an activate approach to error detection. Everytime a user enters data, it will automatically check for validity. 
 
 # Fault Tolerance
 
 If a user enters invalid information into a field, the data will be disregarded an error message will be displayed containing the proper specifications of the field.
 
 # Architectural Feasibility
-
 
 
 # Overengineering
@@ -88,8 +87,6 @@ If a user enters invalid information into a field, the data will be disregarded 
 # Build-vs-Buy Decisions
 
 Django is being used for data formating, display, and it's ORM feature to easily manipulate data.
-
-See Code Complete, Chapter 3
 
 # Reuse
 
