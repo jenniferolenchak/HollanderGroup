@@ -6,7 +6,13 @@ Populate each section with information as it applies to your project. If a secti
 
 Our context diagram gives an overall big-picture view of our project. We want the user to be able to interact with the budgeting system to track their expenses and savings, and also be reminded of these things in a timely and effective manner. This is what we wanted to achieve with user story 2, 4, and 10.
 
-See Code Complete, Chapter 3 and https://c4model.com/
+![Container Diagram](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/Container%20Diagram.png)
+
+Our Container Diagram shows an overall view of the kind of systems and servers our project will be working with. In order to satisfy the needs of user story 1, 2, and 5, we had to make sure we had an email system capable of sending emails at the right time, as well as a database that can store information properly and for usage of the application
+
+![Component Diagram](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/Component%20Diagram.png)
+
+Our component diagram provides a more in depth look at our web app and the things it will communicate with to develop features. For user stories involving account information and settings, such as 1 and 4, we are using features that Django has, such as the sign and login features, which will communicate with our database to provide a login system that allows users to change their passwords and safely log in when needed. Our sav esuggestion and budget component will work together with our email component to provide some of the key functionalities of the app, such as letting people know what they can save in, and what kind of expenses they have, satisfying user stories 4, 8, 9 and 10.
 
 # Code Design
 
