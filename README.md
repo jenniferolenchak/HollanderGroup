@@ -61,7 +61,7 @@ Demonstration
 
 In this section, each group member needs to provide a brief description of what they worked on during the sprint. Keep this short and to the point. Your trello board and commit history will provide the details
 
-* Jennifer Olenchak - 
+* Jennifer Olenchak - Create UI mockup, worked in demonstration video, connected heroku to github, created website graphics.
 * Robin Perlman - Created database ER diagram, Worked on demonstration video, Created sample splash screen.
 * Amen Naeem - Context Diagram, Container Diagram, Component Diagram, Logo.
 * Allen Pereira - system design document, set up heroku
