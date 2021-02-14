@@ -1,6 +1,5 @@
 # COP4331 - **Savester** Team Project
 
-## Savester Web App
 ## https://savesterapp.herokuapp.com/
 
 
