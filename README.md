@@ -53,7 +53,7 @@ In this section, each group member needs to provide a brief description of what 
 
 [Velocity Chart](https://github.com/jenniferolenchak/Savester/blob/main/Velocity%20Charts/velocity%20chart%202.JPG?raw=true)
 
-Design Document
+[Design Document](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/architecture.md)
 
 [Demonstration](https://youtu.be/pVdxVfYD3qU)
 
