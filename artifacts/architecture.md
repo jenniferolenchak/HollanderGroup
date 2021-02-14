@@ -2,7 +2,8 @@ Populate each section with information as it applies to your project. If a secti
 
 # Program Organization
 
-[Context Diagram](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/Component%20Diagram.png)
+[Context Diagram](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/System%20Context%20Diagram.png)
+Our context diagram gives an overall big-picture view of our project. We want the user to be able to interact with the budgeting system to track their expenses and savings, and also be reminded of these things in a timely and effective manner. This is what we wanted to achieve with user story 2, 4, and 10.
 
 See Code Complete, Chapter 3 and https://c4model.com/
 
