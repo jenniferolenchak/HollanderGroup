@@ -71,7 +71,7 @@ To ensure what information being entered by the user meets requirements and foll
 
 # Error Processing
 
-The system will take an activate approach to error detection. Everytime a user enters data, it will automatically check for validity. 
+The system will take an activate approach to error detection. Everytime a user enters data, it will automatically check for validity. If user input is invalid, data will be disregarded immediately. Additionally, error messages will be logged an outputed to file.
 
 # Fault Tolerance
 
