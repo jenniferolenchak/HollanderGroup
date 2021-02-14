@@ -27,7 +27,7 @@ Savester is a web application for anyone with consistent income looking to bette
 
 [Burndown Chart](http://prntscr.com/ykded9)
 
-[Velocity Chart](https://i.postimg.cc/N0NN4KfM/velocity-chart-1.jpg)
+[Velocity Chart](https://github.com/jenniferolenchak/Savester/blob/main/Velocity%20Charts/velocity%20chart%201.JPG?raw=true)
 
 ### Team Allocation
 
