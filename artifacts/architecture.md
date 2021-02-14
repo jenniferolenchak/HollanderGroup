@@ -28,8 +28,6 @@ The database contains four entities: Users, Settings, BudgetLists, and CashFlows
 
 You should list the assumptions, rules, and guidelines from external sources that are impacting your program design. 
 
-See Code Complete, Chapter 3
-
 # User Interface Design
 
 You should have one or more user interface screens in this section. Each screen should be accompanied by an explaination of the screens purpose and how the user will interact with it. You should relate each screen to one another as the user transitions through the states of your application. You should also have a table that relates each window or component to the support using stories. 
@@ -80,9 +78,10 @@ If a user enters invalid information into a field, the data will be disregarded 
 # Architectural Feasibility
 
 
+
 # Overengineering
 
-
+Classes are equally simple therefore over engineering is avoided
 
 # Build-vs-Buy Decisions
 
