@@ -34,7 +34,7 @@ The database contains four entities: Users, Settings, BudgetLists, and CashFlows
 
 # Business Rules
 
-You should list the assumptions, rules, and guidelines from external sources that are impacting your program design. 
+Users will be allowed to enter information such as income/expenses which should quickly be factored into their budget and graphically represented by charts. This process should happen instantanously to allow for a good user experience.  
 
 # User Interface Design
 
@@ -48,7 +48,7 @@ Connection to the database will be opened when a database querry is made. The co
 
 # Security
 
-User passwords will be hashed using the PBKDF2 hashing algorithm
+When users create an account, they will be asked for to enter a username and passowrd. User passwords will be hashed by undergoing mutliple iterations of a hashing algorithm. This ensures password security.
 
 # Performance
 
@@ -64,7 +64,7 @@ the current load, more application servers will be added aswell as a load balanc
 
 # Interoperability
 
-Web app operates independently and does not communicate with any other software.
+Web app operates independently and does not communicate with any other software. (subject to change)
 
 # Internationalization/Localization
 
@@ -73,7 +73,7 @@ file is used because it is easier to automate.
 
 # Input/Output
 
-To ensure what information being entered by the user meets requirements and follows a proper format, IO errors will be detected at the field level
+Users will be required to enter data into a variety of fields, to ensure that information being entered by the user meets requirements and follows a proper format, IO errors will be detected at the field level.
 
 # Error Processing
 
@@ -85,6 +85,7 @@ If a user enters invalid information into a field, the data will be disregarded 
 
 # Architectural Feasibility
 
+At the initial stages of product deployment, it is expected to have a relatively low user count therefore, our single application server should be able to meet performance targets. However, if a increase in users is experienced, the app will be appropriately scaled. The scalability section contains information about how we plan on doing so. 
 
 
 # Overengineering
