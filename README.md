@@ -51,7 +51,7 @@ In this section, each group member needs to provide a brief description of what 
 
 [Burndown Chart](http://prntscr.com/ykded9)
 
-[Velocity Chart](https://i.postimg.cc/N0NN4KfM/velocity-chart-1.jpg)
+[Velocity Chart](https://github.com/jenniferolenchak/Savester/blob/main/Velocity%20Charts/velocity%20chart%202.JPG?raw=true)
 
 Design Document
 
