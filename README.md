@@ -66,3 +66,33 @@ In this section, each group member needs to provide a brief description of what 
 * Amen Naeem - Context Diagram, Container Diagram, Component Diagram, Logo.
 * Allen Pereira - system design document, set up heroku.
 * Charles McCampbell-Hill - Created low level UML diagrams.
+
+## Sprint 3
+
+[Trello Board](https://trello.com/b/wx8NhUQK/official-savester-team-board)
+
+[Product Backlog](https://trello.com/b/wx8NhUQK/official-savester-team-board)
+
+[Sprint Backlog](https://trello.com/b/wx8NhUQK/official-savester-team-board)
+
+[Requirements](https://trello.com/b/wx8NhUQK/official-savester-team-board)
+
+[Burndown Chart](https://github.com/jenniferolenchak/Savester/blob/main/Velocity%20Charts/BurndownChart2.PNG?raw=true)
+
+[Velocity Chart](https://github.com/jenniferolenchak/Savester/blob/main/Velocity%20Charts/velocity%20chart%202.JPG?raw=true)
+
+[Design Document](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/architecture.md)
+
+[Automated Test](https://github.com/jenniferolenchak/Savester/blob/main/home/tests.py)
+
+[Demonstration](https://youtu.be/pVdxVfYD3qU)
+
+### Team Allocation
+
+In this section, each group member needs to provide a brief description of what they worked on during the sprint. Keep this short and to the point. Your trello board and commit history will provide the details
+
+* Jennifer Olenchak - 
+* Robin Perlman - 
+* Amen Naeem - 
+* Allen Pereira - 
+* Charles McCampbell-Hill - 
