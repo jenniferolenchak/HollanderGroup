@@ -77,7 +77,7 @@ In this section, each group member needs to provide a brief description of what 
 
 [Requirements](https://trello.com/b/wx8NhUQK/official-savester-team-board)
 
-[Burndown Chart](https://github.com/jenniferolenchak/Savester/blob/main/Velocity%20Charts/BurndownChart2.PNG?raw=true)
+[Burndown Chart](https://raw.githubusercontent.com/jenniferolenchak/Savester/main/Velocity%20Charts/BurndownChart3.png)
 
 [Velocity Chart](https://github.com/jenniferolenchak/Savester/blob/main/Velocity%20Charts/velocity%20chart%202.JPG?raw=true)
 
