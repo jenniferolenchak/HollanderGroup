@@ -1,6 +1,6 @@
 
-#User Registration Test
-#Steps to Reproduce                                                      
+# User Registration Test
+# Steps to Reproduce                                                      
 1. Open browser and enter URL for the homepage screen
 2. Click on Sign In button
 3. Click on the Sign up here link
@@ -12,7 +12,7 @@
 9. Click on the Password confirmation field and enter text
 10. Click sign up button
 
-#Expected Behavior
+# Expected Behavior
 1. The home page should be displayed
 2. The log in page should be displayed
 3. The register page should be displayed
