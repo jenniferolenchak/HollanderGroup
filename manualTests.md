@@ -26,7 +26,7 @@
 
 # Admin Page Test
 # Steps to reproduce
-1. open the browser and enter url for the home page
+1. Open the browser and enter url for the home page
 2. click on address bar and add /admin to the end of the address and press enter
 3. Click on the username field and enter text
 4. Click on the Password field and enter text
@@ -35,11 +35,10 @@
 7. Click LOG OUT on top right hand corner
 
 # Behavior
-1.The home page should be displayed
-2.The admin page should be displayed
+1. The home page should be displayed
+2. The admin page should be displayed
 3. Text entered into username field should be displayed
 4. Text entered in password field should be displayed and masked as bullets
 5. Authentication and authorization page should be displayed
-6. If Group is clicked, group user page should be displayed. If users is clicked,
-   registered users page should be displayed  
+6. If Group is clicked, group user page should be displayed. If users is clicked, registered users page should be displayed  
 7. Admin sign in page is displayed
