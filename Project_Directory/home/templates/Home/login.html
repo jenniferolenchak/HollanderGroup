@@ -19,6 +19,9 @@
 						 </div>
 					</div>
                    <form action="" method="post" name="login">
+                     {% for message in messages %}
+                     <p>{{message}}</p>
+                     {% endfor %}
                            <div class="form-group">
                               <label for="exampleInputEmail1">Email address</label>
                               <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">

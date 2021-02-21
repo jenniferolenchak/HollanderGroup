@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
+from .forms import UserRegisterForm
 # Create your views here.
 
 def home(request):
@@ -10,11 +11,11 @@ def home(request):
 
 def register(request):
 	if request.method == 'POST':
-		form = UserCreationForm(request.POST)
+		form = UserRegisterForm(request.POST)
 		if form.is_valid():
-			email = form.cleaned_data.get('email')
-			messages.success(request, f'Account created for {email}!')
-			return redirect('Home/index.html')
+			form.save()
+			messages.success(request, 'Account was created')
+			return redirect('login')
 	else:
-		form = UserCreationForm()
+		form = UserRegisterForm()
 	return render(request, 'Home/register.html', {'form': form})
