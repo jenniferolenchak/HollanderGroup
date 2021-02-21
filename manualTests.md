@@ -1,6 +1,6 @@
 
 # User Registration Test
-# Steps to Reproduce                                                      
+## Steps to Reproduce                                                      
 1. Open browser and enter URL for the homepage screen
 2. Click on Sign In button
 3. Click on the Sign up here link
@@ -12,7 +12,7 @@
 9. Click on the Password confirmation field and enter text
 10. Click sign up button
 
-# Expected Behavior
+## Expected Behavior
 1. The home page should be displayed
 2. The log in page should be displayed
 3. The register page should be displayed
@@ -25,7 +25,7 @@
 10. The login screen should be displayed with a text "Account was created" on top
 
 # Admin Page Test
-# Steps to reproduce
+## Steps to reproduce
 1. Open the browser and enter url for the home page
 2. click on address bar and add /admin to the end of the address and press enter
 3. Click on the username field and enter text
@@ -34,7 +34,7 @@
 6. Click on group link and/or users link
 7. Click LOG OUT on top right hand corner
 
-# Behavior
+## Behavior
 1. The home page should be displayed
 2. The admin page should be displayed
 3. Text entered into username field should be displayed
