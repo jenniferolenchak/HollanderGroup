@@ -7,7 +7,6 @@ from .forms import UserRegisterForm
 
 def home(request):
 	return render(request, 'Home/index.html')
-	# return HttpResponse	("Savester")
 
 def register(request):
 	if request.method == 'POST':
@@ -19,3 +18,10 @@ def register(request):
 	else:
 		form = UserRegisterForm()
 	return render(request, 'Home/register.html', {'form': form})
+
+
+def login(request):
+	return render(request, 'Home/login.html')
+
+def logout(request):
+	return HttpResponse("Logout")

@@ -21,7 +21,4 @@ from home import views as home_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
-    path('login/', auth_views.LoginView.as_view(template_name='Home/login.html'), name='login'),
-    path('logout/', auth_views.LogoutView.as_view(template_name='Home/logout.html'), name='logout'),
-    path('register/', home_views.register, name='register'),
 ]
