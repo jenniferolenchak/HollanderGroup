@@ -83,7 +83,7 @@ In this section, each group member needs to provide a brief description of what 
 
 [Design Document](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/architecture.md)
 
-[Manual/Automated Test](https://github.com/jenniferolenchak/Savester/blob/main/manualTests.md)
+[Manual](https://github.com/jenniferolenchak/Savester/blob/main/manualTests.md) / [Automated](https://github.com/jenniferolenchak/Savester/blob/main/Project_Directory/home/tests/test_urls.py) Tests
 
 [Demonstration](https://youtu.be/pVdxVfYD3qU)
 
