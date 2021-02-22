@@ -39,6 +39,7 @@ Users will be allowed to enter information such as income/expenses which should 
 # User Interface Design
 
 ![UI Mock-Up](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/UI%20Diagram%20_%20Dashboard.JPG)
+![Page Connectivity](https://github.com/jenniferolenchak/Savester/blob/main/Graphics/UI%20Diagram%20_%20Page%20Connectivity.JPG?raw=true)
 **UI Mock-Up**
 As a web application, the user will be able to access the system through the URL https://savesterapp.herokuapp.com/ on both a desktop and mobile platforms [user story 007]; While on the desktop version, a peripheral device (i.e. mouse) may be used to interact with the website, while the mobile version warrants touchscreen interaction. Once a user signs in[user story 001], they are brought to their dashboard (shown in the mock-up above). It is here that they may view their budget for their decided interval and view upcoming recurring payments[user story 002]. Users are also presented with a graphic representations of their budget plan, savings goal[user story 008], categories of spending [user story 003], and percent of budget spent. Beyond the dashboard, users may navigate to other pages to edit their financial data[user story 006 & 009 & 010], view savings suggestions[user story 004], edit their account information[user story 005], and see more details on upcoming payments[user story 002].
 
