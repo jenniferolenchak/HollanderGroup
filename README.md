@@ -79,7 +79,7 @@ In this section, each group member needs to provide a brief description of what 
 
 [Burndown Chart](https://raw.githubusercontent.com/jenniferolenchak/Savester/main/Velocity%20Charts/BurndownChart3.png)
 
-[Velocity Chart](https://github.com/jenniferolenchak/Savester/blob/main/Velocity%20Charts/velocity%20chart%202.JPG?raw=true)
+[Velocity Chart](https://github.com/jenniferolenchak/Savester/blob/main/Velocity%20Charts/velocity%20chart%203.JPG?raw=true)
 
 [Design Document](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/architecture.md)
 
@@ -91,7 +91,7 @@ In this section, each group member needs to provide a brief description of what 
 
 In this section, each group member needs to provide a brief description of what they worked on during the sprint. Keep this short and to the point. Your trello board and commit history will provide the details
 
-* Jennifer Olenchak - Created Demonstration Video, Expanded on UI Diagrams, Created Velocity Chart
+* Jennifer Olenchak - Created Demonstration Video, Expanded UI Diagrams, Created Velocity Chart, Researched Selenium
 * Robin Perlman - Created Automated Tests for Url Paths, Reorganized Github Project Directory, Reviewed Selenium
 * Amen Naeem - Edited Automated Tests, Reviewed System Design Documents, Updated Requirements
 * Allen Pereira - Created Administrative Portal, Fixed Template Paths, Performed Database Migrations
