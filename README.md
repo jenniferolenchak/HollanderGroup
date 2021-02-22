@@ -78,3 +78,29 @@ In this section, each group member needs to provide a brief description of what 
 * Amen Naeem - Edited Automated Tests, Reviewed System Design Documents, Updated Requirements
 * Allen Pereira - Created Administrative Portal, Fixed Template Paths, Performed Database Migrations
 * Charles McCampbell-Hill - Created Login and Registration Portal, Updated Templates
+
+## Sprint 4
+
+[Trello Board (Product Backlog, Sprint Backlog, & Requirements)](https://trello.com/b/wx8NhUQK/official-savester-team-board)
+
+[Burndown Chart](https://raw.githubusercontent.com/jenniferolenchak/Savester/main/Velocity%20Charts/BurndownChart3.PNG)
+
+[Velocity Chart](https://github.com/jenniferolenchak/Savester/blob/main/Velocity%20Charts/velocity%20chart%203%20_%20jen.JPG?raw=true)
+
+[Design Document](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/architecture.md)
+
+[Source Code](https://github.com/jenniferolenchak/Savester/tree/main/Project_Directory)   
+
+[Manual](https://github.com/jenniferolenchak/Savester/blob/main/manualTests.md) / [Automated](https://github.com/jenniferolenchak/Savester/blob/main/Project_Directory/home/tests/test_urls.py) Tests
+
+[Demonstration](https://www.youtube.com/watch?v=4Ev68EugNpU&feature=youtu.be)
+
+### Team Allocation
+
+In this section, each group member needs to provide a brief description of what they worked on during the sprint. Keep this short and to the point. Your trello board and commit history will provide the details
+
+* Jennifer Olenchak - 
+* Robin Perlman - 
+* Amen Naeem - 
+* Allen Pereira - 
+* Charles McCampbell-Hill - 
