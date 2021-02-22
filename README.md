@@ -17,13 +17,7 @@ Savester is a web application for anyone with consistent income looking to bette
 
 ## Sprint 1
 
-[Trello Board](https://trello.com/b/wx8NhUQK/official-savester-team-board)
-
-[Product Backlog](https://trello.com/b/wx8NhUQK/official-savester-team-board)
-
-[Sprint Backlog](https://trello.com/b/wx8NhUQK/official-savester-team-board)
-
-[Requirements](https://trello.com/b/wx8NhUQK/official-savester-team-board)
+[Trello Board (Product Backlog, Sprint Backlog, & Requirements)](https://trello.com/b/wx8NhUQK/official-savester-team-board)
 
 [Burndown Chart](http://prntscr.com/ykded9)
 
@@ -41,13 +35,7 @@ In this section, each group member needs to provide a brief description of what 
 
 ## Sprint 2
 
-[Trello Board](https://trello.com/b/wx8NhUQK/official-savester-team-board)
-
-[Product Backlog](https://trello.com/b/wx8NhUQK/official-savester-team-board)
-
-[Sprint Backlog](https://trello.com/b/wx8NhUQK/official-savester-team-board)
-
-[Requirements](https://trello.com/b/wx8NhUQK/official-savester-team-board)
+[Trello Board (Product Backlog, Sprint Backlog, & Requirements)](https://trello.com/b/wx8NhUQK/official-savester-team-board)
 
 [Burndown Chart](https://github.com/jenniferolenchak/Savester/blob/main/Velocity%20Charts/BurndownChart2.PNG?raw=true)
 
@@ -69,13 +57,7 @@ In this section, each group member needs to provide a brief description of what 
 
 ## Sprint 3
 
-[Trello Board](https://trello.com/b/wx8NhUQK/official-savester-team-board)
-
-[Product Backlog](https://trello.com/b/wx8NhUQK/official-savester-team-board)
-
-[Sprint Backlog](https://trello.com/b/wx8NhUQK/official-savester-team-board)
-
-[Requirements](https://trello.com/b/wx8NhUQK/official-savester-team-board)
+[Trello Board (Product Backlog, Sprint Backlog, & Requirements)](https://trello.com/b/wx8NhUQK/official-savester-team-board)
 
 [Burndown Chart](https://raw.githubusercontent.com/jenniferolenchak/Savester/main/Velocity%20Charts/BurndownChart3.PNG)
 
