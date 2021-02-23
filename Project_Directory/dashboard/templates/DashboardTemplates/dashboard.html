@@ -1,0 +1,89 @@
+<html lang="en">
+
+<!-- Establish Metadata -->
+
+<head>
+  <title>Savester</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Savester App Welcome Page">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Establish Style of Website Body -->
+  <style>
+    body {
+      font-family: Arial, Times New Roman, Helvetica;
+      margin: 0;
+    }
+
+    .header {
+      padding: 10px;
+      text-align: center;
+      background: #57D557;
+      color: white;
+      font-size: 30px;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .navbar {
+      overflow: hidden;
+      background-color: 215221;
+
+    }
+
+    .navbar button {
+      float: left;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      background-color: white;
+    }
+
+    .navbar button:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .navbar button.active {
+      background-color: lightgray;
+      color: black;
+    }
+  </style>
+</head>
+
+<!-- Establish content of website body -->
+
+<body>
+  <div class="header">
+    <img
+      src="https://github.com/jenniferolenchak/Savester/blob/main/Graphics/Savester%20Logo%204%20_%20green%20background.JPG?raw=true"
+      alt="" width=200 height=200 align="left" padding=90 />
+    <h1>Welcome to Savester</h1>
+    <p>Secure Budgeting, Reimagined</p>
+  </div>
+
+  <div class="navbar">
+    <a href="{% url 'dashboard' %}">
+      <button href="#news">Dashboard</button>
+    </a>
+    <a href="{% url 'logout' %}">
+      <button href="#news">Logout</button>
+    </a>
+  </div>
+
+  <left>
+    <div class="content">
+      <h2>Welcome Back!</h2>
+      <p>Learn More about your savings!
+      </p>
+
+    </div>
+    <left>
+
+</body>
+
+</html>
