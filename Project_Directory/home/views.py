@@ -29,10 +29,11 @@ def login_view(request):
 
 		if user is not None:
 			login(request, user)
-			return redirect('home')
+			return redirect('dashboard')
 		else:
 			messages.info(request, 'Username OR password incorrect')
 	return render(request, 'Home/login.html')
 
-def logout(request):
+def logout_view(request):
+	logout(request)
 	return HttpResponse("Logout")
