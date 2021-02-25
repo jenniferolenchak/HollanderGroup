@@ -70,23 +70,15 @@
     <a href="{% url 'dashboard' %}">
       <button href="#news">Dashboard</button>
     </a>
-    <a href="{% url 'savingsuggestions' %}">
-      <button href="#news">Saving Suggestions</button>
-    </a>
-    <a href="{% url 'settings' %}">
-      <button href="#news">Settings</button>
-    </a>
     <a href="{% url 'logout' %}">
       <button href="#news">Logout</button>
     </a>
-
   </div>
 
   <left>
     <div class="content">
-      <h2>Welcome {% firstof request.user.username %}!</h2>
-      <p>Learn More about your savings!
-      </p>
+      <h2>My Saving Suggestions</h2>
+      <p>Learn more about your saving suggestions</p>
 
     </div>
     <left>
