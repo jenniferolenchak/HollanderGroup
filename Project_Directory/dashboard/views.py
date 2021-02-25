@@ -14,3 +14,7 @@ def settings(request):
 @login_required(login_url='login')
 def saving_suggestions(request):
 	return render(request, 'DashboardTemplates/savingsuggestions.html')
+
+@login_required(login_url='login')
+def upcoming_payments(request):
+	return render(request, 'DashboardTemplates/upcomingpayments.html')
