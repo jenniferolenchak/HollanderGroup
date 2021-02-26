@@ -6,13 +6,132 @@ Populate each section with information as it applies to your project. If a secti
 
 Our context diagram gives an overall big-picture view of our project. We want the user to be able to interact with the budgeting system to track their expenses and savings, and also be reminded of these things in a timely and effective manner. This is what we wanted to achieve with user story 2, 4, and 10.
 
+Our budget system is essentially what provides
+the main function of our web app. It will contain
+everything that a user may want to use ourapp for,
+which will all be accessible through our dashboard
+
+The email system is responsible
+for the essential communication
+from the app to the user when the user
+is not physically present on the web app.
+It's a key to our apps functionality,
+because in order for us to deliver an 
+experience worth while, we need to 
+make sure that our users are actually
+given relevant information real time.
+
 ![Container Diagram](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/Container%20Diagram.png)
 
 Our Container Diagram shows an overall view of the kind of systems and servers our project will be working with. In order to satisfy the needs of user story 1, 2, and 5, we had to make sure we had an email system capable of sending emails at the right time, as well as a database that can store information properly and for usage of the application
 
+Using Django, we intend
+to code the functionality and 
+features of our app, such as the
+budgeting, saving, and income 
+implementation. It will contain the 
+actual features of the app that we 
+want to deliver.
+
+The email system is responsible
+for the essential communication
+from the app to the user when the user
+is not physically present on the web app.
+It's a key to our apps functionality,
+because in order for us to deliver an 
+experience worth while, we need to 
+make sure that our users are actually
+given relevant information real time.
+
+For our database, we ended up going
+with a PostgreSQL database, due to its
+easy to use interface, as well as it being 
+very easy to implement with heroku. It 
+will be used to keep track of important 
+user information, and be open to other parts
+of the app so that we can use the data to
+deliver functionality of our features that 
+require it. 
+
+This container is what handles the bulk of 
+the information side of our web app.
+Communication between the web app and
+the database is essential for delivering both
+the correct and relevant information to our 
+users. When a user enters information into
+the web app, it will be stored into our database,
+and the database will securely store this 
+information so that we can keep track of it
+and use it for other functionalities of the app.
+
 ![Component Diagram](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/documents/Component%20Diagram.png)
 
 Our component diagram provides a more in depth look at our web app and the things it will communicate with to develop features. For user stories involving account information and settings, such as 1 and 4, we are using features that Django has, such as the sign and login features, which will communicate with our database to provide a login system that allows users to change their passwords and safely log in when needed. Our sav esuggestion and budget component will work together with our email component to provide some of the key functionalities of the app, such as letting people know what they can save in, and what kind of expenses they have, satisfying user stories 4, 8, 9 and 10.
+
+The sign in feature
+will be behind 
+the log in page,
+allowing users 
+to enter their account 
+details and log in
+
+The forgot password feature
+will allow users to reset their 
+passwords using djangos functionality
+
+Our budget component featured in our
+dashboard will allow the user a big-picture
+view of their spending over as given period
+of time
+
+
+
+The security component will ensure that
+sensitive user data is kept safe using 
+Django's features. 
+
+The email component will work
+with the email system to ensure the 
+right information is being sent to it,
+and eventually, the user.
+
+Our saving suggestion is a central
+component to the functionality of
+our app. Using existing user data,
+we take into account what the user is spending
+and other information that they have
+entered to deliver relevant saving
+opportunities that the user can start
+implementing right away without 
+changing anything about the way they 
+spend their money.
+
+Our admin feature container
+provides a look into the behind-the-scenes
+aspect of the app. The information a user enters
+will be both very personal and handled privately,
+while still being used in a secure way to deliver
+full functionality of our web app
+
+For our database, we ended up going
+with a PostgreSQL database, due to its
+easy to use interface, as well as it being 
+very easy to implement with heroku. It 
+will be used to keep track of important 
+user information, and be open to other parts
+of the app so that we can use the data to
+deliver functionality of our features that 
+require it. 
+
+The email system is responsible
+for the essential communication
+from the app to the user when the user
+is not physically present on the web app.
+It's a key to our apps functionality,
+because in order for us to deliver an 
+experience worth while, we need to 
+make sure that our users are actually
+given relevant information real time.
 
 # Code Design
 
