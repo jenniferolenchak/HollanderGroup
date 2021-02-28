@@ -1,7 +1,7 @@
 
 # User Registration Test
 <pre>
-## Steps to Reproduce                                           ## Expected Behavior                               
+Steps to Reproduce                                              Expected Behavior                               
 1. Open browser and enter URL for the homepage screen           The home page should be displayed                      
 2. Click on Sign In button                                      The log in page should be displayed
 3. Click on the Sign up here link                               The register page should be displayed
