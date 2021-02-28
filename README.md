@@ -99,8 +99,8 @@ In this section, each group member needs to provide a brief description of what 
 
 In this section, each group member needs to provide a brief description of what they worked on during the sprint. Keep this short and to the point. Your trello board and commit history will provide the details
 
-* Jennifer Olenchak - 
-* Robin Perlman - 
-* Amen Naeem - 
-* Allen Pereira - 
-* Charles McCampbell-Hill - 
+* Jennifer Olenchak - Created Velocity Chart, Updated Front-End of Website, Created Demonstration.
+* Robin Perlman - Created Dashboard with Links to All Other Pages, Updated Logout System, Created Burndown Chart.
+* Amen Naeem - Updated System Design Documents and Added More Information Regarding Diagrams.
+* Allen Pereira - Updated User Settings Page and Added Functionalities.
+* Charles McCampbell-Hill - Updated Login System. Added Security Measures to Login.
