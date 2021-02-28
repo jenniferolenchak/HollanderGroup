@@ -18,7 +18,7 @@ Steps to Reproduce                                              Expected Behavio
 <pre>
 Steps to reproduce                                                                Expected Behavior
 1. Open the browser and enter url for the home page                               The home page should be displayed
-2. click on address bar and add /admin to the end of the address and press enter  The admin page should be displayed
+2. Click on address bar and add /admin to the end of the address and press enter  The admin page should be displayed
 3. Click on the username field and enter text                                     Text entered into username field should be displayed
 4. Click on the Password field and enter text                                     Text entered in password field should be displayed and masked as bullets
 5. Click on the login button or press enter on keyboard                           Authentication and authorization page should be displayed
@@ -27,3 +27,13 @@ Steps to reproduce                                                              
 8. Click LOG OUT on top right hand corner                                         Admin sign in page is displayed.                                         
 </pre>
 
+# Settings Page
+<pre>
+Steps to reproduce                                         Expected Behavior
+1. Open the browser and enter url for the home page        The home page should be displayed       
+2. Click on sign in button                                 The sign in page should be displayed
+3. Click on Username field and enter text                  Text entered in Username field should be displayed
+4. Click on Password field and enter text                  Text entered into password field should be masked as bullets
+5. Click sign in button                                    Dashboard page should be displayed
+6. Click on the settings button                            Settings page should be displayed. Profile picture and correct username should be displayed in right corner
+</pre>
