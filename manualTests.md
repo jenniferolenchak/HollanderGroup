@@ -22,14 +22,8 @@ Steps to reproduce
 3. Click on the username field and enter text                                     Text entered into username field should be displayed
 4. Click on the Password field and enter text                                     Text entered in password field should be displayed and masked as bullets
 5. Click on the login button or press enter on keyboard                           Authentication and authorization page should be displayed
-6. Click on group link and/or users link                                          If Group is clicked, group user page should be displayed. If users is clicked, registered users                                                                                   page should be displayed
-7. Click LOG OUT on top right hand corner                                         Admin sign in page is displayed
+6. Click on group link and/or users link                                          If Group is clicked, group user page should be displayed.
+7. Click on group link and/or users link                                          If users is clicked, registered users page should be displayed.
+8. Click LOG OUT on top right hand corner                                         Admin sign in page is displayed.                                         
 </pre>
-## Behavior
-1. The home page should be displayed
-2. The admin page should be displayed
-3. Text entered into username field should be displayed
-4. Text entered in password field should be displayed and masked as bullets
-5. Authentication and authorization page should be displayed
-6. If Group is clicked, group user page should be displayed. If users is clicked, registered users page should be displayed  
-7. Admin sign in page is displayed
+
