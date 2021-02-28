@@ -1,14 +1,12 @@
 <html lang="en">
 
-<!-- Establish Metadata -->
-
 <head>
   <title>Savester</title>
   <meta charset="UTF-8">
-  <meta name="description" content="Savester App Welcome Page">
+  <meta name="description" content="Settings">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Establish Style of Website Body -->
+
   <style>
     body {
       font-family: Arial, Times New Roman, Helvetica;
@@ -17,11 +15,13 @@
 
     .header {
       padding: 10px;
+      height: 200px;
       text-align: center;
       background: #57D557;
       color: white;
       font-size: 30px;
     }
+
 
     .content {
       padding: 20px;
@@ -29,28 +29,99 @@
 
     .navbar {
       overflow: hidden;
-      background-color: 215221;
-
+      background: #57D557;
+      text-align: center;
     }
 
+
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+
     .navbar button {
-      float: left;
       color: black;
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
       font-size: 17px;
-      background-color: white;
+      background-color: darkgreen;
+      margin-bottom: 5px;
+      display: inline-block;
     }
 
-    .navbar button:hover {
-      background-color: #ddd;
+    button:hover {
+      background-color: limegreen;
       color: black;
     }
+
+
 
     .navbar button.active {
       background-color: lightgray;
       color: black;
+    }
+
+    button {
+      border-radius: 8px;
+    }
+
+    .allbuttons button {
+      display: block;
+      color: white;
+      height: 50px;
+      margin-left: 50%;
+      margin-top: 20px;
+      font-size: 20px;
+      width: 400px;
+      background-color: darkgreen;
+      border: 2px solid black;
+    }
+
+
+    .allbuttons button:hover {
+      background-color: limegreen;
+    }
+
+
+
+    .userPicture {
+      margin-left: 300px;
+      margin-top: 80px;
+      border-radius: 50%;
+      border: 10px solid darkgreen;
+    }
+
+    .profilePictureBtn {
+      margin-top: 50px;
+      margin-left: -280px;
+      color: white;
+      height: 50px;
+      font-size: 20px;
+      width: 300px;
+      background-color: darkgreen;
+      border: 2px solid black;
+    }
+
+    #firstbutton {
+      margin-top: 100px;
+    }
+
+    p {
+      margin-top: 0px;
+      font-size: 18px;
+      color: darkgreen;
+    }
+
+    #userPic {
+      border-radius: 50%;
+      border: 10px solid darkgreen;
+      margin-right: 30px;
+      margin-left: 50px;
+      margin-top: 5px;
+      margin-bottom: 0px;
     }
   </style>
 </head>
@@ -62,36 +133,78 @@
     <img
       src="https://github.com/jenniferolenchak/Savester/blob/main/Graphics/Savester%20Logo%204%20_%20green%20background.JPG?raw=true"
       alt="" width=200 height=200 align="left" padding=90 />
-    <h1>Welcome to Savester</h1>
-    <p>Secure Budgeting, Reimagined</p>
+    <img id='userPic'
+      src="https://st3.depositphotos.com/4111759/13425/v/600/depositphotos_134255532-stock-illustration-profile-placeholder-male-default-profile.jpg"
+      alt="" width=120 height=120 align="right" padding=0 />
+    <h1>Account Settings</h1>
+    <p align='right'>Welcome, {% firstof request.user.username %}</p>
   </div>
 
-  <div class="navbar">
-    <a href="{% url 'dashboard' %}">
-      <button href="#news">Dashboard</button>
-    </a>
-    <a href="{% url 'savingsuggestions' %}">
-      <button href="#news">Saving Suggestions</button>
-    </a>
-    <a href="{% url 'upcomingpayments' %}">
-      <button href="#news">Upcoming Payments</button>
-    </a>
-    <a href="{% url 'settings' %}">
-      <button href="#news">Settings</button>
-    </a>
-    <a href="{% url 'logout' %}">
-      <button href="#news">Logout</button>
-    </a>
-  </div>
 
-  <left>
-    <div class="content">
-      <h2>My Settings</h2>
-      <p>Learn more about your settings</p>
 
+  <div>
+    <div class="navbar">
+      <button><a href="{% url 'dashboard' %}">Dashboard</a></button>
+      <button><a href="{% url 'savingsuggestions' %}">Savings Suggestions</a></button>
+      <button><a href="{% url 'upcomingpayments' %}">Upcoming Payments</a></button>
+      <button><a href="{% url 'settings' %}">Settings</a></button>
+      <button><a href="{% url 'logout' %}">Logout</a></button>
     </div>
-    <left>
+  </div>
 
+
+  <img class='userPicture'
+    src="https://st3.depositphotos.com/4111759/13425/v/600/depositphotos_134255532-stock-illustration-profile-placeholder-male-default-profile.jpg"
+    alt="user profile picture" width=250 height=275 align="left" padding=90 />
+
+
+
+
+
+  <div class='allbuttons'>
+    <button class='username' id='firstButton'>{% firstof request.user.username %}</button>
+    <button class='email'>{% firstof request.user.email %}</button>
+    <button>Change Password</button>
+    <button>Edit Demographic Data</button>
+  </div>
+
+  <button class='profilePictureBtn'>Edit Profile Picture</button>
+
+
+
+  <script>
+    let buttonText = document.querySelector(".username").innerText
+    let userNameBtn = document.querySelector(".username")
+    let emailBtn = document.querySelector(".email")
+
+    document.querySelector(".username").addEventListener("mouseover", mouseOver);
+    document.querySelector(".username").addEventListener("mouseout", mouseOut);
+
+    function mouseOver() {
+      document.querySelector(".username").innerText = "Edit Username"
+    }
+
+    function mouseOut() {
+      document.querySelector(".username").innerText = buttonText
+    }
+
+    let secondButtonText = document.querySelector(".email").innerText
+    document.querySelector(".email").addEventListener("mouseover", onmouseOver);
+    document.querySelector(".email").addEventListener("mouseout", onmouseOut);
+
+
+    function onmouseOver() {
+      document.querySelector(".email").innerText = "Edit Email"
+    }
+
+    function onmouseOut() {
+      document.querySelector(".email").innerText = secondButtonText
+    }
+
+
+  </script>
 </body>
+
+
 
 </html>
