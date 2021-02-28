@@ -1,5 +1,6 @@
 
 # User Registration Test
+<pre>
 ## Steps to Reproduce                                           ## Expected Behavior                               
 1. Open browser and enter URL for the homepage screen           The home page should be displayed                      
 2. Click on Sign In button                                      The log in page should be displayed
@@ -11,6 +12,7 @@
 8. Click on the Password field and enter text                   Text entered into password field should be masked as bullets
 9. Click on the Password confirmation field and enter text      Text entered into password confirmation should be masked as bullets
 10. Click sign up button                                        The login screen should be displayed with a text "Account was created" on top
+</pre>
 
 # Admin Page Test
 ## Steps to reproduce
