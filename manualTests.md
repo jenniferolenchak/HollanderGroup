@@ -15,8 +15,8 @@ Steps to Reproduce                                              Expected Behavio
 </pre>
 
 # Admin Page Test
-Steps to reproduce
 <pre>
+Steps to reproduce                                                                Expected Behavior
 1. Open the browser and enter url for the home page                               The home page should be displayed
 2. click on address bar and add /admin to the end of the address and press enter  The admin page should be displayed
 3. Click on the username field and enter text                                     Text entered into username field should be displayed
