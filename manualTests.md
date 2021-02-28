@@ -36,5 +36,6 @@ Steps to reproduce                                         Expected Behavior
 4. Click on Password field and enter text                  Text entered into password field should be masked as bullets
 5. Click sign in button                                    Dashboard page should be displayed
 6. Click on the settings button                            Settings page should be displayed. Profile picture and correct username should be displayed on top right corner.
-                                                           First button to the right of center profile picture should display a button with the correct username 
+7. Hover cursor over button displaying username            Button should display correct username. Once cursor is hovered over button, text should change to "Edit Username" 
+8. Hover cursor over button displaying email               Button should display correct email. Once cursor is hovered over button, text should change to "Edit email"                                                        
 </pre>
