@@ -83,7 +83,7 @@ In this section, each group member needs to provide a brief description of what 
 
 [Trello Board (Product Backlog, Sprint Backlog, & Requirements)](https://trello.com/b/wx8NhUQK/official-savester-team-board)
 
-[Burndown Chart](https://raw.githubusercontent.com/jenniferolenchak/Savester/main/Velocity%20Charts/BurndownChart3.PNG)
+[Burndown Chart](https://raw.githubusercontent.com/jenniferolenchak/Savester/main/Velocity%20Charts/BurndownChart4.PNG)
 
 [Velocity Chart](https://github.com/jenniferolenchak/Savester/blob/main/Velocity%20Charts/velocity%20chart%203%20_%20jen.JPG?raw=true)
 
