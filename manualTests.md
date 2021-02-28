@@ -15,15 +15,16 @@ Steps to Reproduce                                              Expected Behavio
 </pre>
 
 # Admin Page Test
-## Steps to reproduce
-1. Open the browser and enter url for the home page
-2. click on address bar and add /admin to the end of the address and press enter
-3. Click on the username field and enter text
-4. Click on the Password field and enter text
-5. Click on the login button or press enter on keyboard
-6. Click on group link and/or users link
-7. Click LOG OUT on top right hand corner
-
+Steps to reproduce
+<pre>
+1. Open the browser and enter url for the home page                               The home page should be displayed
+2. click on address bar and add /admin to the end of the address and press enter  The admin page should be displayed
+3. Click on the username field and enter text                                     Text entered into username field should be displayed
+4. Click on the Password field and enter text                                     Text entered in password field should be displayed and masked as bullets
+5. Click on the login button or press enter on keyboard                           Authentication and authorization page should be displayed
+6. Click on group link and/or users link                                          If Group is clicked, group user page should be displayed. If users is clicked, registered users                                                                                   page should be displayed
+7. Click LOG OUT on top right hand corner                                         Admin sign in page is displayed
+</pre>
 ## Behavior
 1. The home page should be displayed
 2. The admin page should be displayed
