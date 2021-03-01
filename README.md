@@ -85,13 +85,13 @@ In this section, each group member needs to provide a brief description of what 
 
 [Burndown Chart](https://raw.githubusercontent.com/jenniferolenchak/Savester/main/Velocity%20Charts/BurndownChart4.PNG)
 
-[Velocity Chart](https://github.com/jenniferolenchak/Savester/blob/main/Velocity%20Charts/velocity%20chart%203%20_%20jen.JPG?raw=true)
+[Velocity Chart](https://github.com/jenniferolenchak/Savester/blob/main/Velocity%20Charts/velocity%20chart%204.JPG?raw=true)
 
 [Design Document](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/architecture.md)
 
 [Source Code](https://github.com/jenniferolenchak/Savester/tree/main/Project_Directory)   
 
-[Manual](https://github.com/jenniferolenchak/Savester/blob/main/manualTests.md) / [Automated](https://github.com/jenniferolenchak/Savester/blob/main/Project_Directory/home/tests/test_urls.py) Tests
+[Manual](https://github.com/jenniferolenchak/Savester/blob/main/manualTests.md) / [Automated Tests](https://github.com/jenniferolenchak/Savester/blob/main/Project_Directory/home/tests/test_urls.py)
 
 [Demonstration](https://www.youtube.com/watch?v=4Ev68EugNpU&feature=youtu.be)
 
