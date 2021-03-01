@@ -20,8 +20,8 @@ class testUrls(SimpleTestCase):
 
 	def test_login_url_resolves(self):
 		url = reverse('login')
-		self.assertEquals(resolve(url).func, login)
+		self.assertEquals(resolve(url).func, login_view)
 
 	def test_logout_url_resolves(self):
 		url = reverse('logout')
-		self.assertEquals(resolve(url).func,logout)
+		self.assertEquals(resolve(url).func,logout_view)
