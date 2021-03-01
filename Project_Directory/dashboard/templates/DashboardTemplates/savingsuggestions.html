@@ -43,6 +43,16 @@
       background-color: white;
     }
 
+	.navbar buttonCurrent {
+      float: left;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      background-color: lightgray;
+    }
+
     .navbar button:hover {
       background-color: #ddd;
       color: black;
@@ -71,7 +81,7 @@
       <button href="#news">Dashboard</button>
     </a>
     <a href="{% url 'savingsuggestions' %}">
-      <button href="#news">Saving Suggestions</button>
+      <buttonCurrent href="#news">Saving Suggestions</buttonCurrent>
     </a>
     <a href="{% url 'upcomingpayments' %}">
       <button href="#news">Upcoming Payments</button>
@@ -86,7 +96,7 @@
 
   <left>
     <div class="content">
-      <h2>My Saving Suggestions</h2>
+
       <p>Learn more about your saving suggestions</p>
 
     </div>

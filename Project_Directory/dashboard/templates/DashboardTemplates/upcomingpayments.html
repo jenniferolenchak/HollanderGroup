@@ -43,6 +43,16 @@
       background-color: white;
     }
 
+	.navbar buttonCurrent {
+      float: left;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      background-color: lightgray;
+    }
+
     .navbar button:hover {
       background-color: #ddd;
       color: black;
@@ -52,7 +62,32 @@
       background-color: lightgray;
       color: black;
     }
-  </style>
+
+	button {
+      color: black;
+      text-align: center;
+      padding: 5px 10px;
+      text-decoration: none;
+      font-size: 14px;
+      background-color: lightgreen;
+    }
+
+	td, th {
+ 	border: 2px solid #dddddd;
+ 	text-align: left;
+  	padding: 8px;
+	}
+
+	tr:nth-child(odd)
+	{
+	  background-color: lightgray;
+	}
+
+	tr:nth-child(even)
+	{
+	  background-color: #dddddd;
+	}
+</style>
 </head>
 
 <!-- Establish content of website body -->
@@ -74,7 +109,7 @@
       <button href="#news">Saving Suggestions</button>
     </a>
     <a href="{% url 'upcomingpayments' %}">
-      <button href="#news">Upcoming Payments</button>
+		<buttonCurrent href="#news">Upcoming Payments</buttonCurrent>
     </a>
     <a href="{% url 'settings' %}">
       <button href="#news">Settings</button>
@@ -84,14 +119,41 @@
     </a>
   </div>
 
-  <left>
     <div class="content">
-      <h2>Upcoming Payments!</h2>
-      <p>Learn More about your upcoming payments!
-      </p>
 
-    </div>
-    <left>
+	<center>
+		<h3>View Options</h3>
+
+      <a href="{% url 'savingsuggestions' %}">
+      <button>View Payments in Specific Date Range</button>
+    </a>
+
+	or
+
+	<a href="{% url 'savingsuggestions' %}">
+		<button>View Specific Number of Payments</button>
+    </a>
+
+	<p><br></p>
+
+	<table>
+  	<tr>
+    	<th>Date</th>
+    	<th>Amount</th>
+    	<th>Payment or Income</th>
+    	<th>Description</th>
+ 	</tr>
+	<tr>
+    	<td>mm/dd/yyyy</td>
+    	<td>$xxxx.xx</td>
+    	<td><font color=green>Payment</font></td>
+    	<td>This is a sample of what the chart will look like</td>
+ 	</tr>
+	</table>
+	</center>
+
+
+   	</div>
 
 </body>
 
