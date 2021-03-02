@@ -104,3 +104,30 @@ In this section, each group member needs to provide a brief description of what 
 * Amen Naeem - Updated System Design Documents and Added More Information Regarding Diagrams.
 * Allen Pereira - Updated User Settings Page and Added Functionalities.
 * Charles McCampbell-Hill - Updated Login System. Added Security Measures to Login.
+
+## Sprint 5
+
+[Trello Board (Product Backlog, Sprint Backlog, & Requirements)](https://trello.com/b/wx8NhUQK/official-savester-team-board)
+
+[Burndown Chart](https://raw.githubusercontent.com/jenniferolenchak/Savester/main/Velocity%20Charts/BurndownChart4.PNG)
+
+[Velocity Chart](https://github.com/jenniferolenchak/Savester/blob/main/Velocity%20Charts/velocity%20chart%204.JPG?raw=true)
+
+[Design Document](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/architecture.md)
+
+[Source Code](https://github.com/jenniferolenchak/Savester/tree/main/Project_Directory)   
+
+[Manual Tests](https://github.com/jenniferolenchak/Savester/blob/main/manualTests.md) & [Automated Tests](https://github.com/jenniferolenchak/Savester/blob/main/Project_Directory/home/tests/)
+
+[Demonstration](https://youtu.be/xGaE1Rpo2F0)
+
+### Team Allocation
+
+In this section, each group member needs to provide a brief description of what they worked on during the sprint. Keep this short and to the point. Your trello board and commit history will provide the details
+
+* Jennifer Olenchak - 
+* Robin Perlman -
+* Amen Naeem -
+* Allen Pereira - 
+* Charles McCampbell-Hill - 
+
