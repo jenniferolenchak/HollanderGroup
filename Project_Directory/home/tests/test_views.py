@@ -9,10 +9,8 @@ from django.contrib.auth.models import User
 
 
 class testViews(TestCase):
-
 	def setUp(self):
 		self.client = Client()
-
 
 	def test_home_view(self):
 		url = reverse('home')
@@ -38,7 +36,6 @@ class testViews(TestCase):
 	def test_logout_view(self):
 		url = reverse('logout')
 		response = self.client.get(url)
-		# print(response['location'])
 
 		self.assertEqual(response.status_code, 302)
 	

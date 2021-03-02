@@ -17,7 +17,6 @@ class testUrls(SimpleTestCase):
 		url = reverse('settings')
 		self.assertEquals(resolve(url).func, settings)
 
-
 	def test_saving_suggestions_url_resolves(self):
 		url = reverse('savingsuggestions')
 		self.assertEquals(resolve(url).func, saving_suggestions)
