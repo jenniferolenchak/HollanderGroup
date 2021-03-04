@@ -100,6 +100,10 @@
       <p>Learn More about your savings!
       </p>
 
+      <h1> Total Budget is ${% firstof request.user.budget.balance %} </h1>
+      <h1> Your Savings Goal is ${% firstof request.user.budget.savings_goal %} </h1>
+      <h1> Last Updated: {% firstof request.user.budget.last_updated %} </h1>
+
     </div>
     <left>
 
