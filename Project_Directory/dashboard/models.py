@@ -28,7 +28,7 @@ class BudgetList(models.Model):
 	balance = models.IntegerField()
 	savings_goal = models.IntegerField()
 	last_updated = models.DateField()
-
+	
 
 class CashFlow(models.Model):
 	# django doesn't naturally have a one to many field, so instead use the ForeignKey which 
