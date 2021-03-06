@@ -48,3 +48,7 @@ def saving_suggestions(request):
 @login_required(login_url='login')
 def upcoming_payments(request):
 	return render(request, 'DashboardTemplates/upcomingpayments.html')
+
+@login_required(login_url='login')
+def edit_my_data(request):
+	return render(request, 'DashboardTemplates/editmydata.html')
