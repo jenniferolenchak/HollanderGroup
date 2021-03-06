@@ -11,6 +11,7 @@ from datetime import datetime
 def dashboard(request):
 	if request.method == 'POST':
 		budgetInput = request.POST.get('budgetInput')
+		savingsGoalInput = request.POST.get('savingsGoalInput')
 
 		# Allow us to save our updated User Budget
 		request.user.budget, created = BudgetList.objects.get_or_create(user = request.user)
@@ -21,10 +22,14 @@ def dashboard(request):
 			request.user.budget.savings_goal = 0
 			request.user.budget.last_updated = datetime.now()
 			
-		else:
+		# Store new input data
+		if budgetInput != "":
 			request.user.budget.balance = budgetInput
-			request.user.budget.last_updated = datetime.now()
-			
+		if savingsGoalInput != "":
+			request.user.budget.savings_goal = savingsGoalInput
+
+		request.user.budget.last_updated = datetime.now()
+		
 		request.user.budget.save()
 
 
