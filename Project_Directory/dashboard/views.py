@@ -2,6 +2,8 @@ from django.shortcuts import render, HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.db import models
 from .models import *
+from datetime import datetime
+
 
 # Create your views here.
 
@@ -9,8 +11,20 @@ from .models import *
 def dashboard(request):
 	if request.method == 'POST':
 		budgetInput = request.POST.get('budgetInput')
-		
-		request.user.budget.balance = budgetInput
+
+		# Allow us to save our updated User Budget
+		request.user.budget, created = BudgetList.objects.get_or_create(user = request.user)
+
+		# If user doesn't already have a BudgetList, we initialize it
+		if created:
+			request.user.budget.balance = 0
+			request.user.budget.savings_goal = 0
+			request.user.budget.last_updated = datetime.now()
+			
+		else:
+			request.user.budget.balance = budgetInput
+			request.user.budget.last_updated = datetime.now()
+			
 		request.user.budget.save()
 
 

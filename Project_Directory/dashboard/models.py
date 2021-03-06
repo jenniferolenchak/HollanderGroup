@@ -25,9 +25,10 @@ class Settings(models.Model):
 class BudgetList(models.Model):
 	user = models.OneToOneField(User, related_name='budget', on_delete=models.CASCADE)
 
-	balance = models.IntegerField()
-	savings_goal = models.IntegerField()
-	last_updated = models.DateField()
+	# Set (null = True) so that fields are allowed to be blank
+	balance = models.IntegerField(null = True)
+	savings_goal = models.IntegerField(null = True)
+	last_updated = models.DateField(auto_now = True, null = True)
 	
 
 class CashFlow(models.Model):
