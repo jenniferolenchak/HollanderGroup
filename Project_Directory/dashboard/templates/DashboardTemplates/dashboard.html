@@ -100,8 +100,29 @@
       <p>Learn More about your savings!
       </p>
 
+      <h1> Total Budget is ${% firstof request.user.budget.balance %} </h1>
+      <h1> Your Savings Goal is ${% firstof request.user.budget.savings_goal %} </h1>
+      <h1> Last Updated: {% firstof request.user.budget.last_updated %} </h1>
     </div>
     <left>
+
+  <right>
+    <div class="container">
+      <form action = "" method = "POST">
+
+        {% csrf_token %}
+        {{form}}
+        <label for="budgetInput"> Change your Budget </label>
+        <input id="budgetInput" name="budgetInput"> </input>
+
+        <label for="savingsGoalInput"> Change your Savings Goal </label>
+        <input id="savingsGoalInput" name="savingsGoalInput"> </input>
+
+        <button type="submit" class="btn"> Change Budget and/or Savings Goal </button>
+
+      </form>
+    </div>
+  </right>
 
 </body>
 
