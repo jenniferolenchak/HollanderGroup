@@ -24,3 +24,7 @@ class testUrls(SimpleTestCase):
 	def test_upcoming_payments_url_resolves(self):
 		url = reverse('upcomingpayments')
 		self.assertEquals(resolve(url).func, upcoming_payments)
+
+	def test_edit_my_data_url_resolves(self):
+		url = reverse('editmydata')
+		self.assertEquals(resolve(url).func, edit_my_data)

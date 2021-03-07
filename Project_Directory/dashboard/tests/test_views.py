@@ -40,7 +40,13 @@ class testViews(TestCase):
 
 		self.assertEqual(response.status_code, 200)
 		self.assertTemplateUsed(response, 'DashboardTemplates/upcomingpayments.html')
-	
+
+	def test_edit_my_daya_view(self):
+		url = reverse('editmydata')
+		response = self.client.get(url)
+
+		self.assertEqual(response.status_code, 200)
+		self.assertTemplateUsed(response, 'DashboardTemplates/editmydata.html')	
 
 	# The following tests require that the client be logged out
 	def test_dashboard_redirects_anonymous_users_to_login_page(self):
