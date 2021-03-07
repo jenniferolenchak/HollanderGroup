@@ -52,10 +52,11 @@
       display: inline-block;
     }
 
-    button:hover {
+    .navbar button:hover {
       background-color: limegreen;
-      color: black;
     }
+
+
 
 
 
@@ -81,9 +82,7 @@
     }
 
 
-    .allbuttons button:hover {
-      background-color: limegreen;
-    }
+
 
 
 
@@ -105,8 +104,16 @@
       border: 2px solid black;
     }
 
+    .profilePictureBtn:hover {
+      background-color: limegreen;
+    }
+
     #firstbutton {
       margin-top: 100px;
+    }
+
+    #editButton:hover {
+      background-color: limegreen;
     }
 
     p {
@@ -162,47 +169,13 @@
 
 
   <div class='allbuttons'>
-    <button class='username' id='firstButton'>{% firstof request.user.username %}</button>
-    <button class='email'>{% firstof request.user.email %}</button>
-    <button>Change Password</button>
-    <button>Edit Demographic Data</button>
+    <button class='username' id='firstButton'> Username : {% firstof request.user.username %}</button>
+    <button class='email'> Email : {% firstof request.user.email %}</button>
+    <button>Name : {% firstof request.user.first_name %} {% firstof request.user.last_name %} </button>
+    <button id='editButton'><a href="{% url 'edit_accountinfo' %}">Edit Account Information</a></button>
   </div>
 
   <button class='profilePictureBtn'>Edit Profile Picture</button>
-
-
-
-  <script>
-    let buttonText = document.querySelector(".username").innerText
-
-    document.querySelector(".username").addEventListener("mouseover", mouseOver);
-    document.querySelector(".username").addEventListener("mouseout", mouseOut);
-
-    function mouseOver() {
-      document.querySelector(".username").innerText = "Edit Username"
-    }
-
-    function mouseOut() {
-      document.querySelector(".username").innerText = buttonText
-    }
-
-    let secondButtonText = document.querySelector(".email").innerText
-    document.querySelector(".email").addEventListener("mouseover", onmouseOver);
-    document.querySelector(".email").addEventListener("mouseout", onmouseOut);
-
-
-    function onmouseOver() {
-      document.querySelector(".email").innerText = "Edit Email"
-    }
-
-    function onmouseOut() {
-      document.querySelector(".email").innerText = secondButtonText
-    }
-
-
-  </script>
 </body>
-
-
 
 </html>
