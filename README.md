@@ -127,7 +127,7 @@ In this section, each group member needs to provide a brief description of what 
 
 * Jennifer Olenchak - Created Demonstration. Created Velocity Chart.
 * Robin Perlman - Updated Automated Tests for Project Views. Created Models for Storing Budget, Payments, or Income. Created Edit My Data Page and Updated Dashboard.
-* Amen Naeem - Updated Manual Tests.
+* Amen Naeem - Add manual tests, Updated Manual Tests and create manualtest markdown file in correct format.
 * Allen Pereira - Updated HTML and JavaScript for Web Pages.
 * Charles McCampbell-Hill - Updated Models and Upcoming Payments Code.
 
