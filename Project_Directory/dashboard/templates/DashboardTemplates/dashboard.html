@@ -128,11 +128,25 @@
 
     <center>
 	 <h4 style="background-color:lightgray;"> Need to change your budget or goal?
-     <a href="{% url 'editmydata' %}">
-      <button href="#news" style="background-color:white">Click Here</button>
-    </a>
     </h4>
     <center>
-</body>
 
-</html>
+      <right>
+        <div class="container">
+          <form action="" method="POST">
+
+            {% csrf_token %}
+            {{form}}
+            <label for="budgetInput"> Change your Budget </label>
+            <input id="budgetInput" name="budgetInput"> </input>
+
+            <label for="savingsGoalInput"> Change your Savings Goal </label>
+            <input id="savingsGoalInput" name="savingsGoalInput"> </input>
+
+            <button type="submit" class="btn"> Change Budget and/or Savings Goal </button>
+
+          </form>
+        </div>
+      </right>
+
+</body>
