@@ -62,6 +62,20 @@
       font-size: 17px;
       background-color: lightgray;
     }
+
+    #highlightText{
+    	color: gray;
+        font-size: 30px;
+
+    }
+
+    .column {
+		float: left;
+		width: 49.5%;
+        background-color: lightgreen;
+        text-align: center;
+        border: 1px solid black;
+	}
   </style>
 </head>
 
@@ -100,33 +114,25 @@
   <left>
     <div class="content">
       <h2>Welcome {% firstof request.user.username %}!</h2>
-      <p>Learn More about your savings!
-      </p>
 
-      <h1> Total Budget is ${{ request.user.budget.balance|floatformat:2}} </h1>
-      <h1> Your Savings Goal is ${{ request.user.budget.savings_goal|floatformat:2}} </h1>
-      <h1> Last Updated: {% firstof request.user.budget.last_updated %} </h1>
-    </div>
+	<div class="row">
+	<div class="column">
+		<h2>Your Budget This Week:</h2>
+		<p id="highlightText">${{ request.user.budget.balance|floatformat:2}}</p>
+	</div>
+	<div class="column">
+		<h2>Your Savings Goal:</h2>
+		<p id="highlightText">${{ request.user.budget.savings_goal|floatformat:2}}</p>
+	</div>
     <left>
 
-      <right>
-        <div class="container">
-          <form action="" method="POST">
-
-            {% csrf_token %}
-            {{form}}
-            <label for="budgetInput"> Change your Budget </label>
-            <input id="budgetInput" name="budgetInput"> </input>
-
-            <label for="savingsGoalInput"> Change your Savings Goal </label>
-            <input id="savingsGoalInput" name="savingsGoalInput"> </input>
-
-            <button type="submit" class="btn"> Change Budget and/or Savings Goal </button>
-
-          </form>
-        </div>
-      </right>
-
+    <center>
+	 <h4 style="background-color:lightgray;"> Need to change your budget or goal?
+     <a href="{% url 'editmydata' %}">
+      <button href="#news" style="background-color:white">Click Here</button>
+    </a>
+    </h4>
+    <center>
 </body>
 
 </html>
