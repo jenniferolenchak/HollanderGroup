@@ -78,10 +78,10 @@
 
   <div class="navbar">
     <a href="{% url 'dashboard' %}">
-      <buttonCurrent href="#news">Dashboard</buttonCurrent>
+      <button href="#news">Dashboard</button>
     </a>
     <a href="{% url 'editmydata' %}">
-      <button href="#news">Edit My Data</button>
+      <buttonCurrent href="#news">Edit My Data</buttonCurrent>
     </a>
     <a href="{% url 'savingsuggestions' %}">
       <button href="#news">Saving Suggestions</button>
@@ -99,13 +99,9 @@
 
   <left>
     <div class="content">
-      <h2>Welcome {% firstof request.user.username %}!</h2>
-      <p>Learn More about your savings!
-      </p>
-
-      <h1> Total Budget is ${{ request.user.budget.balance|floatformat:2}} </h1>
-      <h1> Your Savings Goal is ${{ request.user.budget.savings_goal|floatformat:2}} </h1>
-      <h1> Last Updated: {% firstof request.user.budget.last_updated %} </h1>
+      <h2> Current Budget: ${{ request.user.budget.balance|floatformat:2}} </h2>
+      <h2> Current Savings Goal: ${{ request.user.budget.savings_goal|floatformat:2}} </h2>
+      <h4> [Last Updated: {% firstof request.user.budget.last_updated %}] </h4>
     </div>
     <left>
 
