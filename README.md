@@ -117,7 +117,7 @@ In this section, each group member needs to provide a brief description of what 
 
 [Source Code](https://github.com/jenniferolenchak/Savester/tree/main/Project_Directory)   
 
-[Manual Tests](https://github.com/jenniferolenchak/Savester/blob/main/manualTests.md) & [Automated Tests](https://github.com/jenniferolenchak/Savester/blob/main/Project_Directory/home/tests/)
+[Manual Tests](https://github.com/jenniferolenchak/Savester/blob/main/manualTests.md) & [Automated Tests Page One](https://github.com/jenniferolenchak/Savester/blob/main/Project_Directory/home/tests/) & [Automated Tests Page Two](https://github.com/jenniferolenchak/Savester/tree/main/Project_Directory/dashboard/tests/)
 
 [Demonstration](https://youtu.be/xGaE1Rpo2F0)
 
