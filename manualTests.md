@@ -3,7 +3,7 @@
 | Steps  | Expected Behavior |
 | ------------- | ------------- |
 | Open browser and enter URL for the homepage screen   |  The home page should be displayed  |
-| Content Cell  | Content Cell  |
+| Click on Sign In button  | The log in page should be displayed  |
 
 
 # User Registration Test
