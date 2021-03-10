@@ -13,9 +13,6 @@
 |Click on the Password confirmation field and enter text | Text entered into password confirmation should be masked as bullets |
 | Click sign up button | The login screen should be displayed with a text "Account was created" on top |
 
-# Admin Page
-
-
 # Admin Page Test
 | Steps  | Expected Behavior |
 | ------------- | ------------- |
@@ -30,14 +27,14 @@
 </pre>
 
 # Settings Page
-<pre>
-Steps to reproduce                                         Expected Behavior
-1. Open the browser and enter url for the home page        The home page should be displayed       
-2. Click on sign in button                                 The sign in page should be displayed
-3. Click on Username field and enter text                  Text entered in Username field should be displayed
-4. Click on Password field and enter text                  Text entered into password field should be masked as bullets
-5. Click sign in button                                    Dashboard page should be displayed
-6. Click on the settings button                            Settings page should be displayed. Profile picture and correct username should be displayed on top right corner.
-7. Hover cursor over button displaying username            Button should display correct username. Once cursor is hovered over button, text should change to "Edit Username" 
-8. Hover cursor over button displaying email               Button should display correct email. Once cursor is hovered over button, text should change to "Edit email"                                                        
-</pre>
+| Steps  | Expected Behavior |
+| ------------- | ------------- |
+| Open the browser and enter url for the home page | The home page should be displayed |
+| Click on sign in button | The sign in page should be displayed |
+| Click on Username field and enter text | Text entered in Username field should be displayed |
+| Click on Password field and enter text | Text entered into password field should be masked as bullets |
+| Click sign in button | Dashboard page should be displayed |
+| Click on the settings button | Settings page should be displayed. Profile picture and correct username should be displayed on top right corner. |
+|  Hover cursor over button displaying username | Button should display correct username. Once cursor is hovered over button, text should change to "Edit Username" |
+| Hover cursor over button displaying email | Button should display correct email. Once cursor is hovered over button, text should change to "Edit email"  |                                                      
+
