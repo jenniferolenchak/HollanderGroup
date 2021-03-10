@@ -1,4 +1,11 @@
 
+
+| Steps  | Expected Behavior |
+| ------------- | ------------- |
+| Open browser and enter URL for the homepage screen   |  The home page should be displayed  |
+| Content Cell  | Content Cell  |
+
+
 # User Registration Test
 <pre>
 Steps to Reproduce                                              Expected Behavior                               
