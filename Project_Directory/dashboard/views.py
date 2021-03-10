@@ -69,10 +69,12 @@ def saving_suggestions(request):
 
 @login_required(login_url='login')
 def upcoming_payments(request):
-	flows = CashFlow.objects.all()
+	user = request.user
+	flows = CashFlow.objects.filter(user=user)
 	context = {'flows':flows}
 	print(flows)
 	return render(request, 'DashboardTemplates/upcomingpayments.html', context=context)
+
 
 @login_required(login_url='login')
 def edit_my_data(request):
