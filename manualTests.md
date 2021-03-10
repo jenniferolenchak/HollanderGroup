@@ -26,7 +26,7 @@
 | Click LOG OUT on top right hand corner | Admin sign in page is displayed. |                                          
 </pre>
 
-# Settings Page
+# Settings Page Test
 | Steps  | Expected Behavior |
 | ------------- | ------------- |
 | Open the browser and enter url for the home page | The home page should be displayed |
@@ -36,5 +36,29 @@
 | Click sign in button | Dashboard page should be displayed |
 | Click on the settings button | Settings page should be displayed. Profile picture and correct username should be displayed on top right corner. |
 |  Hover cursor over button displaying username | Button should display correct username. Once cursor is hovered over button, text should change to "Edit Username" |
-| Hover cursor over button displaying email | Button should display correct email. Once cursor is hovered over button, text should change to "Edit email"  |                                                      
+| Hover cursor over button displaying email | Button should display correct email. Once cursor is hovered over button, text should change to "Edit email"  |       
+
+# Display Recurring Payments Page Test
+| Steps  | Expected Behavior |
+| ------------- | ------------- |
+| Open the browser and enter url for the home page | The home page should be displayed |
+| Click on sign in button | The sign in page should be displayed |
+| Click on Username field and enter text | Text entered in Username field should be displayed |
+| Click on Password field and enter text | Text entered into password field should be masked as bullets |
+| Click sign in button | Dashboard page should be displayed |
+| Click on upcoming payments button | Upcoming payments page should be displayed. Profile picture and correct username should be displayed on top right corner. Payments display name, price, and date|
+
+# Add Recurring Payments Test
+| Steps  | Expected Behavior |
+| ------------- | ------------- |
+| Open the browser and enter url for the home page | The home page should be displayed |
+| Click on sign in button | The sign in page should be displayed |
+| Click on Username field and enter text | Text entered in Username field should be displayed |
+| Click on Password field and enter text | Text entered into password field should be masked as bullets |
+| Click sign in button | Dashboard page should be displayed |
+| Click on upcoming payments button | Upcoming payments page should be displayed. Profile picture and correct username should be displayed on top right corner. Payments display name, price, and date|
+| Click add payment button | Text entry box should be displayed, allowing user to enter paymemt information |
+| Enter payment information | Payment should be added to upcoming payment list |
+
+
 
