@@ -1,9 +1,17 @@
-
+# User Registration Test
 
 | Steps  | Expected Behavior |
 | ------------- | ------------- |
 | Open browser and enter URL for the homepage screen   |  The home page should be displayed  |
 | Click on Sign In button  | The log in page should be displayed  |
+| Click on the Sign up here link |  The register page should be displayed |
+| Click on the username field and enter text | Text entered into username field should be displayed |
+| Click on the First name field and enter text |Text entered into first name field should be displayed |
+| Click on the Last name field and enter text | Text entered into last name field should be displayed |
+| Click on the Email field and enter text | Text entered into email field should be displayed |
+| Click on the Password field and enter text | Text entered into password field should be masked as bullets |
+|Click on the Password confirmation field and enter text | Text entered into password confirmation should be masked as bullets |
+| Click sign up button | The login screen should be displayed with a text "Account was created" on top |
 
 
 # User Registration Test
