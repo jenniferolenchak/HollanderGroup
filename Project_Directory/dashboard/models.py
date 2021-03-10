@@ -34,15 +34,20 @@ class BudgetList(models.Model):
 class CashFlow(models.Model):
 	# django doesn't naturally have a one to many field, so instead use the ForeignKey which 
 	# represents a Many to One. It points all of our cashflows to our budget
-	budget_list = models.ForeignKey(BudgetList, on_delete=models.CASCADE)
+	user = models.ForeignKey(User,on_delete=models.CASCADE, null=True)
 
-	date = models.DateField()
+	# Name and date of cashflow
+	name = models.CharField(max_length = 26, null = True)
+	date = models.DateField(null = True)
 
 	# Check whether this is an expense or income
-	is_cash_in_flow = models.BooleanField()
-	is_cash_out_flow = models.BooleanField()
+	#is_cash_in_flow = models.BooleanField()
+	#is_cash_out_flow = models.BooleanField()
+
+	payment_choices = [("Payment", "Payment"), ("Income", "Income")]
+	type = models.CharField(max_length = 26, choices = payment_choices, default = 'Payment', null = True)
 
 	# Currently assumes US dollars
-	amount = models.FloatField()
-
-	category = models.CharField(max_length=140)
+	amount = models.FloatField(null = True)
+	description = models.TextField(null = True)
+	#category = models.CharField(max_length=140)

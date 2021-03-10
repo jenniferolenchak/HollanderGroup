@@ -1,7 +1,11 @@
+
+<!------ Include the above in your HEAD tag ---------->
+
+
 <html lang="en">
 
 <!-- Establish Metadata -->
-
+{% load crispy_forms_tags %}
 <head>
   <title>Savester - Upcoming Payments</title>
   <meta charset="UTF-8">
@@ -105,9 +109,6 @@
     <a href="{% url 'dashboard' %}">
       <button href="#news">Dashboard</button>
     </a>
-    <a href="{% url 'editmydata' %}">
-      <button href="#news">Edit My Data</button>
-    </a>
     <a href="{% url 'savingsuggestions' %}">
       <button href="#news">Saving Suggestions</button>
     </a>
@@ -125,42 +126,14 @@
     <div class="content">
 
 	<center>
-		<h3>View Options</h3>
-
-      <a href="{% url 'savingsuggestions' %}">
-      <button>View Payments in Specific Date Range</button>
-    </a>
-
-	or
-
-	<a href="{% url 'savingsuggestions' %}">
-		<button>View Specific Number of Payments</button>
-    </a>
-
-	<p><br></p>
-
-	<table>
-  	<tr>
-      <th>Name</th>
-    	<th>Date</th>
-    	<th>Amount</th>
-    	<th>Payment or Income</th>
-    	<th>Description</th>
- 	</tr>
-   {% for flow in flows %}
-	<tr>
-      <td>{{flow.name}}</td>
-    	<td>{{flow.date}}</td>
-    	<td>${{flow.amount}}</td>
-    	<td><font color=green>{{flow.type}}</font></td>
-    	<td>{{flow.description}}</td>
- 	</tr>
-   {% endfor %}
-	</table>
-  <a href="{% url 'addnewpayment' %}">
-		<button>Add New Payment</button>
-    </a>  
+    <form action="" method="POST" name="addpayment">
+        {% csrf_token %}
+        {{ form.as_p }}
+          <button type="submit" class="btn btn-block btn-success">Add</button>
+    </form>
+		
 	</center>
+
 
    	</div>
 

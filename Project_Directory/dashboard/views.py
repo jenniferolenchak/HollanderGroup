@@ -1,4 +1,4 @@
-from .forms import UserUpdateForm
+from .forms import UserUpdateForm, CashFlowForm
 from django.shortcuts import render, HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
@@ -69,8 +69,30 @@ def saving_suggestions(request):
 
 @login_required(login_url='login')
 def upcoming_payments(request):
-	return render(request, 'DashboardTemplates/upcomingpayments.html')
+	flows = CashFlow.objects.all()
+	context = {'flows':flows}
+	print(flows)
+	return render(request, 'DashboardTemplates/upcomingpayments.html', context=context)
 
 @login_required(login_url='login')
 def edit_my_data(request):
 	return render(request, 'DashboardTemplates/editmydata.html')
+
+@login_required(login_url='login')
+def addnew_cashflow(request):
+	
+	flows = CashFlow.objects.all()
+	print(flows)
+	form = CashFlowForm()
+
+	if request.method == 'POST':
+		form = CashFlowForm(request.POST)
+		if form.is_valid():
+			obj = form.save(commit=False)
+			obj.user = request.user
+			obj.save()
+			
+		return redirect('upcomingpayments')
+
+	context = {'flows':flows, 'form':form}
+	return render(request,'DashboardTemplates/addnewpayment.html', context=context)
