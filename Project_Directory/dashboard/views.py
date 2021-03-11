@@ -7,35 +7,39 @@ from django.db import models
 from .models import *
 from datetime import datetime
 
-
 # Create your views here.
 
 @login_required(login_url="login")
 def dashboard(request):
 	if request.method == 'POST':
-		budgetInput = request.POST.get('budgetInput')
-		savingsGoalInput = request.POST.get('savingsGoalInput')
-
 		# Allow us to save our updated User Budget
 		request.user.budget, created = BudgetList.objects.get_or_create(user = request.user)
 
-		# If user doesn't already have a BudgetList, we initialize it
+		# If user doesn't already have a BudgetList, we declare and initialize one
 		if created:
 			request.user.budget.balance = 0
 			request.user.budget.savings_goal = 0
 			request.user.budget.last_updated = datetime.now()
-			
-		# Store new input data
-		if budgetInput != "":
-			request.user.budget.balance = budgetInput
-		if savingsGoalInput != "":
-			request.user.budget.savings_goal = savingsGoalInput
-
-		request.user.budget.last_updated = datetime.now()
+			request.user.budget.save()
 		
-		request.user.budget.save()
+		if request.POST.get('budgetButton'):
+			budgetInput = request.POST.get('budgetInput')
 
+			# Check if this is a valid float before storing
+			if len(budgetInput) > 0 and  budgetInput.replace('.','',1).isdigit():
+				request.user.budget.balance = budgetInput
+				request.user.budget.last_updated = datetime.now()	
+				request.user.budget.save()
 
+		elif request.POST.get('savingsGoalButton'):
+			savingsGoalInput = request.POST.get('savingsGoalInput')
+
+			# Check if this is a valid float before storing
+			if len(savingsGoalInput) > 0 and savingsGoalInput.replace('.','',1).isdigit():
+				request.user.budget.savings_goal = savingsGoalInput
+				request.user.budget.last_updated = datetime.now()	
+				request.user.budget.save()
+	
 	return render(request, 'DashboardTemplates/dashboard.html')
 
 
@@ -78,6 +82,37 @@ def upcoming_payments(request):
 
 @login_required(login_url='login')
 def edit_my_data(request):
+
+	if request.method == 'POST':
+		# Allow us to save our updated User Budget
+		request.user.budget, created = BudgetList.objects.get_or_create(user = request.user)
+
+		# If user doesn't already have a BudgetList, we declare and initialize one
+		if created:
+			request.user.budget.balance = 0
+			request.user.budget.savings_goal = 0
+			request.user.budget.last_updated = datetime.now()
+			request.user.budget.save()
+		
+		if request.POST.get('budgetButton'):
+			budgetInput = request.POST.get('budgetInput')
+
+			# Check if this is a valid float before storing
+			if len(budgetInput) > 0 and  budgetInput.replace('.','',1).isdigit():
+				request.user.budget.balance = budgetInput
+				request.user.budget.last_updated = datetime.now()	
+				request.user.budget.save()
+				
+		elif request.POST.get('savingsGoalButton'):
+			savingsGoalInput = request.POST.get('savingsGoalInput')
+
+			# Check if this is a valid float before storing
+			if len(savingsGoalInput) > 0 and savingsGoalInput.replace('.','',1).isdigit():
+				request.user.budget.savings_goal = savingsGoalInput
+				request.user.budget.last_updated = datetime.now()	
+				request.user.budget.save()
+
+
 	return render(request, 'DashboardTemplates/editmydata.html')
 
 @login_required(login_url='login')
