@@ -160,6 +160,10 @@
   <a href="{% url 'addnewpayment' %}">
 		<button>Add New Payment</button>
     </a>  
+
+    <h2>Total payments in last 7 days: ${{ payments_last_7_days|floatformat:2 }}</h2>
+    <h2>Total payments in last 30 days: ${{ payments_last_30_days|floatformat:2 }}</h2>
+    <h2>Total payments in last year: ${ { payments_last_365_days|floatformat:2 }}</h2>
 	</center>
 
    	</div>

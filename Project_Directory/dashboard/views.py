@@ -5,7 +5,8 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.db import models
 from .models import *
-from datetime import datetime
+from datetime import datetime, timedelta
+
 
 # Create your views here.
 
@@ -75,8 +76,28 @@ def saving_suggestions(request):
 def upcoming_payments(request):
 	user = request.user
 	flows = CashFlow.objects.filter(user=user)
-	context = {'flows':flows}
-	print(flows)
+
+	def get_payments_total(user, d = 7):
+		last_d_days = datetime.now() - timedelta(days = d)
+		payments = CashFlow.objects.filter(user = user, type = 'Payment', date__gte = last_d_days)
+		
+		total = 0.0
+		for payment in payments:
+			total += payment.amount
+
+		return total
+
+	payments_last_7_days = get_payments_total(user, d = 7)
+	payments_last_30_days = get_payments_total(user, d = 30)
+	payments_last_365_days = get_payments_total(user, d = 365)
+
+	context = {'flows':flows, 
+				'payments_last_7_days' : payments_last_7_days, 
+				'payments_last_30_days' : payments_last_30_days, 
+				'payments_last_365_days' : payments_last_365_days}
+
+
+
 	return render(request, 'DashboardTemplates/upcomingpayments.html', context=context)
 
 
@@ -111,7 +132,6 @@ def edit_my_data(request):
 				request.user.budget.savings_goal = savingsGoalInput
 				request.user.budget.last_updated = datetime.now()	
 				request.user.budget.save()
-
 
 	return render(request, 'DashboardTemplates/editmydata.html')
 
