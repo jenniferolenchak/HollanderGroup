@@ -131,3 +131,31 @@ In this section, each group member needs to provide a brief description of what 
 * Allen Pereira - Updated HTML and JavaScript for Web Pages.
 * Charles McCampbell-Hill - Updated Models and Upcoming Payments Code.
 
+
+## Sprint 6
+
+[Trello Board (Product Backlog, Sprint Backlog, & Requirements)](https://trello.com/b/wx8NhUQK/official-savester-team-board)
+
+[Burndown Chart](https://raw.githubusercontent.com/jenniferolenchak/Savester/main/Velocity%20Charts/BurndownChart5.PNG)
+
+[Velocity Chart](https://github.com/jenniferolenchak/Savester/blob/main/Velocity%20Charts/velocity%20chart%205.JPG?raw=true)
+
+[Design Document](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/architecture.md)
+
+[Source Code](https://github.com/jenniferolenchak/Savester/tree/main/Project_Directory)   
+
+[Manual Tests](https://github.com/jenniferolenchak/Savester/blob/main/manualTests.md) & [Automated Tests Page One](https://github.com/jenniferolenchak/Savester/blob/main/Project_Directory/home/tests/) & [Automated Tests Page Two](https://github.com/jenniferolenchak/Savester/tree/main/Project_Directory/dashboard/tests/)
+
+[Demonstration](https://youtu.be/ovwvrSDkpKE)
+
+### Team Allocation
+
+In this section, each group member needs to provide a brief description of what they worked on during the sprint. Keep this short and to the point. Your trello board and commit history will provide the details
+
+* Jennifer Olenchak - Created Demonstration, Created Velocity Chart, Updated front-end HTML to implement user stories.
+* Robin Perlman - Updated Automated Tests with Selenium. Created Url Automated Tests for Password Reset. Created Code to Display Payment Totals for 7,30,365 Days
+* Amen Naeem - Add manual tests, Updated Manual Tests and create manualtest markdown file in correct format.
+* Allen Pereira - Created Password Reset Code for Login.
+* Charles McCampbell-Hill - Updated Models and Upcoming Payments Code.
+
+
