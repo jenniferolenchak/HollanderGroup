@@ -5,6 +5,8 @@
 from django.test import SimpleTestCase
 from django.urls import reverse, resolve
 from home.views import *
+from django.contrib.auth import views as auth_views
+
 
 class testUrls(SimpleTestCase):
 	
