@@ -88,6 +88,14 @@
 	  background-color: #dddddd;
 	}
 </style>
+
+<script type="text/JavaScript">
+        function showMessage(){
+            var message = document.getElementById("time").value;
+            display_message.innerHTML= message;
+        }
+    </script>
+
 </head>
 
 <!-- Establish content of website body -->
@@ -159,13 +167,24 @@
 	</table>
   <a href="{% url 'addnewpayment' %}">
 		<button>Add New Payment</button>
-    </a>  
+    </a>
 
-    <h2>Total payments in last 7 days: ${{ payments_last_7_days|floatformat:2 }}</h2>
-    <h2>Total payments in last 30 days: ${{ payments_last_30_days|floatformat:2 }}</h2>
-    <h2>Total payments in last year: ${{ payments_last_365_days|floatformat:2 }}</h2>
+<br><br>
+<form>
+<label for="time">View total payments during: </label>
+<select name="time" id="time">
+  <option value="${{ payments_last_7_days|floatformat:2 }}">The Past 7 Days</option>
+  <option value="${{ payments_last_30_days|floatformat:2 }}">The Past 30 Days</option>
+  <option value="${{ payments_last_365_days|floatformat:2 }}">The Past 1 Year</option>
+  <option value="${{ upcoming_payments_7_days|floatformat:2 }}">The Next 7 Days</option>
+</select>
 
-    <h2>Upcoming payments total next 7 days: ${{ upcoming_payments_7_days|floatformat:2 }}</h2>
+<input type="button" onclick="showMessage()" value="View" />
+</form>
+
+
+<p> Payments in selected time: <span id = "display_message"></span> </p>
+
 
 	</center>
 
