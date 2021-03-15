@@ -87,12 +87,18 @@
 	{
 	  background-color: #dddddd;
 	}
+
+    .background {
+      overflow: hidden;
+      background-color: lightgreen;
+
+    }
 </style>
 
 <script type="text/JavaScript">
         function showMessage(){
             var message = document.getElementById("time").value;
-            display_message.innerHTML= message;
+            display_message.innerHTML= "Payments in selected time:" + message;
         }
     </script>
 
@@ -169,8 +175,8 @@
 		<button>Add New Payment</button>
     </a>
 
-<br><br>
-<form>
+<br><br><br>
+<div class="background">
 <label for="time">View total payments during: </label>
 <select name="time" id="time">
   <option value="${{ payments_last_7_days|floatformat:2 }}">The Past 7 Days</option>
@@ -183,7 +189,7 @@
 </form>
 
 
-<p> Payments in selected time: <span id = "display_message"></span> </p>
+<p style="background-color:lightgreen"><span id = "display_message"></span> </p>
 
 
 	</center>
