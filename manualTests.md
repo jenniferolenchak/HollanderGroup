@@ -10,15 +10,3 @@
 | Click on group link and/or users link | If users is clicked, registered users page should be displayed. | 
 | Click LOG OUT on top right hand corner | Admin sign in page is displayed. |                                          
 </pre>
-
-# Settings Page Test
-| Steps  | Expected Behavior |
-| ------------- | ------------- |
-| Open the browser and enter url for the home page | The home page should be displayed |
-| Click on sign in button | The sign in page should be displayed |
-| Click on Username field and enter text | Text entered in Username field should be displayed |
-| Click on Password field and enter text | Text entered into password field should be masked as bullets |
-| Click sign in button | Dashboard page should be displayed |
-| Click on the settings button | Settings page should be displayed. Profile picture and correct username should be displayed on top right corner. |
-|  Hover cursor over button displaying username | Button should display correct username. Once cursor is hovered over button, text should change to "Edit Username" |
-| Hover cursor over button displaying email | Button should display correct email. Once cursor is hovered over button, text should change to "Edit email"  |       
