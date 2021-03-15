@@ -152,7 +152,7 @@ In this section, each group member needs to provide a brief description of what 
 
 In this section, each group member needs to provide a brief description of what they worked on during the sprint. Keep this short and to the point. Your trello board and commit history will provide the details
 
-* Jennifer Olenchak - Created Demonstration, Created Velocity Chart, Updated front-end HTML to implement displaying payment totals.
+* Jennifer Olenchak - Created Demonstration, Created Velocity Chart, Updated front-end HTML to implement displaying payment totals at user-indicated intervals.
 * Robin Perlman - Updated Automated Tests with Selenium. Created Url Automated Tests for Password Reset. Created Code to Display Payment Totals for 7,30,365 Days
 * Amen Naeem - Add manual tests, Updated Manual Tests and create manualtest markdown file in correct format.
 * Allen Pereira - Created Password Reset Code for Login.
