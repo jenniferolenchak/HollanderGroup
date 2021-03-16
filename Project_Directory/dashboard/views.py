@@ -12,17 +12,22 @@ from datetime import datetime, timedelta
 
 @login_required(login_url="login")
 def dashboard(request):
-	if request.method == 'POST':
-		# Allow us to save our updated User Budget
-		request.user.budget, created = BudgetList.objects.get_or_create(user = request.user)
 
-		# If user doesn't already have a BudgetList, we declare and initialize one
-		if created:
-			request.user.budget.balance = 0
-			request.user.budget.savings_goal = 0
-			request.user.budget.last_updated = datetime.now()
-			request.user.budget.save()
-		
+	# Create a settings object for users if possible
+	request.user.settings, created_settings = Settings.objects.get_or_create(user = request.user)
+
+	# Allow us to save our updated User Budget
+	request.user.budget, created = BudgetList.objects.get_or_create(user = request.user)
+
+	# If user doesn't already have a BudgetList, we declare and initialize one
+	if created:
+		request.user.budget.balance = 0
+		request.user.budget.savings_goal = 0
+		request.user.budget.last_updated = datetime.now()
+		request.user.budget.save()
+
+	if request.method == 'POST':
+
 		if request.POST.get('budgetButton'):
 			budgetInput = request.POST.get('budgetInput')
 
@@ -192,7 +197,6 @@ def edit_icon_url(request):
 				icon_form = IconURLForm(request.POST)
 	else:
 		icon_form = IconURLForm(request.POST)
-
 
 	context = {
 		'icon_form': icon_form

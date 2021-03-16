@@ -12,14 +12,14 @@ class Settings(models.Model):
 	user = models.OneToOneField(User, related_name='settings', on_delete=models.CASCADE)
 	
 	# More Secure Phone number fields are possible to implement in the future
-	phone_number = models.CharField(max_length=12, blank=True)	
-	location = models.CharField(max_length=140, blank=True)
-	age = models.IntegerField(blank=True)
-	student_status = models.BooleanField(blank=True)
+	phone_number = models.CharField(max_length=12, blank=True, null=True)	
+	location = models.CharField(max_length=140, blank=True, null=True)
+	age = models.IntegerField(blank=True, null=True)
+	student_status = models.BooleanField(blank=True, null=True)
 
 	# If we have a means of storing static files, this will be a more valid method of storing images
 	# icon = models.ImageField(upload_to='profile_image', blank=True)
-	icon_url = models.URLField(blank=True)
+	icon_url = models.URLField(blank=True, null=True)
 
 	def __str__(self):
 		return f"Profile Settings for {self.user.username}"
