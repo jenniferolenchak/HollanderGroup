@@ -25,26 +25,6 @@ def dashboard(request):
 		request.user.budget.savings_goal = 0
 		request.user.budget.last_updated = datetime.now()
 		request.user.budget.save()
-
-	if request.method == 'POST':
-
-		if request.POST.get('budgetButton'):
-			budgetInput = request.POST.get('budgetInput')
-
-			# Check if this is a valid float before storing
-			if len(budgetInput) > 0 and  budgetInput.replace('.','',1).isdigit():
-				request.user.budget.balance = budgetInput
-				request.user.budget.last_updated = datetime.now()	
-				request.user.budget.save()
-
-		elif request.POST.get('savingsGoalButton'):
-			savingsGoalInput = request.POST.get('savingsGoalInput')
-
-			# Check if this is a valid float before storing
-			if len(savingsGoalInput) > 0 and savingsGoalInput.replace('.','',1).isdigit():
-				request.user.budget.savings_goal = savingsGoalInput
-				request.user.budget.last_updated = datetime.now()	
-				request.user.budget.save()
 	
 	return render(request, 'DashboardTemplates/dashboard.html')
 

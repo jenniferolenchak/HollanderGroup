@@ -127,27 +127,9 @@
     <left>
 
     <center>
-	 <h4 style="background-color:lightgray;"> Need to change your budget or goal?
+	 <h4 style="background-color:lightgray;"> Need to change your budget or goal? Click "Edit My Data"
     </h4>
     <center>
 
-      <right>
-        <div class="container">
-          <form action="" method="POST">
-
-            {% csrf_token %}
-            {{form}}
-            <label for="budgetInput"> Change your Budget </label>
-            <input id="budgetInput" name="budgetInput"> </input>
-            <button type="submit" class="btn", name="budgetButton", value="budgetButton"> Change Budget </button>
-
-
-            <label for="savingsGoalInput"> Change your Savings Goal </label>
-            <input id="savingsGoalInput" name="savingsGoalInput"> </input>
-            <button type="submit" class="btn", name="savingsGoalButton", value="savingsGoalButton"> Change Savings Goal </button>
-
-          </form>
-        </div>
-      </right>
 
 </body>
