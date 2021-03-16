@@ -157,7 +157,6 @@
   </div>
 
 
-
   <div>
     <div class="navbar">
       <button><a href="{% url 'dashboard' %}">Dashboard</a></button>
@@ -173,22 +172,23 @@
       <img class='userPicture'
       src="{{ request.user.settings.icon_url }}"
       alt="user profile picture" width=250 height=275 align="left" padding=90 />
-
   {% else %}
-    <img id='userPic'
+    <img class='userPicture'
       src="https://st3.depositphotos.com/4111759/13425/v/600/depositphotos_134255532-stock-illustration-profile-placeholder-male-default-profile.jpg"
       alt="user profile picture" width=250 height=275 align="left" padding=90 />
   {% endif %}
-
 
   <div class='allbuttons'>
     <button class='username' id='firstButton'> Username : {% firstof request.user.username %}</button>
     <button class='email'> Email : {% firstof request.user.email %}</button>
     <button>Name : {% firstof request.user.first_name %} {% firstof request.user.last_name %} </button>
     <button id='editButton'><a href="{% url 'edit_accountinfo' %}">Edit Account Information</a></button>
+
   </div>
 
   <button class='profilePictureBtn'><a href="{% url 'edit_icon_url' %}">Edit Profile Picture</a></button>
+
+
 </body>
 
 </html>
