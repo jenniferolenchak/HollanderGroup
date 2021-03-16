@@ -11,6 +11,7 @@
 | Click LOG OUT on top right hand corner | Admin sign in page is displayed. |                                          
 </pre>
 # Savester Homepage Test
+
 | Steps  | Expected Behavior |
 | ------------- | ------------- |
 | Open the browser and enter url for the home page | The home page should be displayed, with development team, and what is savester |
