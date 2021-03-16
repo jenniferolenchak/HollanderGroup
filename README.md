@@ -159,3 +159,29 @@ In this section, each group member needs to provide a brief description of what 
 * Charles McCampbell-Hill - Updated Models and Upcoming Payments Code.
 
 
+## Sprint 7
+
+[Trello Board (Product Backlog, Sprint Backlog, & Requirements)](https://trello.com/b/wx8NhUQK/official-savester-team-board)
+
+[Burndown Chart](https://raw.githubusercontent.com/jenniferolenchak/Savester/main/Velocity%20Charts/BurndownChart6.PNG)
+
+[Velocity Chart](https://github.com/jenniferolenchak/Savester/blob/main/Velocity%20Charts/velocity%20chart%206.JPG?raw=true)
+
+[Design Document](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/architecture.md)
+
+[Source Code](https://github.com/jenniferolenchak/Savester/tree/main/Project_Directory)   
+
+[Manual Tests](https://github.com/jenniferolenchak/Savester/blob/main/manualTests.md) & [Automated Tests Page One](https://github.com/jenniferolenchak/Savester/blob/main/Project_Directory/home/tests/) & [Automated Tests Page Two](https://github.com/jenniferolenchak/Savester/tree/main/Project_Directory/dashboard/tests/)
+
+[Demonstration](https://youtu.be/NS6G1y8iFSg)
+
+### Team Allocation
+
+In this section, each group member needs to provide a brief description of what they worked on during the sprint. Keep this short and to the point. Your trello board and commit history will provide the details
+
+* Jennifer Olenchak - 
+* Robin Perlman - Allow Users to Insert Profile Pictures from URL to Image.
+* Amen Naeem - Add manual tests, manual tests that reflect appearence and desired outcome of user stories.
+* Allen Pereira - 
+* Charles McCampbell-Hill - Updated Models and Allow Categories for Payments
+
