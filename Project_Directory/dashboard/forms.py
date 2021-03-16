@@ -16,7 +16,7 @@ class CashFlowForm(ModelForm):
 
 	class Meta:
 		model = CashFlow
-		fields = ['name','date','amount', 'type','description',]
+		fields = ['name','date','amount', 'category', 'type','description',]
 		exclude = ['user',]
 
 

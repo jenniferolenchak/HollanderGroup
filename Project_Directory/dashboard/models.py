@@ -50,6 +50,8 @@ class CashFlow(models.Model):
 	payment_choices = [("Payment", "Payment"), ("Income", "Income")]
 	type = models.CharField(max_length = 26, choices = payment_choices, default = 'Payment', null = True)
 
+	payment_categories = [("Food", "Food"), ("Transportation", "Transportation"), ("Groceries", "Groceries"), ("Health", "Health"), ("Shopping & Entertainment", "Shopping & Entertainemnt"), ("Other", "Other")]
+	category = models.CharField(max_length = 26, choices = payment_categories, default = 'Food', null = True)
 	# Currently assumes US dollars
 	amount = models.FloatField(null = True)
 	description = models.TextField(null = True)
