@@ -17,7 +17,9 @@ class Settings(models.Model):
 	age = models.IntegerField(blank=True)
 	student_status = models.BooleanField(blank=True)
 
-	icon = models.ImageField(upload_to='profile_image', blank=True)
+	# If we have a means of storing static files, this will be a more valid method of storing images
+	# icon = models.ImageField(upload_to='profile_image', blank=True)
+	icon_url = models.URLField(blank=True)
 
 	def __str__(self):
 		return f"Profile Settings for {self.user.username}"

@@ -1,4 +1,4 @@
-from .forms import UserUpdateForm, CashFlowForm
+from .forms import UserUpdateForm, CashFlowForm, IconURLForm
 from django.shortcuts import render, HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
@@ -167,3 +167,34 @@ def addnew_cashflow(request):
 
 	context = {'flows':flows, 'form':form}
 	return render(request,'DashboardTemplates/addnewpayment.html', context=context)
+
+
+@login_required(login_url='login')
+def edit_icon_url(request):
+
+	if request.method == 'POST':
+		icon_form = IconURLForm(request.POST)
+	
+		if icon_form.is_valid():
+
+			url = icon_form.cleaned_data.get("url").lower()
+
+			if icon_form.is_valid_image_url():
+
+				request.user.settings.icon_url = url
+				request.user.settings.save()
+
+				messages.success(request, 'Your Account has been updated!')
+				return redirect('settings')
+
+			else:
+				icon_form = IconURLForm(request.POST)
+	else:
+		icon_form = IconURLForm(request.POST)
+
+
+	context = {
+		'icon_form': icon_form
+	}
+
+	return render(request, 'DashboardTemplates/edit_icon_url.html', context)
