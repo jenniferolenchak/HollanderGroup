@@ -13,7 +13,7 @@
 # Savester Homepage Test
 | Steps  | Expected Behavior |
 | ------------- | ------------- |
-| Open the browser and enter url for the home page | The home page should be displayed, with development team, and what is savester message, and home and sign in buttons on top |
+| Open the browser and enter url for the home page | The home page should be displayed, with development team, and what is savester |
 | Hover over home button | Home button should appear to be grey and pressed in |
 | Hover over Sign in button | Sign in button should turn grey |
 |Hover off sign in button | Sign in button back to white |                                      
