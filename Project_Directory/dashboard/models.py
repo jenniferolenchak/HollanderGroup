@@ -11,12 +11,13 @@ User = get_user_model()
 class Settings(models.Model):
 	user = models.OneToOneField(User, related_name='settings', on_delete=models.CASCADE)
 	
-	email = models.CharField(max_length=140)
 	# More Secure Phone number fields are possible to implement in the future
-	phone_number = models.CharField(max_length=12)
-	location = models.CharField(max_length=140)
-	age = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(120)])
-	student_status = models.BooleanField()
+	phone_number = models.CharField(max_length=12, blank=True)	
+	location = models.CharField(max_length=140, blank=True)
+	age = models.IntegerField(blank=True)
+	student_status = models.BooleanField(blank=True)
+
+	icon = models.ImageField(upload_to='profile_image', blank=True)
 
 	def __str__(self):
 		return f"Profile Settings for {self.user.username}"
