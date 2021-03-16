@@ -188,6 +188,7 @@ def edit_icon_url(request):
 				return redirect('settings')
 
 			else:
+				messages.error(request, 'Invalid File Extension Found')
 				icon_form = IconURLForm(request.POST)
 	else:
 		icon_form = IconURLForm(request.POST)
