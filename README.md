@@ -154,7 +154,7 @@ In this section, each group member needs to provide a brief description of what 
 
 * Jennifer Olenchak - Created Demonstration, Created Velocity Chart, Updated front-end HTML to implement displaying payment totals at user-indicated intervals.
 * Robin Perlman - Updated Automated Tests with Selenium. Created Url Automated Tests for Password Reset. Created Code to Display Payment Totals for 7,30,365 Days
-* Amen Naeem - Add manual tests, Updated Manual Tests and create manualtest markdown file in correct format.
+* Amen Naeem - Add manual tests, manual tests that reflect appearence and desired outcome of user stories.
 * Allen Pereira - Created Password Reset Code for Login.
 * Charles McCampbell-Hill - Updated Models and Upcoming Payments Code.
 
