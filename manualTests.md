@@ -10,3 +10,21 @@
 | Click on group link and/or users link | If users is clicked, registered users page should be displayed. | 
 | Click LOG OUT on top right hand corner | Admin sign in page is displayed. |                                          
 </pre>
+
+# Savester Homepage Test
+| Steps  | Expected Behavior |
+| ------------- | ------------- |
+| Open the browser and enter url for the home page | The home page should be displayed, with development team, and what is savester |
+| Hover over home button | Home button should appear to be grey and pressed in |
+| Hover over Sign in button | Sign in button should turn grey |
+|Hover off sign in button | Sign in button back to white |                                      
+</pre>
+
+# Login page test
+| Steps  | Expected Behavior |
+| ------------- | ------------- |
+| Open the browser and enter url for the home page | The home page should be displayed, with development team, and what is savester |
+| Click login button | Login page should be displayed with username box, password box, accept terms of use, sign up, and forgot password |
+| Hover over terms of service | terms of service button should be underlined |
+| Hover over forgot password | forgot password button should be underlined |
+| Hover over sign up | sign up button should be underlined |
