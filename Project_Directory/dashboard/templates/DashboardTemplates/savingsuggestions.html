@@ -62,6 +62,16 @@
       background-color: lightgray;
       color: black;
     }
+
+    #userPic {
+      border-radius: 50%;
+      border: 10px solid darkgreen;
+      margin-right: 30px;
+      margin-left: 50px;
+      margin-top: 30px;
+      margin-bottom: 0px;
+    }
+
   </style>
 </head>
 
@@ -72,6 +82,18 @@
     <img
       src="https://github.com/jenniferolenchak/Savester/blob/main/Graphics/Savester%20Logo%204%20_%20green%20background.JPG?raw=true"
       alt="" width=200 height=200 align="left" padding=90 />
+
+    {% if request.user.settings.icon_url %}
+      <img id='userPic'
+      src="{{ request.user.settings.icon_url }}"
+      alt="" width=120 height=120 align="right" padding=0 />
+
+    {% else %}
+      <img id='userPic'
+        src="https://st3.depositphotos.com/4111759/13425/v/600/depositphotos_134255532-stock-illustration-profile-placeholder-male-default-profile.jpg"
+        alt="" width=120 height=120 align="right" padding=0 />
+    {% endif %}
+    
     <h1>Welcome to Savester</h1>
     <p>Secure Budgeting, Reimagined</p>
   </div>
