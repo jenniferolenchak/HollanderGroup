@@ -11,4 +11,5 @@ urlpatterns = [
     path('dashboard/addnewpayment/', views.addnew_cashflow, name='addnewpayment'),
     path('dashboard/settings/', views.settings, name='settings'),
     path('dashboard/', views.dashboard, name='dashboard'),
+    path('dashboard/allpayments/', views.all_payments, name='allpayments')
 ]

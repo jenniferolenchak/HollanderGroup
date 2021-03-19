@@ -14,9 +14,10 @@ class UserUpdateForm(forms.ModelForm):
 
 class CashFlowForm(ModelForm):
 
+
 	class Meta:
 		model = CashFlow
-		fields = ['name','date','amount', 'category', 'type','description',]
+		fields = ['name','date','amount', 'category', 'type', 'recurring', 'description',]
 		exclude = ['user',]
 
 

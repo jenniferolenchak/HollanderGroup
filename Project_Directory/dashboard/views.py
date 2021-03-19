@@ -84,20 +84,40 @@ def upcoming_payments(request):
 
 		return total
 
+	def get_upcoming_payments(user, d = 7):
+		upcoming_d_days = datetime.now() + timedelta(days = d)
+		payments = CashFlow.objects.filter(user = user, type = 'Payment', date__gt = datetime.now()).filter(date__lte = upcoming_d_days)
+		
+		return payments
+
 	payments_last_7_days = get_payments_total(user, d = 7)
 	payments_last_30_days = get_payments_total(user, d = 30)
 	payments_last_365_days = get_payments_total(user, d = 365)
 	upcoming_payments_7_days = get_upcoming_payments_total(user, d = 7)
+	upcoming_payments = get_upcoming_payments(user, d = 30)
 
 	context = {'flows':flows, 
 				'payments_last_7_days' : payments_last_7_days, 
 				'payments_last_30_days' : payments_last_30_days, 
 				'payments_last_365_days' : payments_last_365_days,
-				'upcoming_payments_7_days' : upcoming_payments_7_days}
+				'upcoming_payments_7_days' : upcoming_payments_7_days,
+				'upcoming_payments' : upcoming_payments}
 
 
 
 	return render(request, 'DashboardTemplates/upcomingpayments.html', context=context)
+
+@login_required(login_url='login')
+def all_payments(request):
+	user = request.user
+	flows = CashFlow.objects.filter(user=user)
+
+	
+	context = {'flows':flows}
+
+
+
+	return render(request, 'DashboardTemplates/allpayments.html', context=context)
 
 
 @login_required(login_url='login')
@@ -137,23 +157,43 @@ def edit_my_data(request):
 @login_required(login_url='login')
 def addnew_cashflow(request):
 	
-	flows = CashFlow.objects.all()
-	print(flows)
+	# Creates payment object for 12 months
+	def create_recurring(user, form):
+
+		for i in range(0,12):
+			newform = form
+			obj = newform.save(commit=False)
+			obj.user = user
+			obj.date = obj.date + timedelta(days = 30)
+			obj.pk = None
+			obj.save()
+
+
+
+	flows = CashFlow.objects.filter(user=request.user)
 	form = CashFlowForm()
 
 	if request.method == 'POST':
 		form = CashFlowForm(request.POST)
 		if form.is_valid():
-			obj = form.save(commit=False)
-			obj.user = request.user
-			obj.save()
-			
+			recurring = form.cleaned_data['recurring']
+
+			# If the payment is recurring, then create recurring payment objects
+			if recurring == True:
+				create_recurring(request.user, form)
+			else:
+				obj = form.save(commit=False)
+				obj.user = request.user
+				obj.save()
+	
 		return redirect('upcomingpayments')
 
 	context = {'flows':flows, 'form':form}
 	return render(request,'DashboardTemplates/addnewpayment.html', context=context)
 
+	
 
+	
 @login_required(login_url='login')
 def edit_icon_url(request):
 

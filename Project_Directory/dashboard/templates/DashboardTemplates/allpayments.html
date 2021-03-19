@@ -162,20 +162,14 @@
     <div class="content">
 
 	<center>
-		<h3>View Options</h3>
+        <br>
+        <a href="{% url 'upcomingpayments' %}">
+            <button>View Upcoming Payments</button>
+        </a>
 
-      <a href="{% url 'savingsuggestions' %}">
-      <button>View Payments in Specific Date Range</button>
-    </a>
-
-	or
-
-	<a href="{% url 'allpayments' %}">
-		<button>View All Payments</button>
-    </a>
 
 	<p><br></p>
-  <h3>Upcoming Cash Flows</h3>
+  <h3>All Cash Flows</h3>
 	<table>
   	<tr>
       <th>Name</th>
@@ -184,7 +178,7 @@
     	<th>Payment or Income</th>
     	<th>Description</th>
  	</tr>
-   {% for flow in upcoming_payments %}
+   {% for flow in flows %}
 	<tr>
       <td>{{flow.name}}</td>
     	<td>{{flow.date}}</td>
@@ -198,21 +192,8 @@
 		<button>Add New Payment</button>
     </a>
 
-<br><br><br>
-<div class="background">
-<label for="time">View total payments during: </label>
-<select name="time" id="time">
-  <option value="${{ payments_last_7_days|floatformat:2 }}">The Past 7 Days</option>
-  <option value="${{ payments_last_30_days|floatformat:2 }}">The Past 30 Days</option>
-  <option value="${{ payments_last_365_days|floatformat:2 }}">The Past 1 Year</option>
-  <option value="${{ upcoming_payments_7_days|floatformat:2 }}">The Next 7 Days</option>
-</select>
-
-<input type="button" onclick="showMessage()" value="View" />
-</form>
 
 
-<p style="background-color:lightgreen"><span id = "display_message"></span> </p>
 
 
 	</center>
