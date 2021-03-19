@@ -160,6 +160,12 @@ def addnew_cashflow(request):
 	# Creates payment object for 12 months
 	def create_recurring(user, form):
 
+		# Creates first month
+		obj = form.save(commit=False)
+		obj.user = request.user
+		obj.save()
+
+		# Creates following months
 		for i in range(0,12):
 			newform = form
 			obj = newform.save(commit=False)
