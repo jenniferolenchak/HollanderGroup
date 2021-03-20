@@ -208,8 +208,7 @@ def edit_icon_url(request):
 	
 		if icon_form.is_valid():
 
-			url = icon_form.cleaned_data.get("url").lower()
-
+			url = icon_form.cleaned_data.get("url")
 			if icon_form.is_valid_image_url():
 
 				request.user.settings.icon_url = url
