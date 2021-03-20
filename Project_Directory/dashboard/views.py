@@ -1,5 +1,5 @@
 from .forms import UserUpdateForm, CashFlowForm, IconURLForm
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib import messages
@@ -197,7 +197,14 @@ def addnew_cashflow(request):
 	context = {'flows':flows, 'form':form}
 	return render(request,'DashboardTemplates/addnewpayment.html', context=context)
 
-	
+@login_required(login_url='login')
+def remove_cashflow(request, id):
+	flow = get_object_or_404(CashFlow, id=id)
+	if request.method == "POST":
+		flow.delete()
+		return redirect('upcomingpayments')
+	context = {"flow" : flow}
+	return render(request, 'DashboardTemplates/delete.html', context)
 
 	
 @login_required(login_url='login')

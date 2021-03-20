@@ -191,7 +191,11 @@
     	<td>${{flow.amount}}</td>
     	<td><font color=green>{{flow.type}}</font></td>
     	<td>{{flow.description}}</td>
+      <td><a href="{% url 'removecashflow' flow.pk %}">
+        <button>Remove</button>
+        </a></td>
  	</tr>
+   
    {% endfor %}
 	</table>
   <a href="{% url 'addnewpayment' %}">

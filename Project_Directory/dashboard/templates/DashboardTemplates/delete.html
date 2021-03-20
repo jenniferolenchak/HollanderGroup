@@ -162,43 +162,13 @@
     <div class="content">
 
 	<center>
-        <br>
-        <a href="{% url 'upcomingpayments' %}">
-            <button>View Upcoming Payments</button>
-        </a>
-
 
 	<p><br></p>
-  <h3>All Cash Flows</h3>
-	<table>
-  	<tr>
-      <th>Name</th>
-    	<th>Date</th>
-    	<th>Amount</th>
-    	<th>Payment or Income</th>
-    	<th>Description</th>
- 	</tr>
-   {% for flow in flows %}
-	<tr>
-      <td>{{flow.name}}</td>
-    	<td>{{flow.date}}</td>
-    	<td>${{flow.amount}}</td>
-    	<td><font color=green>{{flow.type}}</font></td>
-    	<td>{{flow.description}}</td>
-      <td><a href="{% url 'removecashflow' flow.pk %}">
-        <button>Remove</button>
-        </a></td>
- 	</tr>
-   {% endfor %}
-	</table>
-  <a href="{% url 'addnewpayment' %}">
-		<button>Add New Payment</button>
-    </a>
-
-
-
-
-
+  <h3>Delete This Cash Flow?</h3>
+   <form action='.' method='POST'>{% csrf_token %}
+    <h1>Delete {{ flow.name }} due on {{ flow.date }}</h1>
+    <p><input type = 'submit' value = 'Yes' /><a href="{% url 'upcomingpayments' %}">Cancel</a></p>
+   </form>
 	</center>
 
    	</div>
