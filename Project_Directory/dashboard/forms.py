@@ -4,7 +4,7 @@ from django.forms import ModelForm
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.db import models
-
+import requests
 
 class UserUpdateForm(forms.ModelForm):
     class Meta:
@@ -35,10 +35,22 @@ class IconURLForm(forms.Form):
 	]
 
 	def is_valid_image_url(self, valid_extensions=VALID_IMAGE_EXTENSIONS):
-		temp_url = self.cleaned_data['url'].lower()
+		url_lowered = self.cleaned_data['url'].lower()
 
 		for extension in valid_extensions:
-			if temp_url.endswith(extension):
+			if url_lowered.endswith(extension):
 				return True
 
 		return False
+
+	# Check to see if image exists on website
+	# https://stackoverflow.com/questions/2486145/python-check-if-url-to-jpg-exists
+	def image_exists(self):
+		try:
+			url = self.cleaned_data['url']
+			request = requests.head(url)
+		except:
+			return False
+
+		# Return if the connection was success or not
+		return request.status_code in (200, 301, 302)
