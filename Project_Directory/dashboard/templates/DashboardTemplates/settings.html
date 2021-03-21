@@ -76,9 +76,10 @@
       margin-left: 50%;
       margin-top: 20px;
       font-size: 20px;
-      width: 400px;
+      width: 450px;
       background-color: darkgreen;
       border: 2px solid black;
+
     }
 
 
@@ -94,14 +95,17 @@
     }
 
     .profilePictureBtn {
-      margin-top: 50px;
-      margin-left: -280px;
+      margin-top: 0px;
+      position: relative;
+      margin-left: 0px;
       color: white;
       height: 50px;
       font-size: 20px;
-      width: 300px;
+      width: 250px;
       background-color: darkgreen;
       border: 2px solid black;
+      left: 300px;
+
     }
 
     .profilePictureBtn:hover {
@@ -109,7 +113,7 @@
     }
 
     #firstbutton {
-      margin-top: 100px;
+      margin-top: 50px;
     }
 
     #editButton:hover {
@@ -142,14 +146,12 @@
       alt="" width=200 height=200 align="left" padding=90 />
 
     {% if request.user.settings.icon_url %}
-      <img id='userPic'
-      src="{{ request.user.settings.icon_url }}"
-      alt="" width=120 height=120 align="right" padding=0 />
+    <img id='userPic' src="{{ request.user.settings.icon_url }}" alt="" width=120 height=120 align="right" padding=0 />
 
     {% else %}
-      <img id='userPic'
-        src="https://st3.depositphotos.com/4111759/13425/v/600/depositphotos_134255532-stock-illustration-profile-placeholder-male-default-profile.jpg"
-        alt="" width=120 height=120 align="right" padding=0 />
+    <img id='userPic'
+      src="https://st3.depositphotos.com/4111759/13425/v/600/depositphotos_134255532-stock-illustration-profile-placeholder-male-default-profile.jpg"
+      alt="" width=120 height=120 align="right" padding=0 />
     {% endif %}
 
     <h1>Account Settings</h1>
@@ -169,13 +171,12 @@
   </div>
 
   {% if request.user.settings.icon_url %}
-      <img class='userPicture'
-      src="{{ request.user.settings.icon_url }}"
-      alt="user profile picture" width=250 height=275 align="left" padding=90 />
+  <img class='userPicture' src="{{ request.user.settings.icon_url }}" alt="user profile picture" width=250 height=275
+    align="left" padding=90 />
   {% else %}
-    <img class='userPicture'
-      src="https://st3.depositphotos.com/4111759/13425/v/600/depositphotos_134255532-stock-illustration-profile-placeholder-male-default-profile.jpg"
-      alt="user profile picture" width=250 height=275 align="left" padding=90 />
+  <img class='userPicture'
+    src="https://st3.depositphotos.com/4111759/13425/v/600/depositphotos_134255532-stock-illustration-profile-placeholder-male-default-profile.jpg"
+    alt="user profile picture" width=250 height=275 align="left" padding=90 />
   {% endif %}
 
   <div class='allbuttons'>
@@ -183,6 +184,7 @@
     <button class='email'> Email : {% firstof request.user.email %}</button>
     <button>Name : {% firstof request.user.first_name %} {% firstof request.user.last_name %} </button>
     <button id='editButton'><a href="{% url 'edit_accountinfo' %}">Edit Account Information</a></button>
+    <button id='editButton'><a href="{% url 'personal_info' %}">Edit Personal Information</a></button>
 
   </div>
 

@@ -28,3 +28,7 @@ class testUrls(SimpleTestCase):
 	def test_edit_my_data_url_resolves(self):
 		url = reverse('editmydata')
 		self.assertEquals(resolve(url).func, edit_my_data)
+
+	def test_personal_info(self):
+		url = reverse('personal_info')
+		self.assertEquals(resolve(url).func, personal_info)

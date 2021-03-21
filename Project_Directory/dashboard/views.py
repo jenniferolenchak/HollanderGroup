@@ -1,4 +1,4 @@
-from .forms import UserUpdateForm, CashFlowForm, IconURLForm
+from .forms import UserUpdateForm, CashFlowForm, IconURLForm, PersonalInformationForm
 from django.shortcuts import render, HttpResponse, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
@@ -52,6 +52,24 @@ def edit_accountinfo(request):
 		'u_form': u_form
 	}
 	return render(request, 'DashboardTemplates/edit_accountinfo.html', context)
+
+@login_required(login_url='login')
+def personal_info(request):
+	if (request.method == 'POST'):
+		form = PersonalInformationForm(request.POST, instance=request.user.settings) 
+
+		if form.is_valid():
+			form.save()
+			messages.success(request, 'Your personal information has been created')
+			return redirect('settings')
+	else:
+		form = PersonalInformationForm(instance=request.user.settings)
+	
+	context = {
+		'form': form
+	}
+
+	return render(request, 'DashboardTemplates/personal_info.html', context)
 
 @login_required(login_url='login')
 def saving_suggestions(request):
