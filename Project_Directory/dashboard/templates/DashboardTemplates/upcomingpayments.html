@@ -93,7 +93,7 @@
       background-color: lightgreen;
 
     }
-   
+
   #userPic {
     border-radius: 50%;
     border: 10px solid darkgreen;
@@ -195,7 +195,7 @@
         <button>Remove</button>
         </a></td>
  	</tr>
-   
+
    {% endfor %}
 	</table>
   <a href="{% url 'addnewpayment' %}">
@@ -210,6 +210,8 @@
   <option value="${{ payments_last_30_days|floatformat:2 }}">The Past 30 Days</option>
   <option value="${{ payments_last_365_days|floatformat:2 }}">The Past 1 Year</option>
   <option value="${{ upcoming_payments_7_days|floatformat:2 }}">The Next 7 Days</option>
+  <option value="${{ upcoming_payments_30_days|floatformat:2 }}">The Next 30 Days</option>
+
 </select>
 
 <input type="button" onclick="showMessage()" value="View" />

@@ -25,7 +25,7 @@ def dashboard(request):
 		request.user.budget.savings_goal = 0
 		request.user.budget.last_updated = datetime.now()
 		request.user.budget.save()
-	
+
 	return render(request, 'DashboardTemplates/dashboard.html')
 
 
@@ -38,7 +38,7 @@ def settings(request):
 def edit_accountinfo(request):
 	if request.method == 'POST':
 		u_form = UserUpdateForm(request.POST, instance=request.user)
-	
+
 		if u_form.is_valid():
 			u_form.save()
 			messages.success(request, 'Your Account has been updated!')
@@ -56,7 +56,7 @@ def edit_accountinfo(request):
 @login_required(login_url='login')
 def personal_info(request):
 	if (request.method == 'POST'):
-		form = PersonalInformationForm(request.POST, instance=request.user.settings) 
+		form = PersonalInformationForm(request.POST, instance=request.user.settings)
 
 		if form.is_valid():
 			form.save()
@@ -64,7 +64,7 @@ def personal_info(request):
 			return redirect('settings')
 	else:
 		form = PersonalInformationForm(instance=request.user.settings)
-	
+
 	context = {
 		'form': form
 	}
@@ -80,22 +80,22 @@ def upcoming_payments(request):
 	user = request.user
 	flows = CashFlow.objects.filter(user=user)
 
-	# Return total payments starting from d days ago to today 
+	# Return total payments starting from d days ago to today
 	def get_payments_total(user, d = 7):
 		last_d_days = datetime.now() - timedelta(days = d)
 		payments = CashFlow.objects.filter(user = user, type = 'Payment', date__gte = last_d_days).filter(date__lte = datetime.now())
-		
+
 		total = 0.0
 		for payment in payments:
 			total += payment.amount
 
 		return total
 
-	# Return all upcoming payments starting from tomorrow to d 
+	# Return all upcoming payments starting from tomorrow to d
 	def get_upcoming_payments_total(user, d = 7):
 		upcoming_d_days = datetime.now() + timedelta(days = d)
 		payments = CashFlow.objects.filter(user = user, type = 'Payment', date__gt = datetime.now()).filter(date__lte = upcoming_d_days)
-		
+
 		total = 0.0
 		for payment in payments:
 			total += payment.amount
@@ -105,20 +105,22 @@ def upcoming_payments(request):
 	def get_upcoming_payments(user, d = 7):
 		upcoming_d_days = datetime.now() + timedelta(days = d)
 		payments = CashFlow.objects.filter(user = user, type = 'Payment', date__gt = datetime.now()).filter(date__lte = upcoming_d_days)
-		
+
 		return payments
 
 	payments_last_7_days = get_payments_total(user, d = 7)
 	payments_last_30_days = get_payments_total(user, d = 30)
 	payments_last_365_days = get_payments_total(user, d = 365)
 	upcoming_payments_7_days = get_upcoming_payments_total(user, d = 7)
+	upcoming_payments_30_days = get_upcoming_payments_total(user, d = 30)
 	upcoming_payments = get_upcoming_payments(user, d = 30)
 
-	context = {'flows':flows, 
-				'payments_last_7_days' : payments_last_7_days, 
-				'payments_last_30_days' : payments_last_30_days, 
+	context = {'flows':flows,
+				'payments_last_7_days' : payments_last_7_days,
+				'payments_last_30_days' : payments_last_30_days,
 				'payments_last_365_days' : payments_last_365_days,
 				'upcoming_payments_7_days' : upcoming_payments_7_days,
+				'upcoming_payments_30_days' : upcoming_payments_30_days,
 				'upcoming_payments' : upcoming_payments}
 
 
@@ -130,7 +132,7 @@ def all_payments(request):
 	user = request.user
 	flows = CashFlow.objects.filter(user=user)
 
-	
+
 	context = {'flows':flows}
 
 
@@ -151,30 +153,30 @@ def edit_my_data(request):
 			request.user.budget.savings_goal = 0
 			request.user.budget.last_updated = datetime.now()
 			request.user.budget.save()
-		
+
 		if request.POST.get('budgetButton'):
 			budgetInput = request.POST.get('budgetInput')
 
 			# Check if this is a valid float before storing
 			if len(budgetInput) > 0 and  budgetInput.replace('.','',1).isdigit():
 				request.user.budget.balance = budgetInput
-				request.user.budget.last_updated = datetime.now()	
+				request.user.budget.last_updated = datetime.now()
 				request.user.budget.save()
-				
+
 		elif request.POST.get('savingsGoalButton'):
 			savingsGoalInput = request.POST.get('savingsGoalInput')
 
 			# Check if this is a valid float before storing
 			if len(savingsGoalInput) > 0 and savingsGoalInput.replace('.','',1).isdigit():
 				request.user.budget.savings_goal = savingsGoalInput
-				request.user.budget.last_updated = datetime.now()	
+				request.user.budget.last_updated = datetime.now()
 				request.user.budget.save()
 
 	return render(request, 'DashboardTemplates/editmydata.html')
 
 @login_required(login_url='login')
 def addnew_cashflow(request):
-	
+
 	# Creates payment object for 12 months
 	def create_recurring(user, form):
 
@@ -209,7 +211,7 @@ def addnew_cashflow(request):
 				obj = form.save(commit=False)
 				obj.user = request.user
 				obj.save()
-	
+
 		return redirect('upcomingpayments')
 
 	context = {'flows':flows, 'form':form}
@@ -224,13 +226,13 @@ def remove_cashflow(request, id):
 	context = {"flow" : flow}
 	return render(request, 'DashboardTemplates/delete.html', context)
 
-	
+
 @login_required(login_url='login')
 def edit_icon_url(request):
 
 	if request.method == 'POST':
 		icon_form = IconURLForm(request.POST)
-	
+
 		if icon_form.is_valid():
 
 			url = icon_form.cleaned_data.get("url")
