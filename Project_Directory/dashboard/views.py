@@ -102,9 +102,20 @@ def upcoming_payments(request):
 
 		return total
 
+	# Return all upcoming income starting from tomorrow to d
+	def get_upcoming_income_total(user, d = 7):
+		upcoming_d_days = datetime.now() + timedelta(days = d)
+		payments = CashFlow.objects.filter(user = user, type = 'Income', date__gt = datetime.now()).filter(date__lte = upcoming_d_days)
+
+		total = 0.0
+		for payment in payments:
+			total += payment.amount
+
+		return total
+
 	def get_upcoming_payments(user, d = 7):
 		upcoming_d_days = datetime.now() + timedelta(days = d)
-		payments = CashFlow.objects.filter(user = user, type = 'Payment', date__gt = datetime.now()).filter(date__lte = upcoming_d_days)
+		payments = CashFlow.objects.filter(user = user, date__gt = datetime.now()).filter(date__lte = upcoming_d_days)
 
 		return payments
 
@@ -113,6 +124,7 @@ def upcoming_payments(request):
 	payments_last_365_days = get_payments_total(user, d = 365)
 	upcoming_payments_7_days = get_upcoming_payments_total(user, d = 7)
 	upcoming_payments_30_days = get_upcoming_payments_total(user, d = 30)
+	upcoming_income_30_days = get_upcoming_income_total(user, d = 30)
 	upcoming_payments = get_upcoming_payments(user, d = 30)
 
 	context = {'flows':flows,
@@ -121,11 +133,13 @@ def upcoming_payments(request):
 				'payments_last_365_days' : payments_last_365_days,
 				'upcoming_payments_7_days' : upcoming_payments_7_days,
 				'upcoming_payments_30_days' : upcoming_payments_30_days,
+				'upcoming_income_30_days' : upcoming_income_30_days,
 				'upcoming_payments' : upcoming_payments}
 
 
 
 	return render(request, 'DashboardTemplates/upcomingpayments.html', context=context)
+
 
 @login_required(login_url='login')
 def all_payments(request):

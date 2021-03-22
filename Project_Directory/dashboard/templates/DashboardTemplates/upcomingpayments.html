@@ -225,6 +225,75 @@
 
    	</div>
 
+  <br><br>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+  <center>
+  <h2>Income vs Payments</h2>
+  <h4>The Next 30 Days</h4>
+  <center>
+  </canvas><canvas id="myChart" width="800" height="450"></canvas>
+  <script>
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'bar',
+    beginAtZero: true,
+    data: {
+      labels: ['The Next 30 Days'],
+      datasets: [{
+        label: 'Income',
+        data: [{{ upcoming_income_30_days|floatformat:2 }},],
+        backgroundColor: 'darkgreen',
+      }, {
+        label: 'Payments',
+        data: [{{ upcoming_payments_30_days|floatformat:2 }},],
+        backgroundColor: 'darkred',
+      }]
+    },
+    options: {
+    scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    }
+}
+  });
+  </script>
+
+  <br><br><br><br>
+
+  <center>
+  <h2>% of Income Spent</h2>
+  <h4>The Next 30 Days</h4>
+  <center>
+  </canvas><canvas id="chart2" width="800" height="450"></canvas>
+  <script>
+  var ctx = document.getElementById('chart2').getContext('2d');
+  var myChart = new Chart(document.getElementById("chart2"), {
+    type: 'doughnut',
+    data: {
+      labels: ["Spent", "Not Spent"],
+      datasets: [
+        {
+          label: "Population (millions)",
+          backgroundColor: ["darkblue", "lightblue"],
+          borderColor: ["white", "black"],
+          data: [{{ upcoming_payments_30_days|floatformat:2 }}, ({{ upcoming_income_30_days}} - {{ upcoming_payments_30_days}})]
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Predicted world population (millions) in 2050'
+      }
+    }
+});
+</script>
+
 </body>
 
 </html>
