@@ -182,7 +182,7 @@
 	<tr>
       <td>{{flow.name}}</td>
     	<td>{{flow.date}}</td>
-    	<td>${{flow.amount}}</td>
+    	<td>${{flow.amount|floatformat:2}}</td>
     	<td><font color=green>{{flow.type}}</font></td>
     	<td>{{flow.description}}</td>
       <td><a href="{% url 'removecashflow' flow.pk %}">
