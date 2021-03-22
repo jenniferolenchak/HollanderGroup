@@ -179,7 +179,7 @@ In this section, each group member needs to provide a brief description of what 
 
 In this section, each group member needs to provide a brief description of what they worked on during the sprint. Keep this short and to the point. Your trello board and commit history will provide the details
 
-* Jennifer Olenchak - Implemented Charts.js API to create charts of user's data, created additional backend user variables, and created velocity chart.
+* Jennifer Olenchak - Implemented Charts.js API to create charts of user's data, created additional backend user variables, updated income/expense categories, and created velocity chart.
 * Robin Perlman - Allow Users to Insert Profile Pictures from URL to Image. Created Burndown Chart.
 * Amen Naeem - Add manual tests, manual tests that reflect appearence and desired outcome of user stories, automated testing for recurring payment features
 * Allen Pereira - Created Settings Page for Additional User Settings
