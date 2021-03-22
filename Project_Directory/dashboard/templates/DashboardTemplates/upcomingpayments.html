@@ -279,7 +279,6 @@
       labels: ["Spent", "Not Spent"],
       datasets: [
         {
-          label: "Population (millions)",
           backgroundColor: ["darkblue", "lightblue"],
           borderColor: ["white", "black"],
           data: [{{ upcoming_payments_30_days|floatformat:2 }}, ({{ upcoming_income_30_days}} - {{ upcoming_payments_30_days}})]
