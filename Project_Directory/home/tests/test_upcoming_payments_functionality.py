@@ -79,12 +79,9 @@ class TestLoginPage(StaticLiveServerTestCase):
 
 		self.browser.find_element_by_xpath("//button[@type='submit']").click()
 
-		upcomingpayments_url = self.live_server_url + reverse('upcomingpayments')
+		all_upcomingpayments_url = self.live_server_url + reverse('allpayments')
 
-		self.assertEquals(
-			self.browser.current_url,
-			upcomingpayments_url
-			)
+		self.browser.get(all_upcomingpayments_url)
 
 		self.assertTrue("Test" in self.browser.page_source)
-		self.assertTrue("$500.00" in self.browser.page_source)
+		self.assertTrue("$500" in self.browser.page_source)
