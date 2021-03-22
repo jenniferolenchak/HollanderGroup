@@ -266,11 +266,11 @@
 
   <br><br><br><br>
 
-  <center>
+<center>
   <h2>% of Income Spent</h2>
   <h4>The Next 30 Days</h4>
   <center>
-  </canvas><canvas id="chart2" width="400" height="400"></canvas>
+  </canvas><canvas id="chart2" width="800" height="450"></canvas>
   <script>
   var ctx = document.getElementById('chart2').getContext('2d');
   var myChart = new Chart(document.getElementById("chart2"), {
@@ -279,7 +279,7 @@
       labels: ["Spent", "Not Spent"],
       datasets: [
         {
-	  label: "% of Income Spent",
+          label: "% of Income Spent",
           backgroundColor: ["darkblue", "lightblue"],
           borderColor: ["white", "black"],
           data: [{{ upcoming_payments_30_days|floatformat:2 }}, ({{ upcoming_income_30_days}} - {{ upcoming_payments_30_days}})]
@@ -288,7 +288,6 @@
     },
     options: {
       responsive: false,
-      }
     }
 });
 </script>
