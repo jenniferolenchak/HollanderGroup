@@ -233,7 +233,7 @@
   <h2>Income vs Payments</h2>
   <h4>The Next 30 Days</h4>
   <center>
-  </canvas><canvas id="myChart" width="800" height="450"></canvas>
+  </canvas><canvas id="myChart" width="400" height="400"></canvas>
   <script>
   var ctx = document.getElementById('myChart').getContext('2d');
   var myChart = new Chart(ctx, {
@@ -252,6 +252,7 @@
       }]
     },
     options: {
+    responsive: false,
     scales: {
         yAxes: [{
             ticks: {
@@ -269,7 +270,7 @@
   <h2>% of Income Spent</h2>
   <h4>The Next 30 Days</h4>
   <center>
-  </canvas><canvas id="chart2" width="800" height="450"></canvas>
+  </canvas><canvas id="chart2" width="400" height="400"></canvas>
   <script>
   var ctx = document.getElementById('chart2').getContext('2d');
   var myChart = new Chart(document.getElementById("chart2"), {
@@ -286,6 +287,7 @@
       ]
     },
     options: {
+      responsive: false,
       title: {
         display: true,
         text: 'Predicted world population (millions) in 2050'
