@@ -181,7 +181,7 @@ In this section, each group member needs to provide a brief description of what 
 
 * Jennifer Olenchak - 
 * Robin Perlman - Allow Users to Insert Profile Pictures from URL to Image.
-* Amen Naeem - Add manual tests, manual tests that reflect appearence and desired outcome of user stories.
+* Amen Naeem - Add manual tests, manual tests that reflect appearence and desired outcome of user stories, automated testing for recurring payment features
 * Allen Pereira - 
 * Charles McCampbell-Hill - Updated Models and Allow Categories for Payments
 
