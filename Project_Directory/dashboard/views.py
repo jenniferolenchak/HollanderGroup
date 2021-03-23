@@ -6,7 +6,7 @@ from django.contrib import messages
 from django.db import models
 from .models import *
 from datetime import datetime, timedelta
-
+import random
 
 # Create your views here.
 
@@ -73,7 +73,63 @@ def personal_info(request):
 
 @login_required(login_url='login')
 def saving_suggestions(request):
-	return render(request, 'DashboardTemplates/savingsuggestions.html')
+
+	# Get our settings so we can personalize suggestions
+	request.user.settings, created_settings = Settings.objects.get_or_create(user = request.user)
+
+	savings_strings = []
+
+	if request.user.settings.student_status != None and request.user.settings.student_status == True:
+
+		student_savings = ["Spotify Premium Student (with Hulu and ShowTime) $4.99/month", 
+						   "Amazon Prime Student First 6 months free",
+						   "Audible Get 1 free audiobook",
+						   "Apple Music for $4.99/month (regular price $9.99/month)",
+						   "New York Times 4 week basic subscription free",
+						   "Lenonvo 5 % off",
+						   "Microsoft 10 % off a new Surface Pro",
+						   "UNiDAYS deals website for students",
+						   "Adobe Creative Cloud $19.99/month",
+						   "Ableton Live save 40 % on Music Production Software",
+						    ]
+
+		savings_strings += student_savings
+
+	if request.user.settings.age != None and request.user.settings.age >= 13 and request.user.settings.age < 21:
+
+		savings_string += "Github any students over 13 eligible for Student Developer Pack"
+
+	if request.user.settings.age != None and request.user.settings.age >= 65:
+
+		senior_savings = ["Applebee's Senior Discount: 10-15 % off",
+						  "Arby's Senior Discount: 10 % off",
+						  "Boston Market Senior Discount: Amount varies by location",
+						  "Carrabba's Italian Grill: 10 % off entire meal for AARP members",
+						  "Chick-fil-A Senior Discount: Free refillable senior drink",
+						  "Dairy Queen Senior Discount: 10 % off ",
+						  "Subway Senior Discount: 10 % off (varies by location",
+						  "Bealls Senior Discount: 15 % off every Monday",
+						  "National Parks Senior Lifetime Pass: $80 for access to over 2,000 sites"
+						  ]
+		savings_strings += senior_savings
+
+
+	# Select only up to 5 different savings to show the users
+	random.shuffle(savings_strings)
+	if len(savings_strings) > 5:
+		savings_strings = savings_strings[:5]
+
+	# If our savings strings is empty, we can't show any deals
+	is_savings_strings_empty = False
+	if len(savings_strings) == 0:
+		is_savings_strings_empty = True
+
+	context = {
+		"is_savings_strings_empty" : is_savings_strings_empty,
+		"savings_strings" : savings_strings
+	}
+
+	return render(request, 'DashboardTemplates/savingsuggestions.html', context)
 
 @login_required(login_url='login')
 def upcoming_payments(request):
