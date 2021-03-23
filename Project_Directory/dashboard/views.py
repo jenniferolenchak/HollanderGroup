@@ -80,7 +80,6 @@ def saving_suggestions(request):
 	savings_strings = []
 
 	if request.user.settings.student_status != None and request.user.settings.student_status == True:
-
 		student_savings = ["Spotify Premium Student (with Hulu and ShowTime) $4.99/month", 
 						   "Amazon Prime Student First 6 months free",
 						   "Audible Get 1 free audiobook",
@@ -96,11 +95,9 @@ def saving_suggestions(request):
 		savings_strings += student_savings
 
 	if request.user.settings.age != None and request.user.settings.age >= 13 and request.user.settings.age < 21:
-
 		savings_string += "Github any students over 13 eligible for Student Developer Pack"
 
 	if request.user.settings.age != None and request.user.settings.age >= 65:
-
 		senior_savings = ["Applebee's Senior Discount: 10-15 % off",
 						  "Arby's Senior Discount: 10 % off",
 						  "Boston Market Senior Discount: Amount varies by location",
@@ -113,11 +110,14 @@ def saving_suggestions(request):
 						  ]
 		savings_strings += senior_savings
 
+	if request.method == "POST":
+		pass
 
-	# Select only up to 5 different savings to show the users
-	random.shuffle(savings_strings)
-	if len(savings_strings) > 5:
-		savings_strings = savings_strings[:5]
+	else:
+		# Select only up to 5 different savings to show the users
+		random.shuffle(savings_strings)
+		if len(savings_strings) > 5:
+			savings_strings = savings_strings[:5]
 
 	# If our savings strings is empty, we can't show any deals
 	is_savings_strings_empty = False
