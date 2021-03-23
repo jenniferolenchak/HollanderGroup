@@ -95,7 +95,9 @@ def saving_suggestions(request):
 		savings_strings += student_savings
 
 	if request.user.settings.age != None and request.user.settings.age >= 13 and request.user.settings.age < 21:
-		savings_string += "Github any students over 13 eligible for Student Developer Pack"
+		thirteen_or_older_savings = ["Github any students over 13 eligible for Student Developer Pack"]
+
+		savings_strings += thirteen_or_older_savings
 
 	if request.user.settings.age != None and request.user.settings.age >= 65:
 		senior_savings = ["Applebee's Senior Discount: 10-15 % off",
