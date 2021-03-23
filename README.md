@@ -185,3 +185,28 @@ In this section, each group member needs to provide a brief description of what 
 * Allen Pereira - Created Settings Page for Additional User Settings
 * Charles McCampbell-Hill - Updated Models and Allow Categories for Payments. Created Removal Button For Cash Flows
 
+## Sprint 8
+
+[Trello Board (Product Backlog, Sprint Backlog, & Requirements)](https://trello.com/b/wx8NhUQK/official-savester-team-board)
+
+[Burndown Chart](https://raw.githubusercontent.com/jenniferolenchak/Savester/main/Velocity%20Charts/BurndownChart7.PNG)
+
+[Velocity Chart](https://github.com/jenniferolenchak/Savester/blob/main/Velocity%20Charts/velocity%20chart%207.JPG?raw=true)
+
+[Design Document](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/architecture.md)
+
+[Source Code](https://github.com/jenniferolenchak/Savester/tree/main/Project_Directory)   
+
+[Manual Tests](https://github.com/jenniferolenchak/Savester/blob/main/manualTests.md) & [Automated Tests Page One](https://github.com/jenniferolenchak/Savester/blob/main/Project_Directory/home/tests/) & [Automated Tests Page Two](https://github.com/jenniferolenchak/Savester/tree/main/Project_Directory/dashboard/tests/)
+
+[Demonstration](https://youtu.be/NC9L0JVS2xU)
+
+### Team Allocation
+
+In this section, each group member needs to provide a brief description of what they worked on during the sprint. Keep this short and to the point. Your trello board and commit history will provide the details
+
+* Jennifer Olenchak - 
+* Robin Perlman -
+* Amen Naeem - 
+* Allen Pereira -
+* Charles McCampbell-Hill - 
