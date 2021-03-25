@@ -1,8 +1,9 @@
 <html lang="en">
-
 <!-- Establish Metadata -->
 
 <head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
   <title>Savester - Dashboard</title>
   <meta charset="UTF-8">
   <meta name="description" content="Savester Dashboard">
@@ -136,11 +137,11 @@
 
   <left>
     <div class="content">
-      <h2>Welcome {% firstof request.user.username %}!</h2>
+      <h2>Welcome back, {% firstof request.user.username %}!</h2>
 
 	<div class="row">
 	<div class="column">
-		<h2>Your Budget This Week:</h2>
+		<h2>Your Budget This Month:</h2>
 		<p id="highlightText">${{ request.user.budget.balance|floatformat:2}}</p>
 	</div>
 	<div class="column">
@@ -153,6 +154,5 @@
 	 <h4 style="background-color:lightgray;"> Need to change your budget or goal? Click "Edit My Data"
     </h4>
     <center>
-
 
 </body>

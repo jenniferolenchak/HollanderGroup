@@ -72,6 +72,27 @@
       margin-bottom: 0px;
     }
 
+    td, th {
+    border: 2px solid #dddddd;
+    text-align: left;
+      padding: 8px;
+    }
+
+    tr:nth-child(odd)
+    {
+      background-color: lightgray;
+    }
+
+    tr:nth-child(even)
+    {
+      background-color: #dddddd;
+    }
+
+      .background {
+        overflow: hidden;
+        background-color: lightgreen;
+    }
+
   </style>
 </head>
 
@@ -121,11 +142,40 @@
 
   <left>
     <div class="content">
-
       <p>Learn more about your saving suggestions</p>
+    </div>
+
+    <div class= "content">
+      {% if is_savings_strings_empty %}
+        <p> You currently have no savings. Try updating your personal settings!</p>
+
+      {% else %}
+        <table>
+          <tr>
+            <th> Savings Deals for you! </th>
+          </tr>
+
+          {% for string in savings_strings %}
+            <tr>
+              <td>{{string}}</td>
+            </tr>            
+          {% endfor %}
+        </table>
+
+        <p> Try to Refresh the Page to see if new Incoming Deals Appear! </p>
+      {% endif %}
+
+      <form action =" " method='post'>
+        {% csrf_token %}
+        {{form}}
+        <button type="submit", class="btn", name="show_all_btn"> Show all your savings Suggestions! </button>
+      </form>
+
 
     </div>
-    <left>
+
+
+  </left>
 
 </body>
 

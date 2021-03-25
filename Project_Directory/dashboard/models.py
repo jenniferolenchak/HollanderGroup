@@ -10,9 +10,9 @@ User = get_user_model()
 
 class Settings(models.Model):
 	user = models.OneToOneField(User, related_name='settings', on_delete=models.CASCADE)
-	
+
 	# More Secure Phone number fields are possible to implement in the future
-	phone_number = models.CharField(max_length=12, blank=True, null=True)	
+	phone_number = models.CharField(max_length=12, blank=True, null=True)
 	location = models.CharField(max_length=140, blank=True, null=True)
 	age = models.IntegerField(blank=True, null=True)
 	student_status = models.BooleanField(blank=True, null=True)
@@ -32,10 +32,10 @@ class BudgetList(models.Model):
 	balance = models.FloatField(default = 0.0)
 	savings_goal = models.FloatField(default = 0.0)
 	last_updated = models.DateField(auto_now = True, null = True)
-	
+
 
 class CashFlow(models.Model):
-	# django doesn't naturally have a one to many field, so instead use the ForeignKey which 
+	# django doesn't naturally have a one to many field, so instead use the ForeignKey which
 	# represents a Many to One. It points all of our cashflows to our budget
 	user = models.ForeignKey(User,on_delete=models.CASCADE, null=True)
 
@@ -52,7 +52,7 @@ class CashFlow(models.Model):
 	recurring_choices = ((True,"Yes"),(False,"No"))
 	recurring = models.BooleanField(choices = recurring_choices, default = False, null = True)
 
-	payment_categories = [("Food", "Food"), ("Transportation", "Transportation"), ("Groceries", "Groceries"), ("Health", "Health"), ("Shopping & Entertainment", "Shopping & Entertainemnt"), ("Other", "Other")]
+	payment_categories = [("Housing", "Housing"), ("Utilities", "Utilities"), ("Transportation", "Transportation"), ("Food/Groceries", "Food/Groceries"), ("Shopping & Entertainment", "Shopping & Entertainemnt"), ("Subscriptions", "Subscriptions"), ("Health", "Health"), ("Other", "Other")]
 	category = models.CharField(max_length = 26, choices = payment_categories, default = 'Food', null = True)
 	# Currently assumes US dollars
 	amount = models.FloatField(null = True)
