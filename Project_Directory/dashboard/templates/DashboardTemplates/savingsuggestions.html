@@ -143,6 +143,8 @@
   <left>
     <div class="content">
       <p>Learn more about your saving suggestions</p>
+      <p> Click <a href ="{% url 'personal_info' %}">Here</a> to Update Your Personal Settings to See More Deals </p>
+
     </div>
 
     <div class= "content">
@@ -157,20 +159,20 @@
 
           {% for string in savings_strings %}
             <tr>
-              <td>{{string}}</td>
+              <td>{{string | safe}}</td>
             </tr>            
           {% endfor %}
         </table>
 
         <p> Try to Refresh the Page to see if new Incoming Deals Appear! </p>
-      {% endif %}
-
+      
       <form action =" " method='post'>
         {% csrf_token %}
         {{form}}
         <button type="submit", class="btn", name="show_all_btn"> Show all your savings Suggestions! </button>
       </form>
 
+      {% endif %}
 
     </div>
 

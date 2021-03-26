@@ -79,38 +79,51 @@ def saving_suggestions(request):
 
 	savings_strings = []
 
-	if request.user.settings.student_status != None and request.user.settings.student_status == True:
-		student_savings = ["Spotify Premium Student (with Hulu and ShowTime) $4.99/month", 
-						   "Amazon Prime Student First 6 months free",
-						   "Audible Get 1 free audiobook",
-						   "Apple Music for $4.99/month (regular price $9.99/month)",
-						   "New York Times 4 week basic subscription free",
-						   "Lenonvo 5 % off",
-						   "Microsoft 10 % off a new Surface Pro",
-						   "UNiDAYS deals website for students",
-						   "Adobe Creative Cloud $19.99/month",
-						   "Ableton Live save 40 % on Music Production Software",
-						    ]
+	general_coupons = ['<a href="https://www.homedepot.com/c/coupons">General Deals: Check out Home Depot\'s Coupon Page</a>',
+					   '<a href="https://www.bk.com/offers">General Deals: Check out Burger King Offers</a>',
+					   '<a href="https://www.costco.com/join-costco.html">General Deals: Look into Receiving a Costco WholeSale Membership $60 or $120 Annual Membership</a>',
+					   '<a href="https://www.walgreens.com/offers/offers.jsp">General Deals: See Walgreens Paperless Coupons</a>',
+					   '<a href="https://www.publix.com/savings/digital-coupons">General Deals: See Publix Weekly Digital Coupons</a>',
+					   ]
+	savings_strings += general_coupons
 
+	if request.user.settings.student_status != None and request.user.settings.student_status == True:
+		student_savings = ['<a href="https://www.spotify.com/us/student/">Spotify Premium Student (with Hulu and ShowTime) $4.99/month</a>', 
+						   '<a href="https://www.amazon.com/Amazon-Student/b?ie=UTF8&node=668781011">Amazon Prime Student First 6 Months Free</a>',
+						   '<a href="https://www.audible.com/ep/students">Audible Get 3 Titles Every Month for just $9.95/month</a>',
+						   '<a href="https://www.apple.com/apple-music/#:~:text=(1)%20Students%20can%20choose%20the,a%20three%2Dmonth%20free%20trial.">Apple Music for $4.99/month (regular price $9.99/month)</a>',
+						   '<a href="https://www.nytimes.com/subscription/education/student?campaignId=6JQ7F">New York Times 4 week basic subscription free</a>',
+						   '<a href="https://www.lenovo.com/us/en/landingpage/students-and-teachers/">Lenonvo Extra 5 % Off Sitewide</a>',
+						   '<a href="https://www.microsoft.com/en-us/store/b/education">Microsoft Browse Student Deals</a>',
+						   '<a href="https://www.myunidays.com/US/en-US">UNiDAYS deals website for students</a>',
+						   '<a href="https://www.adobe.com/creativecloud/buy/students.html">Adobe Creative Cloud $19.99/month</a>',
+						   '<a href="https://www.ableton.com/en/shop/education/">Ableton Live save 40 % on Music Production Software</a>',
+						    ]
 		savings_strings += student_savings
 
 	if request.user.settings.age != None and request.user.settings.age >= 13 and request.user.settings.age < 21:
-		thirteen_or_older_savings = ["Github any students over 13 eligible for Student Developer Pack"]
-
+		thirteen_or_older_savings = ['<a href="https://docs.github.com/en/education/explore-the-benefits-of-teaching-and-learning-with-github-education/apply-for-a-student-developer-pack"> \
+									  Github any students over 13 eligible for Student Developer Pack</a>',
+									]
 		savings_strings += thirteen_or_older_savings
 
-	if request.user.settings.age != None and request.user.settings.age >= 65:
-		senior_savings = ["Applebee's Senior Discount: 10-15 % off",
-						  "Arby's Senior Discount: 10 % off",
-						  "Boston Market Senior Discount: Amount varies by location",
-						  "Carrabba's Italian Grill: 10 % off entire meal for AARP members",
-						  "Chick-fil-A Senior Discount: Free refillable senior drink",
-						  "Dairy Queen Senior Discount: 10 % off ",
-						  "Subway Senior Discount: 10 % off (varies by location",
-						  "Bealls Senior Discount: 15 % off every Monday",
-						  "National Parks Senior Lifetime Pass: $80 for access to over 2,000 sites"
-						  ]
-		savings_strings += senior_savings
+	if request.user.settings.age != None and request.user.settings.age >= 50:
+		senior_50_up_savings = ['<a href="https://www.carrabbas.com/aarp">Carrabba\'s Italian Grill: 10% Off Entire Meal for AARP Members</a>',
+								'<a href="https://www.seniordiscounts.com/FeaturedDiscounts/ChicfilA.aspx#:~:text=Discount%3A,purchase%20or%20a%2010%25%20discount.">\
+								  	Chick-fil-A Senior Discount: Free refillable senior drink</a>',
+								'<a href="https://www.walgreens.com/topic/promotion/seniorday.jsp">Walgreens Senior Day with AARP or Over 65</a>',
+								'<a href="https://www.nps.gov/planyourvisit/passes.htm">National Parks Senior Lifetime Pass: $80 for access to over 2,000 sites</a>',
+								'<a href="https://www.aarp.org/benefits-discounts/all/dennys-10003/">Denny\'s AARP 15% Off Your Check</a>'
+								'<a href="https://www.aarp.org/benefits-discounts/all/bonefish-grill-10137/">Bonefish Grill 10% off AARP Members</a>',
+								'<a href="https://www.att.com/offers/discount-program/aarp/">AA&T AARP Members Save $10/month on Wireless Plan</a>',
+							  	]
+		savings_strings += 	senior_50_up_savings
+
+	if request.user.settings.age != None and request.user.settings.age >= 60:
+		senior_60_up_savings = ['<a href="https://cs.kohls.com/app/answers/detail/a_id/101/~/age-specific-discounts#:~:text=We%20offer%20a%20special%2015,your%20age%20for%20this%20offer."> \
+									Kohls Get 15% Off Every Wednesday for Seniors 60 or Older',
+								]
+		savings_strings += senior_60_up_savings
 
 	if request.method == "POST":
 		pass
