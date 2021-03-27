@@ -106,6 +106,7 @@ def saving_suggestions(request):
 					   '<a href="https://www.costco.com/join-costco.html">General Deals: Look into Receiving a Costco WholeSale Membership $60 or $120 Annual Membership</a>',
 					   '<a href="https://www.walgreens.com/offers/offers.jsp">General Deals: See Walgreens Paperless Coupons</a>',
 					   '<a href="https://www.publix.com/savings/digital-coupons">General Deals: See Publix Weekly Digital Coupons</a>',
+					   '<a href="https://www.hulu.com/live-tv">General Deals: Hulu Plus Live TV $64/month</a>',
 					   ]
 	savings_strings += general_coupons
 
@@ -120,6 +121,7 @@ def saving_suggestions(request):
 						   '<a href="https://www.myunidays.com/US/en-US">UNiDAYS deals website for students</a>',
 						   '<a href="https://www.adobe.com/creativecloud/buy/students.html">Adobe Creative Cloud $19.99/month</a>',
 						   '<a href="https://www.ableton.com/en/shop/education/">Ableton Live save 40 % on Music Production Software</a>',
+						   '<a href="https://www.hulu.com/student">Hulu Student Subscription $1.99/month'
 						    ]
 		savings_strings += student_savings
 
