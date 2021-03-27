@@ -173,7 +173,7 @@ def saving_suggestions(request):
 @login_required(login_url='login')
 def upcoming_payments(request):
 	user = request.user
-	flows = CashFlow.objects.filter(user=user)
+	flows = CashFlow.objects.filter(user=user).order_by("date")
 
 	payments_last_7_days = get_payments_total(user, d = 7)
 	payments_last_30_days = get_payments_total(user, d = 30)
@@ -181,7 +181,7 @@ def upcoming_payments(request):
 	upcoming_payments_7_days = get_upcoming_payments_total(user, d = 7)
 	upcoming_payments_30_days = get_upcoming_payments_total(user, d = 30)
 	upcoming_income_30_days = get_upcoming_income_total(user, d = 30)
-	upcoming_payments = get_upcoming_payments(user, d = 30)
+	upcoming_payments = get_upcoming_payments(user, d = 30).order_by("date")
 
 	context = {'flows':flows,
 				'payments_last_7_days' : payments_last_7_days,
@@ -197,7 +197,7 @@ def upcoming_payments(request):
 @login_required(login_url='login')
 def all_payments(request):
 	user = request.user
-	flows = CashFlow.objects.filter(user=user)
+	flows = CashFlow.objects.filter(user=user).order_by("date")
 
 	context = {'flows':flows}
 
