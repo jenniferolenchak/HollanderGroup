@@ -13,8 +13,6 @@ class UserUpdateForm(forms.ModelForm):
 
 
 class CashFlowForm(ModelForm):
-
-
 	class Meta:
 		model = CashFlow
 		fields = ['name','date','amount', 'category', 'type', 'recurring', 'description',]
@@ -24,7 +22,6 @@ class PersonalInformationForm(forms.ModelForm):
 	class Meta:
 		model = Settings
 		fields = ['phone_number', 'location', 'age', 'student_status',]
-
 
 # https://timmyomahony.com/blog/upload-and-validate-image-from-url-in-django
 # Check if the url has a valid extension for the file

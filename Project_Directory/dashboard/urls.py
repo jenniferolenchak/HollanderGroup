@@ -3,6 +3,7 @@ from . import views
 
 
 urlpatterns = [
+    path('dashboard/editcashflow/<int:id>/', views.edit_cashflow, name='editcashflow'),
     path('dashboard/settings/edit_icon_url/', views.edit_icon_url, name='edit_icon_url'),
     path('dashboard/settings/edit_accountinfo/', views.edit_accountinfo, name='edit_accountinfo'),
     path('dashboard/settings/personal_info/', views.personal_info, name='personal_info'),

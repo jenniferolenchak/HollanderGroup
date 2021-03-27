@@ -168,7 +168,7 @@
           <button>View Upcoming Payments</button>
         </a>
         <br><br>
-
+        
         <a href="{% url 'allpayments' %}">
           <button>View All Income and Payments</button>
         </a>
@@ -183,6 +183,8 @@
     	<th>Amount</th>
     	<th>Payment or Income</th>
     	<th>Description</th>
+      <th>Edit</th>
+      <th>Remove</th>
  	</tr>
    {% for flow in flows %}
 	<tr>
@@ -191,9 +193,12 @@
     	<td>${{flow.amount|floatformat:2}}</td>
     	<td><font color=green>{{flow.type}}</font></td>
     	<td>{{flow.description}}</td>
+      <td><a href="{% url 'editcashflow' flow.pk %}">
+        <button>Edit</button></a>
+      </td>
       <td><a href="{% url 'removecashflow' flow.pk %}">
-        <button>Remove</button>
-        </a></td>
+        <button>Remove</button></a>
+      </td>
  	</tr>
    {% endfor %}
 	</table>
