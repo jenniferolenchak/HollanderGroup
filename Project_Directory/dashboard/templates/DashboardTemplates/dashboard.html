@@ -139,13 +139,15 @@
             <img id='userPic'
               src="https://st3.depositphotos.com/4111759/13425/v/600/depositphotos_134255532-stock-illustration-profile-placeholder-male-default-profile.jpg"
               alt="" width=120 height=120 align="right" padding=0 />
-     <h1>Savester</h1>
+
+            {% endif %}
+     <h1>Welcome to Savester</h1>
      <p id="slogan">Secure Budgeting Reimagined</p>
      <p id="username">{% firstof request.user.username %}</p>
 
 
 
-     {% endif %}
+
 
 
   </div>
