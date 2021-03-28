@@ -205,7 +205,7 @@ In this section, each group member needs to provide a brief description of what 
 
 In this section, each group member needs to provide a brief description of what they worked on during the sprint. Keep this short and to the point. Your trello board and commit history will provide the details
 
-* Jennifer Olenchak - Created Charts for Dashboard, Created Demonstration, Created Velocity Chart.
+* Jennifer Olenchak - Created Charts for Dashboard, Created Backend Variables & Functions for charts use, Created Demonstration, Created Velocity Chart.
 * Robin Perlman - Displayed Savings Suggestions Based on Personal Information From User, Created an Edit Button for Cash Flows, Fixed and Edited Text On Webpages, Created utilities.py File to Organize Functions, and Created Burndown Chart.
 * Amen Naeem - Created Presentation PowerPoints.
 * Allen Pereira - Updated Front-End for all Web Pages.
