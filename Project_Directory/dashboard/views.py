@@ -76,6 +76,8 @@ def settings(request):
 
 @login_required(login_url='login')
 def edit_accountinfo(request):
+
+	# Form for editing user account info
 	if request.method == 'POST':
 		u_form = UserUpdateForm(request.POST, instance=request.user)
 
@@ -95,6 +97,8 @@ def edit_accountinfo(request):
 
 @login_required(login_url='login')
 def personal_info(request):
+
+	# Form for user personal info upload
 	if (request.method == 'POST'):
 		form = PersonalInformationForm(request.POST, instance=request.user.settings)
 
@@ -190,9 +194,12 @@ def saving_suggestions(request):
 
 @login_required(login_url='login')
 def upcoming_payments(request):
+
+	# Gets a users payments or incomes
 	user = request.user
 	flows = CashFlow.objects.filter(user=user).order_by("date")
 
+	# Separates user data based on time deltas
 	payments_last_7_days = get_payments_total(user, d = 7)
 	payments_last_30_days = get_payments_total(user, d = 30)
 	payments_last_365_days = get_payments_total(user, d = 365)
@@ -214,9 +221,12 @@ def upcoming_payments(request):
 
 @login_required(login_url='login')
 def all_payments(request):
+
+	# Gets all payments or incomes for a user
 	user = request.user
 	flows = CashFlow.objects.filter(user=user).order_by("date")
 
+	# Context for displaying info on html template
 	context = {'flows':flows}
 
 	return render(request, 'DashboardTemplates/allpayments.html', context=context)
@@ -301,6 +311,8 @@ def addnew_cashflow(request):
 
 @login_required(login_url='login')
 def remove_cashflow(request, id):
+
+	# Gets flow to be removed
 	flow = get_object_or_404(CashFlow, id=id)
 	if request.method == "POST":
 		flow.delete()
@@ -310,6 +322,8 @@ def remove_cashflow(request, id):
 
 @login_required(login_url='login')
 def edit_cashflow(request, id):
+
+	# Gets flow to be edited
 	flow = get_object_or_404(CashFlow, id=id)
 
 	if request.method == "POST":
@@ -321,6 +335,7 @@ def edit_cashflow(request, id):
 	else:
 		form = CashFlowForm(instance=flow)
 
+	# Context for display on html template
 	context = {"flow" : flow,
 			   "form" : form}
 
@@ -328,6 +343,7 @@ def edit_cashflow(request, id):
 
 @login_required(login_url='login')
 def edit_icon_url(request):
+
 
 	if request.method == 'POST':
 		icon_form = IconURLForm(request.POST)
@@ -337,6 +353,7 @@ def edit_icon_url(request):
 			url = icon_form.cleaned_data.get("url")
 			if icon_form.is_valid_image_url() and icon_form.image_exists():
 
+				# Sets user icon as url
 				request.user.settings.icon_url = url
 				request.user.settings.save()
 
@@ -344,6 +361,8 @@ def edit_icon_url(request):
 				return redirect('settings')
 
 			else:
+
+				# If file extension is invalid, throw error message
 				messages.error(request, 'Invalid File Extension or Link Found')
 				icon_form = IconURLForm(request.POST)
 	else:
