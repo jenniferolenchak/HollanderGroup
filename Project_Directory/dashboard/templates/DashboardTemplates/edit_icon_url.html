@@ -7,9 +7,141 @@
 <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+<style>
+  body {
+    font-family: Arial, Times New Roman, Helvetica;
+    margin: 0;
+  }
+
+  .header {
+     background: #57D557;
+
+     height: 220px;
+  }
+
+  .header h1 {
+     text-align: center;
+     position: relative;
+     right: 35px;
+     top: 15px;
+     font-size: 75px;
+     color: white;
+     font-weight: bold;
+  }
+
+  .header p {
+     font-size: 20px;
+     text-align: center;
+     position: relative;
+     right: 50;
+     color: white;
+     top: 15px;
+  }
+
+  #logo {
+     width: 200;
+     height: 200;
+     text-align: left;
+  }
+
+
+  #userPic {
+  border-radius: 50%;
+  border: 10px solid darkgreen;
+  height: 150px;
+  width: 150px;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  position: relative;
+  top: 30px;
+  right:30px;
+
+}
+
+.black-links{
+  color: darkgreen;
+}
+
+.dashboard-links{
+  background: lightgreen;
+}
+
+#username{
+  position: relative;
+  text-align: right;
+
+}
+
+#slogan{
+  position: relative;
+  top:30px;
+
+  font-size: 28px;
+
+
+
+  </style>
+
+
 {% load crispy_forms_tags %}
 
 <body>
+
+  <div class="container-fluid">
+
+  </div>
+  <div class="header">
+     "<img id="logo"
+        src="https://github.com/jenniferolenchak/Savester/blob/main/Graphics/Savester%20Logo%204%20_%20green%20background.JPG?raw=true"
+        alt="logo" align="left">
+
+        {% if request.user.settings.icon_url %}
+          <img id='userPic'
+          src="{{ request.user.settings.icon_url }}"
+          alt="" align="right" padding=0 />
+
+          {% else %}
+            <img id='userPic'
+              src="https://st3.depositphotos.com/4111759/13425/v/600/depositphotos_134255532-stock-illustration-profile-placeholder-male-default-profile.jpg"
+              alt="" width=120 height=120 align="right" padding=0 />
+
+            {% endif %}
+     <h1>Edit Icon Url</h1>
+     <p id="slogan">Secure Budgeting Reimagined</p>
+     <p id="username">{% firstof request.user.username %}</p>
+
+  </div>
+
+
+<div class="dashboard-links">
+  <ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link black-links" href="{% url 'dashboard'%}">Dashboard</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link black-links" href="{% url 'editmydata'%}">Edit My Data</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link black-links" href="{% url 'savingsuggestions'%}">Saving Suggestions</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link black-links" href="{% url 'upcomingpayments'%}">Upcoming Payments</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link black-links" href="{% url 'settings'%}">Settings</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link black-links" href="{% url 'logout'%}">Logout</a>
+  </li>
+
+</ul>
+
+</div>
+
     <div class="container">
         <div class="row">
             <div class="col-md-5 mx-auto">
@@ -17,7 +149,7 @@
                     <div class="myform form ">
                         <div class="logo mb-3">
                             <div class="col-md-12 text-center">
-                                <h1>Edit Icon Url</h1>
+                                <br>
                                 <h3>Insert the link to a valid image (.jpg, .jpeg, .png, .gif)</h3>
                             </div>
                         </div>
@@ -28,7 +160,7 @@
                             {% for message in messages %}
                                 <p>{{message}}</p>
                             {% endfor %}
-                            
+
                             <div class="col-md-12 text-center ">
                                 <button type="submit" class="btn btn-block btn-success">Change Icon</button>
                             </div>
