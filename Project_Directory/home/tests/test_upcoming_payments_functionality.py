@@ -17,7 +17,6 @@ class TestLoginPage(StaticLiveServerTestCase):
 	def tearDown(self):
 		self.browser.close()
 
-
 	def test_logged_in_user_can_view_upcoming_payments_tab(self):
 		user = User.objects.create_user('username', 'username@gmail.com', 'password')
 		user.save()
@@ -66,6 +65,9 @@ class TestLoginPage(StaticLiveServerTestCase):
 		add_upcomingpayments_url = self.live_server_url + reverse('addnewpayment')
 
 		self.browser.get(add_upcomingpayments_url)
+
+		# Ensure all page elements are visible by scrolling
+		self.browser.execute_script("window.scrollTo(0,10000)")
 
 		self.assertEquals(
 			self.browser.current_url, 
