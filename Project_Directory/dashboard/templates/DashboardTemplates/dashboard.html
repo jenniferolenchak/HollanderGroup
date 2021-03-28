@@ -66,7 +66,7 @@
 
     .column {
 		float: left;
-		width: 33%;
+		width: 20%;
     background-color: white;
     text-align: center;
     border: 5px solid green;
@@ -179,38 +179,32 @@
     <div class="content">
       <br>
 
-	<div class="row">
-  	<div class="column">
-      <div class="column" style="width:100%; border: none;">
-    		<h1 style="color:green;"> My Goals<h1>
-    	</div>
-      <div class="column" style="width:50%; border: 5px solid white; background-color: palegreen">
-    		<h2>Your Budget Goal:</h2>
-    		<p id="highlightText">${{ request.user.budget.balance|floatformat:2}}</p>
-    	</div>
-    	<div class="column" style="width:50%; border: 5px solid white; background-color: palegreen">
-    		<h2>Your Savings Goal:</h2>
-    		<p id="highlightText">${{ request.user.budget.savings_goal|floatformat:2}}</p>
-    	</div>
-  	</div>
-  </div>
-    <left>
-
   <!-- Display Charts -->
   <p style="background-color:lightgreen"><span id = "display_message"></span> </p>
     </center>
-
-      </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
     <div class="row">
       <div class="column">
+        <div class="column" style="width:100%; border: none">
+      		<h1 style="margin-top:30px; color:green;"> My Goals<h1>
+      	</div>
+        <div class="column" style="margin-top:30px; width:100%; border: 5px solid white">
+      		<h2>Your Budget Goal:</h2>
+      		<h1 id="highlightText">${{ request.user.budget.balance|floatformat:2}}</h1>
+      	</div>
+      	<div class="column" style="margin-top:30px; width:100%; border: 5px solid white">
+      		<h2>Your Savings Goal:</h2>
+      		<h1 id="highlightText">${{ request.user.budget.savings_goal|floatformat:2}}</h1>
+      	</div>
+    	</div>
+      <div class="column">
         <center>
         <h3>Income vs Payments</h3>
         <h5>The Next 30 Days</h5>
         <center>
-        </canvas><canvas id="myChart" width="400" height="400"></canvas>
+        </canvas><canvas id="myChart" width="300" height="300"></canvas>
         <script>
         var ctx = document.getElementById('myChart').getContext('2d');
         var myChart = new Chart(ctx, {
@@ -246,7 +240,7 @@
           <h3>% of Income Spent</h3>
           <h5>The Next 30 Days</h5>
           <center>
-          </canvas><canvas id="chart2" width="400" height="400"></canvas>
+          </canvas><canvas id="chart2" width="300" height="300"></canvas>
           <script>
           var ctx = document.getElementById('chart2').getContext('2d');
           var myChart = new Chart(document.getElementById("chart2"), {
@@ -268,30 +262,66 @@
         });
         </script>
 
+        <h5 style = "margin-top: 15px"> Have any unspent income? Consider contributing it to your savings goal</h5>
+      </div>
+      <div class="column">
+        <center>
+        <h3>Savings Goal vs Savings Contributions</h3>
+        <h5>The Next 30 Days</h5>
+        <center>
+        </canvas><canvas id="chart4" width="300" height="300"></canvas>
         <script>
-          document.getElementById("moneyLeft").innerHTML = {{ upcoming_income_30_days}} - {{ upcoming_payments_30_days}};
-        </script>
+        var ctx = document.getElementById('chart4').getContext('2d');
+        var myChart = new Chart(ctx, {
+          type: 'bar',
+          beginAtZero: true,
+          data: {
+            labels: ['The Next 30 Days'],
+            datasets: [{
+              label: 'Savings Goal',
+              data: [{{ request.user.budget.savings_goal|floatformat:2}},],
+              backgroundColor: 'gray',
+            }, {
+              label: 'Savings Contribution',
+              data: [{{ savings_payments|floatformat:2 }},],
+              backgroundColor: 'gold',
+            }]
+          },
+          options: {
+          responsive: false,
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      beginAtZero: true
+                  }
+              }]
+          }
+      }
+        });
 
-        <h4 style = "margin-top: 15px"> Consider applying any unspent income to your savings goal!</h4>
+      </script>
+
+      <h5 style = "margin-top: 15px"> Indicate a contribution to your savings goal by creating a payment of the type "Savings Contribution"</h5>
+
       </div>
       <div class="column">
         <center>
         <h3>Categorical Spending Breakdown</h3>
         <h5>The Next 30 Days</h5>
         <center>
-        </canvas><canvas id="chart3" width="400" height="450"></canvas>
+        </canvas><canvas id="chart3" width="300" height="300"></canvas>
         <script>
         var ctx = document.getElementById('chart3').getContext('2d');
         var myChart = new Chart(document.getElementById("chart3"), {
           type: 'pie',
           data: {
-            labels: ["Housing", "Utilities", "Transportation", "Food/Groceries", "Shopping & Entertainment", "Subscriptions", "Health", "Other"],
+            labels: ["Housing", "Utilities", "Transportation", "Food/Groceries", "Shopping & Entertainment", "Subscriptions", "Health", "Savings Contribution", "Other"],
             datasets: [
               {
-                label: "% of Income Spent",
-                backgroundColor: ["mediumvioletred", "blueviolet", "royalblue", "mediumseagreen", "darkgoldenrod", "brown", "lightskyblue", "gray"],
+                label: "Categorical Breakdown",
+                backgroundColor: ["mediumvioletred", "blueviolet", "royalblue", "mediumseagreen", "darkgoldenrod", "brown", "lightskyblue", "gold", "gray"],
                 borderColor: ["white", "black"],
-                data: [{{ housing_payments|floatformat:2 }}, {{ utilities_payments|floatformat:2 }}, {{ transportation_payments|floatformat:2 }}, {{ food_payments|floatformat:2 }}, {{ shopping_payments|floatformat:2 }}, {{ subscriptions_payments |floatformat:2 }}, {{ health_payments|floatformat:2 }}, {{ other_payments|floatformat:2 }}],
+                data: [{{ housing_payments|floatformat:2 }}, {{ utilities_payments|floatformat:2 }}, {{ transportation_payments|floatformat:2 }}, {{ food_payments|floatformat:2 }}, {{ shopping_payments|floatformat:2 }}, {{ subscriptions_payments |floatformat:2 }}, {{ health_payments|floatformat:2 }}, {{ savings_payments|floatformat:2 }}, {{ other_payments|floatformat:2 }}],
               }
             ]
           },
@@ -302,20 +332,22 @@
         </script>
 
         <div class="column" style="width:40%; border: none; text-align: left; margin-top: 15px">
-          <h5>
+          <h6>
           Housing: ${{ housing_payments|floatformat:2 }} <br>
           Utilities: ${{ utilities_payments|floatformat:2 }} <br>
           Transportation: ${{ transportation_payments|floatformat:2 }} <br>
           Food/Groceries: ${{ food_payments|floatformat:2 }} <br>
-        </h5>
+        </h6>
         </div>
         <div class="column" style="width:60%; text-align: left; border: none; margin-top: 15px">
-          <h5>
+          <h6>
           Shopping & Entertainment: ${{ shopping_payments|floatformat:2 }} <br>
           Subscriptions: ${{ subscriptions_payments|floatformat:2 }} <br>
           Health: ${{ health_payments|floatformat:2 }} <br>
+          Savings Contribution: ${{ savings_payments|floatformat:2 }} <br>
           Other: ${{ other_payments|floatformat:2 }} <br>
-          <h5>
+          <h6>
         </div>
       </div>
     </div>
+  </div>

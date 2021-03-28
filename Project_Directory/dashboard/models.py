@@ -52,7 +52,7 @@ class CashFlow(models.Model):
 	recurring_choices = ((True,"Yes"),(False,"No"))
 	recurring = models.BooleanField(choices = recurring_choices, default = False, null = True)
 
-	payment_categories = [("Housing", "Housing"), ("Utilities", "Utilities"), ("Transportation", "Transportation"), ("Food/Groceries", "Food/Groceries"), ("Shopping & Entertainment", "Shopping & Entertainemnt"), ("Subscriptions", "Subscriptions"), ("Health", "Health"), ("Other", "Other")]
+	payment_categories = [("Housing", "Housing"), ("Utilities", "Utilities"), ("Transportation", "Transportation"), ("Food/Groceries", "Food/Groceries"), ("Shopping & Entertainment", "Shopping & Entertainemnt"), ("Subscriptions", "Subscriptions"), ("Health", "Health"), ("Savings Contribution", "Savings Contribution"), ("Other", "Other")]
 	category = models.CharField(max_length = 26, choices = payment_categories, default = 'Food', null = True)
 	# Currently assumes US dollars
 	amount = models.FloatField(null = True)

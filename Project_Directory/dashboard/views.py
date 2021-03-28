@@ -45,6 +45,7 @@ def dashboard(request):
 	shopping_payments = get_payments_in_category(user, d = 30, category = 'Shopping & Entertainment')
 	subscriptions_payments = get_payments_in_category(user, d = 30, category = 'Subscriptions')
 	health_payments = get_payments_in_category(user, d = 30, category = 'Health')
+	savings_payments = get_payments_in_category(user, d = 30, category = 'Savings Contribution')
 	other_payments = get_payments_in_category(user, d = 30, category = 'Other')
 
 	context = {'flows':flows,
@@ -62,6 +63,7 @@ def dashboard(request):
 				'shopping_payments' : shopping_payments,
 				'subscriptions_payments' : subscriptions_payments,
 				'health_payments' : health_payments,
+				'savings_payments' : savings_payments,
 				'other_payments' : other_payments,}
 
 	return render(request, 'DashboardTemplates/dashboard.html', context=context)
