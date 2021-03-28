@@ -44,3 +44,14 @@ def get_upcoming_payments(user, d = 7):
 	payments = CashFlow.objects.filter(user = user, date__gt = datetime.now()).filter(date__lte = upcoming_d_days)
 
 	return payments
+
+# Returns value of cashflow payments in specific category, from tomorrow to d
+def get_payments_in_category(user, d = 7, category = 'Housing'):
+	upcoming_d_days = datetime.now() + timedelta(days = d)
+	payments = CashFlow.objects.filter(user = user, type = 'Payment', category = category, date__gt = datetime.now()).filter(date__lte = upcoming_d_days)
+
+	total = 0.0
+	for payment in payments:
+		total += payment.amount
+
+	return total

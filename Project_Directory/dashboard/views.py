@@ -30,7 +30,7 @@ def dashboard(request):
 	# All Required Information for the Charts
 	user = request.user
 	flows = CashFlow.objects.filter(user=user)
-	
+
 	payments_last_7_days = get_payments_total(user, d = 7)
 	payments_last_30_days = get_payments_total(user, d = 30)
 	payments_last_365_days = get_payments_total(user, d = 365)
@@ -38,6 +38,14 @@ def dashboard(request):
 	upcoming_payments_30_days = get_upcoming_payments_total(user, d = 30)
 	upcoming_income_30_days = get_upcoming_income_total(user, d = 30)
 	upcoming_payments = get_upcoming_payments(user, d = 30)
+	housing_payments = get_payments_in_category(user, d = 30, category = 'Housing')
+	utilities_payments = get_payments_in_category(user, d = 30, category = "Utilities")
+	transportation_payments = get_payments_in_category(user, d = 30, category = 'Transportation')
+	food_payments = get_payments_in_category(user, d = 30, category = 'Food/Groceries')
+	shopping_payments = get_payments_in_category(user, d = 30, category = 'Shopping & Entertainment')
+	subscriptions_payments = get_payments_in_category(user, d = 30, category = 'Subscriptions')
+	health_payments = get_payments_in_category(user, d = 30, category = 'Health')
+	other_payments = get_payments_in_category(user, d = 30, category = 'Other')
 
 	context = {'flows':flows,
 				'payments_last_7_days' : payments_last_7_days,
@@ -46,7 +54,15 @@ def dashboard(request):
 				'upcoming_payments_7_days' : upcoming_payments_7_days,
 				'upcoming_payments_30_days' : upcoming_payments_30_days,
 				'upcoming_income_30_days' : upcoming_income_30_days,
-				'upcoming_payments' : upcoming_payments}
+				'upcoming_payments' : upcoming_payments,
+				'housing_payments' : housing_payments,
+				'utilities_payments' : utilities_payments,
+				'transportation_payments' : transportation_payments,
+				'food_payments' : food_payments,
+				'shopping_payments' : shopping_payments,
+				'subscriptions_payments' : subscriptions_payments,
+				'health_payments' : health_payments,
+				'other_payments' : other_payments,}
 
 	return render(request, 'DashboardTemplates/dashboard.html', context=context)
 
@@ -111,7 +127,7 @@ def saving_suggestions(request):
 	savings_strings += general_coupons
 
 	if request.user.settings.student_status != None and request.user.settings.student_status == True:
-		student_savings = ['<a href="https://www.spotify.com/us/student/">Spotify Premium Student (with Hulu and ShowTime) $4.99/month</a>', 
+		student_savings = ['<a href="https://www.spotify.com/us/student/">Spotify Premium Student (with Hulu and ShowTime) $4.99/month</a>',
 						   '<a href="https://www.amazon.com/Amazon-Student/b?ie=UTF8&node=668781011">Amazon Prime Student First 6 Months Free</a>',
 						   '<a href="https://www.audible.com/ep/students">Audible Get 3 Titles Every Month for just $9.95/month</a>',
 						   '<a href="https://www.apple.com/apple-music/#:~:text=(1)%20Students%20can%20choose%20the,a%20three%2Dmonth%20free%20trial.">Apple Music for $4.99/month (regular price $9.99/month)</a>',
@@ -305,7 +321,7 @@ def edit_cashflow(request, id):
 
 	context = {"flow" : flow,
 			   "form" : form}
-	
+
 	return render(request, 'DashboardTemplates/edit_cashflow.html', context)
 
 @login_required(login_url='login')
