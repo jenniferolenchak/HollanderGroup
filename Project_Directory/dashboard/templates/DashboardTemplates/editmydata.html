@@ -41,6 +41,22 @@
       color: darkgreen;
     }
 
+
+    /* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 100px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
     .header p {
        font-size: 20px;
        text-align: center;
@@ -82,15 +98,51 @@
 
   }
 
+
+  .right{
+    text-align: right;
+  }
+
+  #budgetInput{
+    margin-top: 20px;
+
+  }
+
+  .annoying{
+    margin-top: 40px;
+    text-align: center;
+  }
+
   #username{
     position: relative;
     text-align: right;
+    margin-top: 10px;
+  }
+
+  #first-button{
+    margin-right:40px;
+
+  }
+
+  .second{
+    float:right;
+    margin-top:20px;
+    margin-right: 30px;
+
   }
 
   #slogan{
     position: relative;
     top:30px;
     font-size: 30px;
+  }
+
+  #second-button{
+    text-align: right;
+  }
+
+  .right{
+    text-align: right;
   }
   </style>
 </head>
@@ -148,29 +200,42 @@
 
 </div>
 
-  <left>
-    <div class="content">
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
       <h2> Current Budget: ${{ request.user.budget.balance|floatformat:2}} </h2>
-      <h2> Current Savings Goal: ${{ request.user.budget.savings_goal|floatformat:2}} </h2>
       <h4> [Last Updated: {% firstof request.user.budget.last_updated %}] </h4>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2> Current Savings Goal: ${{ request.user.budget.savings_goal|floatformat:2}} </h2>
+      <h4> [Last Updated: {% firstof request.user.budget.last_updated %}] </h4>
+  </div>
+</div>
+
+  <left>
+    <div class=>
+
     </div>
   <left>
 
       <right>
-        <div class="container">
+        <div >
           <form action="" method="POST">
 
             {% csrf_token %}
             {{form}}
+
+
             <label for="budgetInput"> Change your Budget </label>
             <input id="budgetInput" name="budgetInput"> </input>
-            <button type="submit" class="btn", name="budgetButton", value="budgetButton"> Change Budget </button>
+            <button type="submit" id="first-button" class="btn btn-success", name="budgetButton", value="budgetButton"> Change Budget </button>
 
 
-            <label for="savingsGoalInput"> Change your Savings Goal </label>
-            <input id="savingsGoalInput" name="savingsGoalInput"> </input>
-            <button type="submit" class="btn", name="savingsGoalButton", value="savingsGoalButton"> Change Savings Goal </button>
-
+            <div class="second">
+            <label class="right" for="savingsGoalInput"> Change your Savings Goal </label>
+            <input class="right"id="savingsGoalInput" name="savingsGoalInput"> </input>
+            <button id="second-button" type="submit" class="right btn btn-success", name="savingsGoalButton", value="savingsGoalButton"> Change Savings Goal </button>
+          </div>
           </form>
       </right>
 
