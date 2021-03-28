@@ -218,6 +218,7 @@
     	<th>Date</th>
     	<th>Amount</th>
     	<th>Payment or Income</th>
+      <th>Category</th>
     	<th>Description</th>
       <th>Edit</th>
       <th>Remove</th>
@@ -228,6 +229,7 @@
     	<td>{{flow.date}}</td>
     	<td>${{flow.amount|floatformat:2}}</td>
     	<td><font color=green>{{flow.type}}</font></td>
+      <td>{{flow.category}}</td>
     	<td>{{flow.description}}</td>
       <td><a href="{% url 'editcashflow' flow.pk %}">
         <button>Edit</button></a>

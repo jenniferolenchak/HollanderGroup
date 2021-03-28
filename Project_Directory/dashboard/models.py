@@ -43,9 +43,6 @@ class CashFlow(models.Model):
 	name = models.CharField(max_length = 26, null = True)
 	date = models.DateField(null = True)
 
-	# Check whether this is an expense or income
-	#is_cash_in_flow = models.BooleanField()
-	#is_cash_out_flow = models.BooleanField()
 
 	payment_choices = [("Payment", "Payment"), ("Income", "Income")]
 	type = models.CharField(max_length = 26, choices = payment_choices, default = 'Payment', null = True)

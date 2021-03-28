@@ -17,7 +17,6 @@ class TestLoginPage(StaticLiveServerTestCase):
 	def tearDown(self):
 		self.browser.close()
 
-
 	def test_login_with_valid_user_redirects_to_dashboard(self):
 		user = User.objects.create_user('username', 'username@gmail.com', 'password')
 		user.save()
@@ -50,5 +49,4 @@ class TestLoginPage(StaticLiveServerTestCase):
 			self.browser.current_url,
 			dashboard_url
 			)
-
 

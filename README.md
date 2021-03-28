@@ -189,9 +189,9 @@ In this section, each group member needs to provide a brief description of what 
 
 [Trello Board (Product Backlog, Sprint Backlog, & Requirements)](https://trello.com/b/wx8NhUQK/official-savester-team-board)
 
-[Burndown Chart](https://raw.githubusercontent.com/jenniferolenchak/Savester/main/Velocity%20Charts/BurndownChart7.PNG)
+[Burndown Chart](https://raw.githubusercontent.com/jenniferolenchak/Savester/main/Velocity%20Charts/BurndownChart8.PNG)
 
-[Velocity Chart](https://github.com/jenniferolenchak/Savester/blob/main/Velocity%20Charts/velocity%20chart%207.JPG?raw=true)
+[Velocity Chart](https://github.com/jenniferolenchak/Savester/blob/main/Velocity%20Charts/velocity%20chart%208.JPG?raw=true)
 
 [Design Document](https://github.com/jenniferolenchak/Savester/blob/main/artifacts/architecture.md)
 
@@ -205,8 +205,8 @@ In this section, each group member needs to provide a brief description of what 
 
 In this section, each group member needs to provide a brief description of what they worked on during the sprint. Keep this short and to the point. Your trello board and commit history will provide the details
 
-* Jennifer Olenchak - 
+* Jennifer Olenchak - Created Charts for Dashboard, Created Backend Variables & Functions for charts use, Created Demonstration, Created Velocity Chart.
 * Robin Perlman - Displayed Savings Suggestions Based on Personal Information From User, Created an Edit Button for Cash Flows, Fixed and Edited Text On Webpages, Created utilities.py File to Organize Functions, and Created Burndown Chart.
-* Amen Naeem - 
-* Allen Pereira -
-* Charles McCampbell-Hill - Added comments to dashboard views.py
+* Amen Naeem - Created Presentation PowerPoints.
+* Allen Pereira - Updated Front-End for all Web Pages.
+* Charles McCampbell-Hill - Added category display to upcoming payments template and added comments to dashboard/views.py
