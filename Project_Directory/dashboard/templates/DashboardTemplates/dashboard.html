@@ -277,15 +277,43 @@
         datasets: [
           {
             label: "% of Income Spent",
-            backgroundColor: ["darkblue", "lightblue"],
+            backgroundColor: ["blue", "deepskyblue"],
             borderColor: ["white", "black"],
-            data: [{{ upcoming_payments_30_days|floatformat:2 }}, ({{ upcoming_income_30_days}} - {{ upcoming_payments_30_days}})]
+            data: [  {{ upcoming_payments_30_days|floatformat:2 }}, ({{ upcoming_income_30_days}} - {{ upcoming_payments_30_days}})],
           }
         ]
       },
       options: {
         responsive: false,
       }
+  });
+  </script>
+
+  <br><br><br><br>
+
+  <center>
+  <h2>Categorical Spending Breakdown</h2>
+  <h4>The Next 30 Days</h4>
+  <center>
+  </canvas><canvas id="chart3" width="800" height="450"></canvas>
+  <script>
+  var ctx = document.getElementById('chart3').getContext('2d');
+  var myChart = new Chart(document.getElementById("chart3"), {
+    type: 'pie',
+    data: {
+      labels: ["Housing", "Utilities", "Transportation", "Food/Groceries", "Shopping & Entertainment", "Subscriptions", "Health", "Other"],
+      datasets: [
+        {
+          label: "% of Income Spent",
+          backgroundColor: ["mediumvioletred", "blueviolet", "royalblue", "mediumseagreen", "darkgoldenrod", "brown", "lightskyblue", "gray"],
+          borderColor: ["white", "black"],
+          data: [{{ housing_payments|floatformat:2 }}, {{ utilities_payments|floatformat:2 }}, {{ transportation_payments|floatformat:2 }}, {{ food_payments|floatformat:2 }}, {{ shopping_payments|floatformat:2 }}, {{ subscriptions_payments |floatformat:2 }}, {{ health_payments|floatformat:2 }}, {{ other_payments|floatformat:2 }}],
+        }
+      ]
+    },
+    options: {
+      responsive: false,
+    }
   });
   </script>
 
