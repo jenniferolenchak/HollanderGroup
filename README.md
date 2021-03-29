@@ -199,9 +199,9 @@ In this section, each group member needs to provide a brief description of what 
 
 [Manual Tests](https://github.com/jenniferolenchak/Savester/blob/main/manualTests.md) & [Automated Tests Page One](https://github.com/jenniferolenchak/Savester/blob/main/Project_Directory/home/tests/) & [Automated Tests Page Two](https://github.com/jenniferolenchak/Savester/tree/main/Project_Directory/dashboard/tests/)
 
-[Demonstration](https://youtu.be/iIc96nduAB0)
+[Demonstration](https://youtu.be/St3krjPWPZI)
 
-**Our demonstration was removed from Youtube, so here is the video broken up in sections:
+**If the demonstration is removed from Youtube, here is the video broken up in sections:
 [Part 1 - Betty Scenario (Student)](https://youtu.be/iCLiAQzRaTQ), 
 [Part 2 - John Scenario (Married Workpace Professional)](https://youtu.be/F-_bNeJthhk), 
 [Part 3 - Jim (Note on Senior Savings Suggestions)](https://youtu.be/uFjXqZ1Kd9s), 
