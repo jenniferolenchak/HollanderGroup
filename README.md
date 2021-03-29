@@ -201,7 +201,7 @@ In this section, each group member needs to provide a brief description of what 
 
 [Demonstration](https://youtu.be/iIc96nduAB0)
 
-Our demonstartion was removed from Youtube, so here is the video broken up in sections:
+**Our demonstration was removed from Youtube, so here is the video broken up in sections:
 [Part 1 - Betty Scenario (Student)](https://youtu.be/iCLiAQzRaTQ)
 [Part 2 - John Scenario (Married Workpace Professional)](https://youtu.be/F-_bNeJthhk)
 [Part 3 - Jim (Note on Senior Savings Suggestions)](https://youtu.be/uFjXqZ1Kd9s)
