@@ -201,6 +201,12 @@ In this section, each group member needs to provide a brief description of what 
 
 [Demonstration](https://youtu.be/iIc96nduAB0)
 
+Our demonstartion was removed from Youtube, so here is the video broken up in sections:
+[Part 1 - Betty Scenario (Student)](https://youtu.be/iCLiAQzRaTQ)
+[Part 2 - John Scenario (Married Workpace Professional)](https://youtu.be/F-_bNeJthhk)
+[Part 3 - Jim (Note on Senior Savings Suggestions)](https://youtu.be/uFjXqZ1Kd9s)
+[Part 4 - Automated Tests](https://youtu.be/d7TNEPav8AQ)
+
 ### Team Allocation
 
 In this section, each group member needs to provide a brief description of what they worked on during the sprint. Keep this short and to the point. Your trello board and commit history will provide the details
